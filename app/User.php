@@ -60,4 +60,13 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
     }
+
+    public function timeline()
+    {
+        $friends = $this->follows()->pluck('id');
+
+        return Tweet::whereIn('user_id', $friends)
+            ->orWhere('user_id', $this->id)
+            ->latest()->get();
+    }
 }
