@@ -20,7 +20,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/type" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/nunomaduro/collision" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dragonmantank/cron-expression" />
@@ -35,7 +34,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/fakerphp/faker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/manifest" />
@@ -45,7 +43,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition-contracts" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/scrivo/highlight.php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
@@ -65,7 +62,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation-contracts" />
@@ -95,12 +91,24 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/error-handler" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/cli-parser" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/php-parallel-lint/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/php-parallel-lint/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fruitcake/laravel-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nunomaduro/collision" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
