@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Mention users when creating tweets using @">
-      <change afterPath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Construct notification page and structure follow notification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotificationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotificationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/YouWereFollowed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/YouWereFollowed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/YouWereMentioned.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/YouWereMentioned.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +199,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="19716000" />
+      <workItem from="1617413411109" duration="19926000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial scaffolding">
       <created>1617399390786</created>
@@ -535,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617462352371</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Construct notification page and structure follow notification">
+      <created>1617463004118</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1617463004118</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +557,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add flash component and wip on like/dislike" />
     <MESSAGE value="Update LikeButtons component" />
     <MESSAGE value="Update register form UI" />
     <MESSAGE value="Fix lose ends" />
@@ -580,6 +581,7 @@
     <MESSAGE value="Add notification for follow" />
     <MESSAGE value="Notify user when they get mentioned" />
     <MESSAGE value="Mention users when creating tweets using @" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mention users when creating tweets using @" />
+    <MESSAGE value="Construct notification page and structure follow notification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Construct notification page and structure follow notification" />
   </component>
 </project>
