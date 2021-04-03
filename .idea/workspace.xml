@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Attach image to a tweet setup">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add image to publish tweet panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/PublishTweetPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/PublishTweetPanel.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +192,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="9855000" />
+      <workItem from="1617413411109" duration="10069000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial scaffolding">
       <created>1617399390786</created>
@@ -446,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617424849966</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add image to publish tweet panel">
+      <created>1617424984344</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1617424984344</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +473,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactor views to components and upgrade to laravel 7" />
     <MESSAGE value="Add follow user logic" />
     <MESSAGE value="Authorize profile edits with policy" />
     <MESSAGE value="Add profile update logic" />
@@ -491,6 +497,7 @@
     <MESSAGE value="Add vue component to publish tweet" />
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Attach image to a tweet setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attach image to a tweet setup" />
+    <MESSAGE value="Add image to publish tweet panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image to publish tweet panel" />
   </component>
 </project>
