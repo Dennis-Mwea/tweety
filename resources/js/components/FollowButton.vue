@@ -15,10 +15,6 @@ export default {
     props: ["user", "following"],
 
     computed: {
-        endpoint() {
-            return `/profiles/${this.user.username}/follow`;
-        },
-
         text: {
             get: function () {
                 return this.followed ? "Following" : "Follow";
@@ -37,9 +33,9 @@ export default {
 
     methods: {
         toggle() {
-            axios.post(this.endpoint).then(response => {
-                this.followed ? this.unfollow() : this.follow();
-            });
+            this.$store.dispatch('followFriend', this.user).then(() => {
+                this.followed ? this.unfollow() : this.follow()
+            })
         },
 
         follow() {

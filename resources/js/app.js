@@ -5,6 +5,7 @@
  */
 require('./bootstrap')
 import Vue from 'vue'
+import store from './store/store'
 
 window.Vue = Vue;
 window.events = new Vue();
@@ -23,6 +24,7 @@ Vue.component('avatar-form', require('./components/AvatarForm').default)
 Vue.component('like-buttons', require('./components/LikeButtons').default)
 Vue.component('flash', require('./components/Flash').default)
 Vue.component('follow-button', require('./components/FollowButton').default)
+Vue.component('friends-list', require('./components/FriendsList').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
@@ -34,5 +36,6 @@ Vue.component('follow-button', require('./components/FollowButton').default)
  */
 
 const app = new Vue({
+    store,
     el: '#app',
 });

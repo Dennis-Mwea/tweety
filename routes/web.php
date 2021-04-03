@@ -30,4 +30,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/profiles/{user}/follow', 'FollowsController@store')->name('follows');
 
     Route::get('/explore', 'ExploreController')->name('explore');
+
+    Route::get('/api/friends', 'FriendsController@index');
 });
