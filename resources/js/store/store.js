@@ -29,15 +29,19 @@ export default new Vuex.Store({
 
         UNFOLLOW_FRIEND(state, friend) {
             state.friends.splice(state.friends.indexOf(friend), 1);
+        },
+
+        SET_LOADING_STATUS(state, status) {
+            state.loading = status
         }
     },
 
     actions: {
         fetchFriends({commit}) {
-            this.state.loading = true;
+            commit('SET_LOADING_STATUS', true)
             axios.get("/api/friends").then(response => {
                 commit("SET_FRIENDS", response.data);
-                this.state.loading = false;
+                commit('SET_LOADING_STATUS', false)
             });
         },
 
