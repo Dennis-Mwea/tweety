@@ -56,3 +56,7 @@ body::-webkit-scrollbar-thumb {
         transform: rotate(359deg);
     }
 }
+
+[v-cloak] {
+    display: none;
+}

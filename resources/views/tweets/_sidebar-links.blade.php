@@ -19,8 +19,11 @@
             Notifications
         </a>
 
-        <span class="absolute top-0 bg-blue-700 rounded-full text-white h-6 w-6 text-center"
-              style="right:-15%">{{ current_user()->unreadNotifications->count() }}</span>
+        @if (current_user()->unreadNotifications->count())
+            <span class="absolute top-0 bg-blue-700 rounded-full text-white h-6 w-6 text-center" style="right:-15%">
+                {{ current_user()->unreadNotifications->count() }}
+            </span>
+        @endif
     </li>
 
     <li>

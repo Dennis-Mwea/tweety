@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tweak notifications view">
-      <change afterPath="$PROJECT_DIR$/app/Listeners/NotifyFollowers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/RecentlyTweeted.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/notifications/_RecentlyTweeted.blade.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add tweet notifications for followers">
+      <change afterPath="$PROJECT_DIR$/app/Notifications/TweetWasDisliked.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Notifications/TweetWasLiked.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/notifications/_TweetWasDisliked.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/notifications/_TweetWasLiked.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/Followable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Followable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_youwerefollowed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_youwerefollowed.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="21469000" />
-    </task>
-    <task id="LOCAL-00004" summary="Design the timeline">
-      <created>1617401152660</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1617401152660</updated>
+      <workItem from="1617413411109" duration="21958000" />
     </task>
     <task id="LOCAL-00005" summary="Make timeline dynamic">
       <created>1617402086285</created>
@@ -550,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617464253110</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Add tweet notifications for followers">
+      <created>1617464746149</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1617464746149</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add FriendList component and vuex store" />
     <MESSAGE value="Tweak UI" />
     <MESSAGE value="Add new fields to profile editor" />
     <MESSAGE value="Tweak banner form" />
@@ -595,6 +596,7 @@
     <MESSAGE value="Refactor pages" />
     <MESSAGE value="Update UI for mentioned notification" />
     <MESSAGE value="Tweak notifications view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweak notifications view" />
+    <MESSAGE value="Add tweet notifications for followers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tweet notifications for followers" />
   </component>
 </project>

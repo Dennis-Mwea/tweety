@@ -3,6 +3,8 @@
 namespace App\Traits;
 
 use App\Like;
+use App\Notifications\TweetWasDisliked;
+use App\Notifications\TweetWasLiked;
 use App\User;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -52,6 +54,9 @@ trait Likable
         if ($this->isLikedBy($user = current_user()) && $liked) {
             return $this->removeLike($user);
         }
+
+        $this->user->notify($liked ? new TweetWasLiked($tweet = $this, current_user())
+            : new TweetWasDisliked($tweet = $this, current_user()));
 
         return $this->likes()->updateOrCreate([
             'user_id' => $user ? $user->id : current_user()->id,
