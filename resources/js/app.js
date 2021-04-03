@@ -7,9 +7,11 @@ require('./bootstrap')
 import Vue from 'vue'
 import store from './store/store'
 import TurboLinksAdapter from 'vue-turbolinks'
+import VModal from "vue-js-modal";
 
 window.Vue = Vue;
 Vue.use(TurboLinksAdapter)
+Vue.use(VModal)
 window.events = new Vue();
 window.flash = function (message, level = "success") {
     window.events.$emit('flash', {message, level})
@@ -29,6 +31,8 @@ Vue.component('follow-button', require('./components/FollowButton').default)
 Vue.component('friends-list', require('./components/FriendsList').default)
 Vue.component('banner-form', require('./components/BannerForm').default)
 Vue.component('publish-tweet-panel', require('./components/PublishTweetPanel').default)
+Vue.component('dropdown', require('./components/Dropdown').default)
+Vue.component('confirm-delete-modal', require('./utils/ConfirmDeleteModal').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 

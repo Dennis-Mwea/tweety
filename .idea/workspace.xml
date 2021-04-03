@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add image to publish tweet panel">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tweak percentage indicator">
+      <change afterPath="$PROJECT_DIR$/resources/css/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Dropdown.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/utils/ConfirmDeleteModal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/PublishTweetPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/PublishTweetPanel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -166,7 +175,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,7 +201,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="10069000" />
+      <workItem from="1617413411109" duration="14315000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial scaffolding">
       <created>1617399390786</created>
@@ -453,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617424984344</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Tweak percentage indicator">
+      <created>1617425235770</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1617425235770</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add follow user logic" />
     <MESSAGE value="Authorize profile edits with policy" />
     <MESSAGE value="Add profile update logic" />
     <MESSAGE value="Style avater upload button" />
@@ -498,6 +513,7 @@
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Attach image to a tweet setup" />
     <MESSAGE value="Add image to publish tweet panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add image to publish tweet panel" />
+    <MESSAGE value="Tweak percentage indicator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweak percentage indicator" />
   </component>
 </project>
