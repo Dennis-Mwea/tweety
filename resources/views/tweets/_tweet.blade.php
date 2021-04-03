@@ -11,7 +11,7 @@
         </a>
 
         <p class="text-sm">
-            {{ $tweet->body }}
+            {!! $tweet->body !!}
         </p>
 
         @if($tweet->image !=null)

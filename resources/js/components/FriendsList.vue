@@ -3,7 +3,7 @@
         <h3 class="font-bold text-xl mb-4">Following</h3>
 
         <transition-group v-if="friends.length > 0" :class="loading ? 'loader' : ''" appear name="slide-up" tag="ul">
-            <li v-for="(friend,index) in friends" :key="friend.id" :class="index === last ? '' :'mb-4'">
+            <li v-for="(friend, index) in friends" :key="friend.id" :class="index === last ? '' :'mb-4'">
                 <div>
                     <a :href="'/profiles/'+friend.username" class="text-sm font-semibold flex items-center">
                         <img :src="friend.avatar" alt class="rounded-full mr-2" height="40" width="40"/>

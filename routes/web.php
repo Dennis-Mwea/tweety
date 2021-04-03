@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/explore', 'ExploreController')->name('explore');
 
     Route::get('/api/friends', 'FriendsController@index');
+    Route::get('/api/search-friends', 'Api\FriendsController@index');
 
     Route::get('/notifications', 'NotificationsContoller@index')->name('notifications');
 });

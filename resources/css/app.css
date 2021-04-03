@@ -1,7 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import "dropdown";
+/*@import "./dropdown";*/
+@import "./components/tribute.css";
 
 body {
     width: 100vw;
