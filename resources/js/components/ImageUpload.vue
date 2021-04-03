@@ -5,13 +5,8 @@
         >
             Choose File
         </button>
-        <input
-            class="cursor-pointer opacity-0 absolute block right-0 top-0"
-            type="file"
-            name="avatar"
-            accept="image/*"
-            @change="onChange"
-        />
+        <input :name="name" accept="image/*" class="cursor-pointer opacity-0 absolute block right-0 top-0" type="file"
+               @change="onChange"/>
     </div>
 </template>
 
@@ -19,15 +14,20 @@
 export default {
     name: "ImageUpload",
 
+    props: {
+        name: String
+    },
+
     methods: {
         onChange(e) {
-            if (! e.target.files.length) return;
+            if (!e.target.files.length) return;
+
             let file = e.target.files[0];
             let reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = e => {
                 let src = e.target.result;
-                this.$emit('loaded', { src, file });
+                this.$emit('loaded', {src, file});
             };
         }
     }
