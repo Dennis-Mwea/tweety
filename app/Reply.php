@@ -39,9 +39,6 @@ class Reply extends Model
 
     public function path()
     {
-        $replyPosition = $this->tweet->replies()->pluck('id')->search($this->id) + 1;
-        $page = ceil($replyPosition / 3);
-
         return $this->tweet->path() . "#reply-{$this->id}";
     }
 
