@@ -1,3 +1,23 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+
+/*body {*/
+/*    width: 100vw;*/
+/*    overflow-x: hidden;*/
+/*}*/
+
+/*body::-webkit-scrollbar {*/
+/*    width: 8px;*/
+/*    background: transparent;*/
+/*}*/
+
+/*body::-webkit-scrollbar-track {*/
+/*    !*background: var(--header-background-color);*!*/
+/*}*/
+
+/*body::-webkit-scrollbar-thumb {*/
+/*    background-color: #3e474b;*/
+/*    border-radius: 10px;*/
+/*}*/
+
 @import 'tailwindcss/utilities';
