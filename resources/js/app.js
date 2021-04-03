@@ -35,6 +35,7 @@ Vue.component('banner-form', require('./components/BannerForm').default)
 Vue.component('publish-tweet-panel', require('./components/PublishTweetPanel').default)
 Vue.component('dropdown', require('./components/Dropdown').default)
 Vue.component('confirm-delete-modal', require('./utils/ConfirmDeleteModal').default)
+Vue.component('add-reply-modal', require('./components/AddReplyModal').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
