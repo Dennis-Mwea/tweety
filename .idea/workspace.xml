@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add flash component and wip on like/dislike">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update LikeButtons component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetsLikesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetsLikesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_02_220740_create_tweets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_02_220740_create_tweets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_03_013907_create_likes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_03_013907_create_likes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AvatarForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AvatarForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/like-buttons.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="3323000" />
+      <workItem from="1617413411109" duration="3587000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial scaffolding">
       <created>1617399390786</created>
@@ -356,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617416122247</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update LikeButtons component">
+      <created>1617416856375</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1617416856375</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +396,7 @@
     <MESSAGE value="Add like/dislike functionality" />
     <MESSAGE value="Downgrade vue version" />
     <MESSAGE value="Add flash component and wip on like/dislike" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add flash component and wip on like/dislike" />
+    <MESSAGE value="Update LikeButtons component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update LikeButtons component" />
   </component>
 </project>
