@@ -26,7 +26,15 @@ class NotifyOwner
     public function handle(TweetReceivedNewReply $event)
     {
         $hasParent = $event->reply->parent_id !== null;
-        $owner = $hasParent ? $event->reply->parent->owner : $event->reply->tweet->user;
+        $replyOwner = $event->reply->parent->owner;
+
+        $tweetOwner = $event->reply->tweet->user;
+
+        $owner = $hasParent ? $replyOwner : $tweetOwner;
+
+        if ($owner->is($tweetOwner) || $owner->is($replyOwner)) {
+            return;
+        }
 
         $owner->notify(new ReceivedNewReply($event->reply->tweet, $event->reply, $isTweet = !$hasParent));
     }

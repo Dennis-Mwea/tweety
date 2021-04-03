@@ -42,7 +42,7 @@ class Reply extends Model
         $replyPosition = $this->tweet->replies()->pluck('id')->search($this->id) + 1;
         $page = ceil($replyPosition / 3);
 
-        return $this->tweet->path() . "/?page=$page#reply-{$this->id}";
+        return $this->tweet->path() . "#reply-{$this->id}";
     }
 
     public function getBodyAttribute($body)
