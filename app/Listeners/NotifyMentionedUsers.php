@@ -24,7 +24,7 @@ class NotifyMentionedUsers
      * @param TweetWasPublished $event
      * @return void
      */
-    public function handle(TweetWasPublished $event)
+    public function handle($event)
     {
         tap($event->subject(), function ($subject) {
             User::whereIn('username', $this->mentionedUsers($subject->body))

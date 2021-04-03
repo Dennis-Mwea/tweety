@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\TweetReceivedNewReply;
 use App\Events\TweetWasPublished;
 use App\Traits\Likable;
 use Illuminate\Database\Eloquent\Model;
@@ -55,7 +56,11 @@ class Tweet extends Model
 
     public function addReply($reply)
     {
-        return $this->replies()->create($reply);
+        $reply = $this->replies()->create($reply);
+
+        event(new TweetReceivedNewReply($reply));
+
+        return $reply;
     }
 
     public function path()
@@ -65,6 +70,6 @@ class Tweet extends Model
 
     public function showTweet()
     {
-        return static::where('tweet_id', $this->id)->withLikes($this->id)->first();
+        return static::where('id', $this->id)->withLikes($this->id)->first();
     }
 }

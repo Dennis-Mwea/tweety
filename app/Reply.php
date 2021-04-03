@@ -23,4 +23,14 @@ class Reply extends Model
     {
         return new ReplyCollection($models);
     }
+
+    public function parent()
+    {
+        return $this->belongsTo(Reply::class, 'parent_id');
+    }
+
+    public function path()
+    {
+        return $this->tweet->path();
+    }
 }

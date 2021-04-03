@@ -2,28 +2,30 @@
 
 namespace App\Notifications;
 
-use App\Reply;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class YouWereMentioned extends Notification
+class ReceivedNewReply extends Notification
 {
     use Queueable;
 
-    /**
-     * @var
-     */
-    private $subject;
+    protected $subject;
+    protected $reply;
+    protected $isTweet;
 
     /**
      * Create a new notification instance.
      *
      * @param $subject
+     * @param $reply
+     * @param $isTweet
      */
-    public function __construct($subject)
+    public function __construct($subject, $reply, $isTweet)
     {
         $this->subject = $subject;
+        $this->reply = $reply;
+        $this->isTweet = $isTweet;
     }
 
     /**
@@ -61,21 +63,13 @@ class YouWereMentioned extends Notification
     {
         return [
             'message' => $this->message(),
-            'notifier' => $this->user(),
-            'link' => '/tweets'
+            'notifier' => $this->reply->owner,
+            'link' => $this->reply->path()
         ];
     }
 
     public function message()
     {
-        return sprintf("%s mentioned you in %s", $this->user()->username, $this->subject instanceof Reply ? 'a reply.' : 'in a tweet.');
-    }
-
-    /**
-     * Get the associated user for the subject.
-     */
-    public function user()
-    {
-        return $this->subject instanceof Reply ? $this->subject->owner : $this->subject->user;
+        return sprintf('%s replied to your %s.', $this->reply->owner->name, $this->isTweet ? 'tweet' : 'reply');
     }
 }
