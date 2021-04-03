@@ -6,6 +6,11 @@ use App\Tweet;
 
 class RepliesController extends Controller
 {
+    public function index(Tweet $tweet)
+    {
+        return $tweet->getThreadedReplies();
+    }
+
     public function store(Tweet $tweet)
     {
         $attributes = request()->validate([
