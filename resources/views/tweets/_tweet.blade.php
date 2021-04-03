@@ -14,6 +14,13 @@
             {{ $tweet->body }}
         </p>
 
+        @if($tweet->image !=null)
+            <div class="mb-3">
+                <img src="{{ asset($tweet->image) }}" alt="tweet-image" class="rounded-lg mb-1 h-64 w-full object-cover"
+                     width="50" height="50">
+            </div>
+        @endif
+
         <like-buttons :tweet="{{ $tweet }}"></like-buttons>
     </div>
 
