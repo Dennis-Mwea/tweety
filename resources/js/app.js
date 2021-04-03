@@ -37,6 +37,7 @@ Vue.component('dropdown', require('./components/Dropdown').default)
 Vue.component('confirm-delete-modal', require('./utils/ConfirmDeleteModal').default)
 Vue.component('add-reply-modal', require('./utils/AddReplyModal').default)
 Vue.component('replies', require('./components/Replies').default)
+Vue.component('notification-link', require('./components/NotificationLink').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
