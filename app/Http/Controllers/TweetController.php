@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tweet;
+use Illuminate\Support\Facades\Storage;
 
 class TweetController extends Controller
 {
@@ -35,6 +36,8 @@ class TweetController extends Controller
     public function destroy(Tweet $tweet)
     {
         $this->authorize('edit', $tweet->user);
+        if (Storage::disk('public')->exists($tweet->image))
+            Storage::disk('public')->delete($tweet->image);
 
         $tweet->delete();
 
