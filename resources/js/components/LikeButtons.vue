@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center">
+    <div class="flex items-center -ml-2">
         <form @submit.prevent="like">
             <button
                 :class="isLiked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-500'"
