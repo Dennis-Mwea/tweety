@@ -86,8 +86,8 @@ class User extends Authenticatable
         return $append ? "{$path}/{$append}" : "$path";
     }
 
-    public function getFullNameAttribute()
+    public function getBannerAttribute($value)
     {
-        return "{$this->name} {$this->email}";
+        return asset($value ?: '/images/default-profile-banner.jpeg');
     }
 }

@@ -6,8 +6,10 @@
 require('./bootstrap')
 import Vue from 'vue'
 import store from './store/store'
+import TurboLinksAdapter from 'vue-turbolinks'
 
 window.Vue = Vue;
+Vue.use(TurboLinksAdapter)
 window.events = new Vue();
 window.flash = function (message, level = "success") {
     window.events.$emit('flash', {message, level})
@@ -25,6 +27,7 @@ Vue.component('like-buttons', require('./components/LikeButtons').default)
 Vue.component('flash', require('./components/Flash').default)
 Vue.component('follow-button', require('./components/FollowButton').default)
 Vue.component('friends-list', require('./components/FriendsList').default)
+Vue.component('banner-form', require('./components/BannerForm').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
@@ -35,7 +38,9 @@ Vue.component('friends-list', require('./components/FriendsList').default)
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    store,
-    el: '#app',
-});
+document.addEventListener('turbolinks:load', () => {
+    const app = new Vue({
+        store,
+        el: '#app',
+    });
+})

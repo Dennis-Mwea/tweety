@@ -19,6 +19,10 @@ export default {
         ImageUpload
     },
 
+    props: {
+        user: Object
+    },
+
     data() {
         return {
             avatar: this.user.avatar
