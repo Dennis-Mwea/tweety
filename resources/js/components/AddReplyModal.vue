@@ -1,22 +1,50 @@
 <template>
-    <modal classes="p-2 bg-white shadow-lg rounded-lg w-64" height="auto" name="add-reply" @before-open="beforeOpen">
-        <div class="flex justify-end mb-6">
-            <svg class="w-8 text-red-600 hover:text-red-700" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M4.93 19.07A10 10 0 1119.07 4.93 10 10 0 014.93 19.07zm1.41-1.41A8 8 0 1017.66 6.34 8 8 0 006.34 17.66zM13.41 12l1.42 1.41a1 1 0 11-1.42 1.42L12 13.4l-1.41 1.42a1 1 0 11-1.42-1.42L10.6 12l-1.42-1.41a1 1 0 111.42-1.42L12 10.6l1.41-1.42a1 1 0 111.42 1.42L13.4 12z"
-                    fill="currentColor"
-                />
-            </svg>
+    <modal classes="p-4 bg-white shadow-lg rounded-lg w-64" height="auto" name="add-reply" @before-open="beforeOpen">
+        <div class="flex justify-end">
+            <button
+                class="focus:outline-none bg-transparent p-1 hover:bg-blue-300 text-center rounded-full"
+                @click.prevent="$modal.hide('add-reply')"
+            >
+                <svg class="w-8 text-red-600 hover:text-red-700" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.93 19.07A10 10 0 1119.07 4.93 10 10 0 014.93 19.07zm1.41-1.41A8 8 0 1017.66 6.34 8 8 0
+                         006.34 17.66zM13.41 12l1.42 1.41a1 1 0 11-1.42 1.42L12 13.4l-1.41 1.42a1 1 0 11-1.42-1.42L10.6
+                          12l-1.42-1.41a1 1 0 111.42-1.42L12 10.6l1.41-1.42a1 1 0 111.42 1.42L13.4 12z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </button>
         </div>
 
-        <form class="p-6" enctype="multipart/form-data" method="POST" @keydown="submitted = false"
+        <div class="mb-4 ml-4">
+            <div class="flex">
+                <div class="mr-2 flex-shrink-0">
+                    <img :src="owner.avatar" alt class="rounded-full mr-2" height="50" width="50"/>
+                </div>
+
+                <div class="flex-1">
+                    <h5 class="font-bold mb-4">{{ owner.name }}</h5>
+                    <div class="mb-4">
+                        <p>{{ parentBody }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-600 bg-white">
+                Replying to
+                <span class="text-blue-500">{{ '@' + owner.username }}</span>
+            </p>
+        </div>
+
+        <form class="p-4" enctype="multipart/form-data" method="POST" @keydown="submitted = false"
               @submit.prevent="submit">
             <input v-if="parentID" :value="parentID" name="parent_id" type="hidden"/>
 
             <vue-tribute :options="tributeOptions">
                 <textarea id="body" ref="tweet" v-model="body"
-                          autofocus class="w-full focus:outline-none focus:placeholder-gray-800 bg-white" name="body"
-                          placeholder="Add a reply..."
+                          autofocus
+                          class="w-full focus:outline-none placeholder-blue-800 focus:placeholder-black bg-white mb-4"
+                          name="body" placeholder="Add a reply..."
                           @keydown="delete errors.body"></textarea>
             </vue-tribute>
             <span v-if="errors.body" class="text-xs text-red-600" v-text="errors.body[0]"></span>
@@ -95,10 +123,12 @@ export default {
         return {
             body: "",
             tweetID: "",
-            userID: "",
+            replyingTo: "",
+            avatar: window.App.user.avatar,
             parentID: null,
+            parentBody: "",
+            owner: "",
             limit: 255,
-            avatar: "",
             errors: {},
             tributeOptions: new Tribute({
                 values: function (text, cb) {
@@ -131,10 +161,12 @@ export default {
     },
 
     methods: {
-        beforeOpen() {
-            console.log(event.params.id);
-            this.tweetID = event.params.tweetID;
-            this.parentID = event.params.parentID;
+        beforeOpen($event) {
+            console.log($event.params.id);
+            this.tweetID = $event.params.tweetID;
+            this.parentID = $event.params.parentID;
+            this.parentBody = $event.params.parentRepyBody;
+            this.owner = $event.params.owner;
         },
 
         submit() {
@@ -154,6 +186,11 @@ export default {
             if (this.image !== null) {
                 data.append("image", this.image);
             }
+
+            if (this.parentID !== null) {
+                data.append("parent_id", this.parentID);
+            }
+
             return data;
         }
     }
