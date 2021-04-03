@@ -1,6 +1,5 @@
 <x-master>
     <div class="w-full max-w-sm mx-auto">
-
         <form
             class="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 mb-4"
             method="POST" action="{{ route('login') }}"
@@ -15,7 +14,7 @@
                 </label>
 
                 <input
-                    class="shadow appearance-none @error('password') border border-red-500  @enderror border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    class="shadow appearance-none @error('email') border border-red-500  @enderror border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="email"
                     type="email"
                     name="email"
@@ -55,7 +54,7 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between mb-6">
 
                 <button
                     class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
@@ -73,11 +72,15 @@
 
             </div>
 
+
+            <p class="text-center text-gray-700 text-sm">
+                Don't have an account? <a href="/register" class="text-blue-500 hover:underline">Register now!</a>.
+            </p>
+
         </form>
 
         <p class="text-center text-gray-500 text-xs">
             &copy;2020 Tweety. All rights reserved.
         </p>
-
     </div>
 </x-master>
