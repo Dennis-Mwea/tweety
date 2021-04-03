@@ -14,6 +14,7 @@
             {{ $tweet->body }}
         </p>
 
-        <x-like-buttons :tweet="$tweet"></x-like-buttons>
+        <like-buttons :tweet="{{ $tweet }}"></like-buttons>
+        {{--        <x-like-buttons :tweet="$tweet"></x-like-buttons>--}}
     </div>
 </div>

@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script type="module" src="{{ mix('js/app.js') }}"></script>
 
+    <script src="https://unpkg.com/turbolinks"></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">

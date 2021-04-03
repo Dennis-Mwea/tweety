@@ -54,4 +54,20 @@ trait Likable
     {
         return $this->hasMany(Like::class);
     }
+
+    public function getIsDislikedByAttribute()
+    {
+        return (bool)current_user()->likes
+            ->where('tweet_id', $this->id)
+            ->where('liked', false)
+            ->count();
+    }
+
+    public function getIsLikedByAttribute()
+    {
+        return (bool)current_user()->likes
+            ->where('tweet_id', $this->id)
+            ->where('liked', true)
+            ->count();
+    }
 }

@@ -85,4 +85,9 @@ class User extends Authenticatable
 
         return $append ? "{$path}/{$append}" : "$path";
     }
+
+    public function getFullNameAttribute()
+    {
+        return "{$this->name} {$this->email}";
+    }
 }
