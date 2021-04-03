@@ -2,28 +2,27 @@
 
 namespace App\Notifications;
 
-use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class FollowedUnfollowed extends Notification
+class YouWereMentioned extends Notification
 {
     use Queueable;
 
     /**
-     * @var User
+     * @var
      */
-    private $user;
+    private $subject;
 
     /**
      * Create a new notification instance.
      *
-     * @param User $user
+     * @param $subject
      */
-    public function __construct(User $user)
+    public function __construct($subject)
     {
-        $this->user = $user;
+        $this->subject = $subject;
     }
 
     /**
@@ -61,13 +60,21 @@ class FollowedUnfollowed extends Notification
     {
         return [
             'message' => $this->message(),
-            'notifier' => $this->user,
-            'path' => $this->user->path(),
+            'notifier' => $this->user(),
+            'link' => '/tweets'
         ];
     }
 
-    private function message()
+    public function message()
     {
-        return sprintf('%s is now following you.', $this->user->username);
+        return sprintf('%s mentioned you in "%s"', $this->user()->username, 'in a tweet.');
+    }
+
+    /**
+     * Get the associated user for the subject.
+     */
+    public function user()
+    {
+        return $this->subject instanceof Reply ? $this->subject->owner : $this->subject->user;
     }
 }
