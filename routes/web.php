@@ -35,5 +35,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/api/friends', 'FriendsController@index');
     Route::get('/api/search-friends', 'Api\FriendsController@index');
 
-    Route::get('/notifications', 'NotificationsContoller@index')->name('notifications');
+    Route::get('/notifications', 'NotificationsController@index')->name('notifications');
 });
