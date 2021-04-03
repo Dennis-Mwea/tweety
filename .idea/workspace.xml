@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix notification receivers for reply">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/NotificationLink.vue" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Extract notification to vue component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_ReceivedNewReply.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_ReceivedNewReply.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tweet.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +201,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="32946000" />
-    </task>
-    <task id="LOCAL-00020" summary="Add like/dislike functionality">
-      <created>1617414276873</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1617414276873</updated>
+      <workItem from="1617413411109" duration="33126000" />
     </task>
     <task id="LOCAL-00021" summary="Downgrade vue version">
       <created>1617416006463</created>
@@ -548,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617475946283</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Extract notification to vue component">
+      <created>1617489794783</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1617489794784</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +566,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Delete image when deliting a tweet" />
     <MESSAGE value="Tidy things up" />
     <MESSAGE value="Add notification for follow" />
     <MESSAGE value="Notify user when they get mentioned" />
@@ -593,6 +590,7 @@
     <MESSAGE value="Add infiite scroll for replies" />
     <MESSAGE value="Add path to reply" />
     <MESSAGE value="Fix notification receivers for reply" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix notification receivers for reply" />
+    <MESSAGE value="Extract notification to vue component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extract notification to vue component" />
   </component>
 </project>

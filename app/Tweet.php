@@ -23,6 +23,10 @@ class Tweet extends Model
         static::created(function ($tweet) {
             event(new TweetWasPublished($tweet));
         });
+
+        static::deleting(function ($tweet) {
+            $tweet->replies->each->delete();
+        });
     }
 
     public function user()
