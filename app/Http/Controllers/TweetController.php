@@ -49,4 +49,12 @@ class TweetController extends Controller
 
         return redirect('home');
     }
+
+    public function show(Tweet $tweet)
+    {
+        return view('tweets.show', [
+            'tweet' => $tweet,
+            'replies' => $tweet->getThreadedReplies()
+        ]);
+    }
 }

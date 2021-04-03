@@ -42,4 +42,19 @@ class Tweet extends Model
             $body
         );
     }
+
+    public function getThreadedReplies()
+    {
+        return $this->Replies()->with('owner')->get()->threaded();
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class, 'tweet_id');
+    }
+
+    public function addReply($reply)
+    {
+        $this->replies()->create($reply);
+    }
 }
