@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tidy things up for pagination">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/mixins/collection.js" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Change replies to vue components">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/LoadMore.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/utils/Paginator.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RepliesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/replies/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/replies/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AddReplyModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/utils/AddReplyModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +29,8 @@
       <list>
         <option value="SCSS File" />
         <option value="CSS File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -189,6 +188,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/utils" />
       <recent name="$PROJECT_DIR$/storage/app/public" />
     </key>
   </component>
@@ -207,14 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="30987000" />
-    </task>
-    <task id="LOCAL-00016" summary="Fix a few bugs">
-      <created>1617411171111</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1617411171111</updated>
+      <workItem from="1617413411109" duration="31683000" />
     </task>
     <task id="LOCAL-00017" summary="Add explore page">
       <created>1617411636255</created>
@@ -552,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617473615486</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Change replies to vue components">
+      <created>1617474457698</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1617474457699</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add delete dropdown button" />
     <MESSAGE value="Change button colors" />
     <MESSAGE value="Store images publicly for accessibility" />
     <MESSAGE value="Add image view to tweet" />
@@ -597,6 +596,7 @@
     <MESSAGE value="Add notifications for reply" />
     <MESSAGE value="Fix loose ends" />
     <MESSAGE value="Tidy things up for pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tidy things up for pagination" />
+    <MESSAGE value="Change replies to vue components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change replies to vue components" />
   </component>
 </project>
