@@ -16,6 +16,8 @@ class Tweet extends Model
         'body', 'user_id', 'image'
     ];
 
+    protected $appends = ['is_liked', 'is_disliked', 'replies_count'];
+
     protected static function boot()
     {
         parent::boot();
@@ -55,7 +57,7 @@ class Tweet extends Model
 
     public function replies()
     {
-        return $this->hasMany(Reply::class, 'tweet_id');
+        return $this->hasMany(Reply::class);
     }
 
     public function addReply($reply)
@@ -75,5 +77,10 @@ class Tweet extends Model
     public function showTweet()
     {
         return static::where('id', $this->id)->withLikes($this->id)->first();
+    }
+
+    public function getRepliesCountAttribute()
+    {
+        return $this->replies()->count();
     }
 }

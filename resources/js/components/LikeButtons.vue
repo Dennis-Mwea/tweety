@@ -1,12 +1,12 @@
 <template>
-    <div class="flex items-center -ml-2">
+    <div class="flex items-center">
         <form @submit.prevent="like">
             <button
-                :class="isLiked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-500'"
+                :class="isLiked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-600'"
                 class="flex items-center mr-4 focus:outline-none hover:text-blue-500 hover:bg-blue-200 p-2 rounded-lg"
                 type="submit"
             >
-                <svg class="mr-1 w-3" style="transform: scaleX(-1)" viewBox="0 0 20 20">
+                <svg class="mr-1 w-4 h-4" style="transform: scaleX(-1)" viewBox="0 0 20 20">
                     <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
                         <g class="fill-current">
                             <path
@@ -23,7 +23,7 @@
 
         <form @submit.prevent="dislike">
             <button
-                :class="isDisliked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-500'"
+                :class="isDisliked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-600'"
                 class="flex items-center focus:outline-none hover:text-blue-500 hover:bg-blue-200 p-2 rounded-lg"
                 type="submit"
             >
