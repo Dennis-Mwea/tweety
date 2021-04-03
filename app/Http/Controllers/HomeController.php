@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $tweets = Tweet::latest()->get();
 
-        return view('home', [
+        return view('tweets.home', [
             'tweets' => $tweets
         ]);
     }

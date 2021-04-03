@@ -17,10 +17,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', 'HomeController@index');
+
     Route::get('/tweets', 'TweetController@index')->name('home');
     Route::post('/tweets', 'TweetController@store')->name('createTweet');
 
     Route::get('/profiles/{user}','ProfilesController@show')->name('profile');
     Route::get('/profiles/{user}/edit','ProfilesController@edit')->name('profile.edit');
+    Route::patch('/profiles/{user}','ProfilesController@update')->name('profile.edit');
     Route::post('/profiles/{user}/follow','FollowsController@store')->name('follows');
 });
