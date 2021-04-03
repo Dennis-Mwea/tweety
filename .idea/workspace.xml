@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Group notifications by date">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix follow button text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/FollowButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FollowButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExploreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExploreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,14 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="22609000" />
-    </task>
-    <task id="LOCAL-00007" summary="Expand the timeline">
-      <created>1617402570285</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1617402570285</updated>
+      <workItem from="1617413411109" duration="22877000" />
     </task>
     <task id="LOCAL-00008" summary="Refractor Views">
       <created>1617402866522</created>
@@ -544,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617465762049</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Fix follow button text">
+      <created>1617465935138</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1617465935138</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +565,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tweak banner form" />
     <MESSAGE value="Style things" />
     <MESSAGE value="Add loading indicator" />
     <MESSAGE value="Add vue component to publish tweet" />
@@ -589,6 +589,7 @@
     <MESSAGE value="Add tweet notifications for followers" />
     <MESSAGE value="Add notifications for tweet likes and dislikes" />
     <MESSAGE value="Group notifications by date" />
-    <option name="LAST_COMMIT_MESSAGE" value="Group notifications by date" />
+    <MESSAGE value="Fix follow button text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix follow button text" />
   </component>
 </project>
