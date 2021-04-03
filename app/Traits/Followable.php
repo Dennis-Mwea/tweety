@@ -2,13 +2,23 @@
 
 namespace App\Traits;
 
+use App\Notifications\FollowedUnfollowed;
 use App\User;
 
 trait Followable
 {
-    public function follow(User $user)
+    public function toggleFollow(user $user)
     {
-        return $this->follows()->save($user);
+        if ($this->following($user)) {
+            return $this->unfollow($user);
+        }
+
+        return $this->follow($user);
+    }
+
+    public function following(User $user)
+    {
+        return (bool)$this->follows()->where('following_user_id', $user->id)->exists();
     }
 
     public function follows()
@@ -21,13 +31,10 @@ trait Followable
         return $this->follows()->detach($user);
     }
 
-    public function toggleFollow(user $user)
+    public function follow(User $user)
     {
-        return $this->follows()->toggle($user);
-    }
+        $user->notify(new FollowedUnfollowed(current_user()));
 
-    public function following(User $user)
-    {
-        return (bool)$this->follows()->where('following_user_id', $user->id)->exists();
+        return $this->follows()->save($user);
     }
 }
