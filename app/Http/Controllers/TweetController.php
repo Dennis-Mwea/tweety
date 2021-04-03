@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Tweet;
-use Illuminate\Http\Request;
-
 class TweetController extends Controller
 {
     public function index()
@@ -20,10 +17,12 @@ class TweetController extends Controller
             'body' => 'required'
         ]);
 
-        request()->user()->tweets()->create([
-            'body' => $attributes['body']
-        ]);
+        request()->user()->tweets()->create($attributes);
 
-        return redirect()->route('home');
+        if (request()->wantsJson()) {
+            return ['message' => '/tweets'];
+        }
+
+        return redirect()->route('home')->with('flash', 'Your tweet has been published!');
     }
 }
