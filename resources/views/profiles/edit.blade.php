@@ -57,14 +57,7 @@
                     </label>
                 </div>
 
-                <div class="overflow-hidden relative w-64 mt-4 mb-">
-                    <button
-                        class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
-                    >
-                        Choose File
-                    </button>
-                    <input class="cursor-pointer opacity-0 absolute block right-0 top-0" type="file" name="avatar"/>
-                </div>
+                <avatar-form :user="{{ $user }}"></avatar-form>
             </div>
 
             <div class="mb-6">
