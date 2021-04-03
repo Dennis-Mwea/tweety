@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tweak banner form">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Style things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/FriendsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FriendsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/explore.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/explore.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +194,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="7509000" />
+      <workItem from="1617413411109" duration="7874000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial scaffolding">
       <created>1617399390786</created>
@@ -413,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617422140153</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Style things">
+      <created>1617422622656</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1617422622656</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add the Following" />
     <MESSAGE value="Expand the timeline" />
     <MESSAGE value="Refractor Views" />
     <MESSAGE value="Add profile page" />
@@ -458,6 +464,7 @@
     <MESSAGE value="Tweak UI" />
     <MESSAGE value="Add new fields to profile editor" />
     <MESSAGE value="Tweak banner form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweak banner form" />
+    <MESSAGE value="Style things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style things" />
   </component>
 </project>

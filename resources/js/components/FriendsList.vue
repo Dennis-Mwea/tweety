@@ -2,18 +2,20 @@
     <div class="bg-gray-200 border border-gray-400 rounded-lg py-4 px-4">
         <h3 class="font-bold text-xl mb-4">Following</h3>
 
-        <transition-group v-if="friends.length > 0" appear class="stacked-tag-list" name="slide-up" tag="ul">
+        <transition-group v-if="friends.length > 0" :class="loading ? 'loader' : ''" appear name="slide-up" tag="ul">
             <li v-for="(friend,index) in friends" :key="friend.id" :class="index === last ? '' :'mb-4'">
                 <div>
                     <a :href="'/profiles/'+friend.username" class="text-sm font-semibold flex items-center">
                         <img :src="friend.avatar" alt class="rounded-full mr-2" height="40" width="40"/>
-                        {{ friend.name }}
+                        <span
+                            class="rounded-full bg-transparent px-2 py-1 hover:bg-blue-500 hover:text-white text-center block"
+                        >{{ friend.name }}</span>
                     </a>
                 </div>
             </li>
         </transition-group>
 
-        <ul v-else>
+        <ul v-else :class="loading ? 'loader' : ''">
             <li>No friends yet!</li>
         </ul>
     </div>
@@ -34,7 +36,7 @@ export default {
             return Object.keys(this.friends).length - 1
         },
 
-        ...mapState(['friends'])
+        ...mapState(['friends', 'loading'])
     }
 }
 </script>
