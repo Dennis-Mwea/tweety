@@ -5,7 +5,7 @@
 
             <img src="{{ $user->avatar }}" alt=""
                  class="rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2" width="150"
-                style="left: 50%">
+                 style="left: 50%">
         </div>
 
         <div class="flex justify-between items-center mb-4">
@@ -15,13 +15,18 @@
             </div>
 
             <div>
-                <a class="bg-white rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-2">Edit Profile</a>
+                @can('edit')
+                    <a href="{{ $user->path('edit') }}"
+                       class="bg-white rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-2">Edit
+                        Profile</a>
+                @endcan
 
                 <x-follow-button :user="$user"></x-follow-button>
             </div>
         </div>
 
-        <p class="text-sm">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <p class="text-sm">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+            velit.</p>
     </header>
 
     @include('_timeline',['tweets' => $user->tweets])
