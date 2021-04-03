@@ -1,12 +1,11 @@
 <template>
     <div>
         <div class="rounded-full">
-            <img :src="avatar" width="50" height="50" class="mb-1">
-
+            <img :src="avatar" class="mb-1" height="50" width="50">
         </div>
 
 
-        <image-upload name="avatar" class="mr-1" @loaded="onLoad"></image-upload>
+        <image-upload class="mr-1" name="avatar" @loaded="onLoad"></image-upload>
     </div>
 </template>
 

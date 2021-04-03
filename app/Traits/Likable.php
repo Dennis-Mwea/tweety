@@ -18,6 +18,15 @@ trait Likable
         );
     }
 
+    public function dislike(User $user = null)
+    {
+        if ($this->isDislikedBy($user = current_user())) {
+            return $this->removeLike($user);
+        }
+
+        return $this->like($user, false);
+    }
+
     public function isDislikedBy(User $user)
     {
         return (bool)$user
@@ -28,26 +37,9 @@ trait Likable
 
     }
 
-    public function isLikedBy(User $user)
+    public function removeLike($user = null)
     {
-        return (bool)$user->likes
-            ->where('tweet_id', $this->id)
-            ->where('liked', true)
-            ->count();
-    }
-
-    public function dislike(User $user = null)
-    {
-        return $this->like($user, false);
-    }
-
-    public function like(User $user = null, $liked = true)
-    {
-        return $this->likes()->updateOrCreate([
-            'user_id' => $user ? $user->id : current_user()->id,
-        ], [
-            'liked' => $liked
-        ]);
+        return $this->likes()->delete($user, null);
     }
 
     public function likes()
@@ -55,17 +47,22 @@ trait Likable
         return $this->hasMany(Like::class);
     }
 
-    public function getIsDislikedByAttribute()
+    public function like(User $user = null, $liked = true)
     {
-        return (bool)current_user()->likes
-            ->where('tweet_id', $this->id)
-            ->where('liked', false)
-            ->count();
+        if ($this->isLikedBy($user = current_user()) && $liked) {
+            return $this->removeLike($user);
+        }
+
+        return $this->likes()->updateOrCreate([
+            'user_id' => $user ? $user->id : current_user()->id,
+        ], [
+            'liked' => $liked
+        ]);
     }
 
-    public function getIsLikedByAttribute()
+    public function isLikedBy(User $user)
     {
-        return (bool)current_user()->likes
+        return (bool)$user->likes
             ->where('tweet_id', $this->id)
             ->where('liked', true)
             ->count();
