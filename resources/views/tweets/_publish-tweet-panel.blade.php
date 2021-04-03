@@ -7,11 +7,13 @@
 
         <hr class="mb-4">
 
-        <footer class="flex justify-between">
+        <footer class="flex items-center justify-between">
             <img src="{{ request()->user()->avatar }}" alt="Your avatar" class="rounded-full mr-2" width="50"
                  height="50">
 
-            <button type="submit" class="bg-blue-500 rounded-full shadow py-2 px-3 text-white">Publish</button>
+            <button type="submit"
+                    class="bg-blue-500 rounded-full shadow text-sm px-10 text-white hover:bg-blue-600 h-10">Publish
+            </button>
         </footer>
     </form>
 </div>
