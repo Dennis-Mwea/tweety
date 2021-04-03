@@ -46,7 +46,7 @@ class Tweet extends Model
 
     public function getThreadedReplies()
     {
-        return $this->Replies()->with('owner')->get()->threaded();
+        return $this->Replies()->with('children', 'owner')->whereNull('parent_id')->paginate(2);
     }
 
     public function replies()

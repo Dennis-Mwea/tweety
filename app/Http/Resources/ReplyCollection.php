@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Database\Eloquent\Collection;
 
-class ReplyCollection extends ResourceCollection
+class ReplyCollection extends Collection
 {
     /**
      * Transform the resource collection into an array.
