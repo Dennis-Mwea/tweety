@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Events\TweetWasPublished;
+use App\Listeners\NotifyFollowers;
 use App\Listeners\NotifyMentionedUsers;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -22,6 +23,7 @@ class EventServiceProvider extends ServiceProvider
 
         TweetWasPublished::class => [
             NotifyMentionedUsers::class,
+            NotifyFollowers::class,
         ],
     ];
 
