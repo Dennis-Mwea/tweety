@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\Followable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -9,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+    use Followable;
 
     /**
      * The attributes that are mass assignable.
@@ -43,22 +45,12 @@ class User extends Authenticatable
 
     public function tweets()
     {
-        return $this->hasMany(Tweet::class);
+        return $this->hasMany(Tweet::class)->latest();
     }
 
     public function getAvatarAttribute()
     {
         return "https://i.pravatar.cc/200/?u=" . $this->email;
-    }
-
-    public function follow(User $user)
-    {
-        return $this->follows()->save($user);
-    }
-
-    public function follows()
-    {
-        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
     }
 
     public function timeline()
