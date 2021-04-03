@@ -57,4 +57,14 @@ class Tweet extends Model
     {
         return $this->replies()->create($reply);
     }
+
+    public function path()
+    {
+        return "/tweets/{$this->id}";
+    }
+
+    public function showTweet()
+    {
+        return static::where('tweet_id', $this->id)->withLikes($this->id)->first();
+    }
 }

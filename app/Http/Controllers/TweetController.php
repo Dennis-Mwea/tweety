@@ -53,7 +53,7 @@ class TweetController extends Controller
     public function show(Tweet $tweet)
     {
         return view('tweets.show', [
-            'tweet' => $tweet,
+            'tweet' => $tweet->showtweet(),
             'replies' => $tweet->getThreadedReplies()
         ]);
     }
