@@ -13,5 +13,7 @@
         <p class="text-sm">
             {{ $tweet->body }}
         </p>
+
+        <x-like-buttons :tweet="$tweet"></x-like-buttons>
     </div>
 </div>
