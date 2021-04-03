@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Change replies to vue components">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/LoadMore.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/utils/Paginator.vue" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add infiite scroll for replies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AddReplyModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/utils/AddReplyModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/RecentlyTweeted.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/RecentlyTweeted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/YouWereMentioned.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/YouWereMentioned.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,14 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="31683000" />
-    </task>
-    <task id="LOCAL-00017" summary="Add explore page">
-      <created>1617411636255</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1617411636255</updated>
+      <workItem from="1617413411109" duration="32248000" />
     </task>
     <task id="LOCAL-00018" summary="Add missing images">
       <created>1617411813549</created>
@@ -552,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617474457699</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Add infiite scroll for replies">
+      <created>1617475228922</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1617475228922</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +568,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change button colors" />
     <MESSAGE value="Store images publicly for accessibility" />
     <MESSAGE value="Add image view to tweet" />
     <MESSAGE value="Delete image when deliting a tweet" />
@@ -597,6 +592,7 @@
     <MESSAGE value="Fix loose ends" />
     <MESSAGE value="Tidy things up for pagination" />
     <MESSAGE value="Change replies to vue components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change replies to vue components" />
+    <MESSAGE value="Add infiite scroll for replies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add infiite scroll for replies" />
   </component>
 </project>

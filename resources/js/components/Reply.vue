@@ -1,5 +1,5 @@
 <template>
-    <div :class="last ? '' : 'border-b border-gray-400'" class="p-4">
+    <div :id="'reply-' + id" :class="last ? '' : 'border-b border-gray-400'" class="p-4">
         <div class="flex">
             <div class="mr-2 flex-shrink-0">
                 <a :href="'/profiles/' + reply.owner.username">
@@ -51,12 +51,6 @@
             </div>
         </div>
 
-        <!-- @if(isset($replies[$reply->id]))
-        <div class="ml-6 -mb-4">
-            @include('replies.list',['collection' => $replies[$reply->id]])
-        </div>
-    @endif-->
-
         <slot></slot>
 
         <add-reply-modal></add-reply-modal>
@@ -74,6 +68,12 @@ export default {
     props: ["reply", "tweet", "last"],
 
     name: "reply",
+
+    data() {
+        return {
+            id: this.reply.id
+        };
+    },
 
     components: {AddReplyModal},
 
