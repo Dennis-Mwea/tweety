@@ -1,9 +1,9 @@
 <template>
     <form @submit.prevent="toggle">
         <button :class="followed ? 'hover:bg-red-500' : 'hover:bg-blue-600'"
-                class="bg-blue-500 rounded-full shadow py-2 px-6 text-white text-sm font-bold focus:outline-none"
-                type="submit" @mouseleave="hover" @mouseover="hover">
-            {{ text }}
+                class="bg-blue-600 rounded-full shadow py-2 px-6 text-white text-sm font-bold focus:outline-none"
+                type="submit" @mouseleave="mouseleave" @mouseover="hover">
+            {{ unfollowText ? unfollowText : text }}
         </button>
     </form>
 </template>
@@ -27,7 +27,8 @@ export default {
 
     data() {
         return {
-            followed: this.following
+            followed: this.following,
+            unfollowText: null
         };
     },
 
@@ -49,7 +50,13 @@ export default {
         },
 
         hover() {
-            this.text = "Unfollow";
+            this.followed
+                ? (this.unfollowText = "Unfollow")
+                : (this.unfollowText = null)
+        },
+
+        mouseleave() {
+            this.unfollowText = null;
         }
     }
 }
