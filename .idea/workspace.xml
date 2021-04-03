@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix autorization bug">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetsLikesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Like.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_03_013907_create_likes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/like-buttons.blade.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add like/dislike functionality">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Flash.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tweet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Like.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +172,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -198,7 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="829000" />
+      <workItem from="1617413411109" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial scaffolding">
       <created>1617399390786</created>
@@ -333,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617412592716</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add like/dislike functionality">
+      <created>1617414276873</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1617414276873</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +383,7 @@
     <MESSAGE value="Add explore page" />
     <MESSAGE value="Add missing images" />
     <MESSAGE value="Fix autorization bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix autorization bug" />
+    <MESSAGE value="Add like/dislike functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add like/dislike functionality" />
   </component>
 </project>
