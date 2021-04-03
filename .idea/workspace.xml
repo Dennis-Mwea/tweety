@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add delete event to models">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add replies count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tweet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_timeline.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="33973000" />
-    </task>
-    <task id="LOCAL-00022" summary="Add flash component and wip on like/dislike">
-      <created>1617416122247</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1617416122247</updated>
+      <workItem from="1617413411109" duration="34393000" />
     </task>
     <task id="LOCAL-00023" summary="Update LikeButtons component">
       <created>1617416856375</created>
@@ -548,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617489976968</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Add replies count">
+      <created>1617490841555</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1617490841555</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +568,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add notification for follow" />
     <MESSAGE value="Notify user when they get mentioned" />
     <MESSAGE value="Mention users when creating tweets using @" />
     <MESSAGE value="Construct notification page and structure follow notification" />
@@ -593,6 +592,7 @@
     <MESSAGE value="Fix notification receivers for reply" />
     <MESSAGE value="Extract notification to vue component" />
     <MESSAGE value="Add delete event to models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add delete event to models" />
+    <MESSAGE value="Add replies count" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add replies count" />
   </component>
 </project>
