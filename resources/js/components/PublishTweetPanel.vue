@@ -80,12 +80,12 @@ export default {
     data() {
         return {
             body: "",
-            image: File,
+            image: null,
             imageSrc: "",
             limit: 200,
             avatar: this.user.avatar,
             clear: false,
-            errors: []
+            errors: {}
         }
     },
 
@@ -120,17 +120,29 @@ export default {
         },
 
         submit() {
-            let data = new FormData();
-            data.append("body", this.body);
-            data.append("image", this.image);
+            let _this = this;
+
+            let data = this.createFormData();
+
             axios
                 .post("/tweets", data)
                 .then(response => {
-                    console.log(response.data.message);
+                    location = response.data.message;
                 })
                 .catch(errors => {
-                    console.log(errors);
+                    _this.errors = errors.response.data.errors;
                 });
+        },
+
+        createFormData: function createFormData() {
+            let data = new FormData();
+            data.append("body", this.body);
+
+            if (this.image !== null) {
+                data.append("image", this.image);
+            }
+
+            return data;
         }
     }
 }
