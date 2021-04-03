@@ -8,7 +8,9 @@ import Vue from 'vue'
 import store from './store/store'
 import TurboLinksAdapter from 'vue-turbolinks'
 import VModal from "vue-js-modal";
+import TurboLinks from 'turbolinks'
 
+TurboLinks.start()
 window.Vue = Vue;
 Vue.use(TurboLinksAdapter)
 Vue.use(VModal)

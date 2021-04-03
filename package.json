@@ -28,6 +28,7 @@
         "webpack-cli": "^4.6.0"
     },
     "dependencies": {
+        "turbolinks": "^5.2.0",
         "vue-js-modal": "^2.0.0-rc.6",
         "vue-turbolinks": "^2.2.1",
         "vuex": "2.0.0"

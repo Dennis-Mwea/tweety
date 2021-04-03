@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Storage;
 
 class TweetController extends Controller
 {
+    protected $shouldFlash;
+
     public function index()
     {
         return view('tweets.home', [

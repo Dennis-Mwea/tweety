@@ -40,7 +40,8 @@
                     </button>
                 </template>
 
-                <button type="submit" class="px-2 py-2 w-full text-left class text-red-500 hover:underline"
+                <button type="submit"
+                        class="px-2 py-2 w-full text-left class text-red-500 rounded hover:bg-red-600 hover:text-white"
                         @click.prevent="$modal.show('confirm-delete',{'id':{{$tweet->id }}})">
                     Delete
                 </button>
