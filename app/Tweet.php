@@ -10,7 +10,7 @@ class Tweet extends Model
     use Likable;
 
     protected $fillable = [
-        'body', 'user_id'
+        'body', 'user_id', 'image'
     ];
 
     public function user()

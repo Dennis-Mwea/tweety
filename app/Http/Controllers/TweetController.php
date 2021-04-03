@@ -21,7 +21,7 @@ class TweetController extends Controller
         ]);
         $attributes['user_id'] = auth()->id();
         if (request('image'))
-            $attributes['image'] = request()->file('image')->store('tweet-images');
+            $attributes['image'] = request()->file('image')->storePublicly('tweet-images', 'public');
 
         request()->user()->tweets()->create($attributes);
 

@@ -35,10 +35,10 @@ class ProfilesController extends Controller
         ]);
 
         if (request('avatar'))
-            $attributes['avatar'] = request()->file('avatar')->store('avatars');
+            $attributes['avatar'] = request()->file('avatar')->storePublicly('avatars', 'public');
 
         if (request('banner'))
-            $attributes['banner'] = request()->file('banner')->store('banners');
+            $attributes['banner'] = request()->file('banner')->storePublicly('banners', 'public');
 
         $user->update($attributes);
 
