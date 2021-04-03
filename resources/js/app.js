@@ -22,6 +22,7 @@ window.flash = function (message, level = "success") {
 Vue.component('avatar-form', require('./components/AvatarForm').default)
 Vue.component('like-buttons', require('./components/LikeButtons').default)
 Vue.component('flash', require('./components/Flash').default)
+Vue.component('follow-button', require('./components/FollowButton').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
