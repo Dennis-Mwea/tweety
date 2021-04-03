@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 class ProfilesController extends Controller
 {
     public function show(User $user)
     {
-        return view('profiles.show',compact('user'));
+        return view('profiles.show', compact('user'));
     }
 
     public function edit(User $user)
@@ -25,12 +24,13 @@ class ProfilesController extends Controller
         $attributes = request()->validate([
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', Rule::unique('users')->ignore($user), 'alpha_dash'],
-            'avatar' => ['required', 'file'],
+            'avatar' => ['file'],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user)],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        $attributes['avatar'] = request('avatar')->store('avatars');
+        if (request('avatar'))
+            $attributes['avatar'] = request('avatar')->store('avatars');
 
         $user->update($attributes);
 

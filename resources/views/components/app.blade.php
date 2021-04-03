@@ -4,7 +4,7 @@
             <div class="lg:flex lg:justify-between">
 
                 @if(auth()->check())
-                    <div class="lg:w-32">
+                    <div class="lg:w-32 lg:-ml-8">
                         @include('tweets/_sidebar-links')
 
                     </div>

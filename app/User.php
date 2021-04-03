@@ -3,7 +3,6 @@
 namespace App;
 
 use App\Traits\Followable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
@@ -19,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username','avatar', 'email', 'password',
+        'name', 'username', 'avatar', 'email', 'password',
     ];
 
     /**
@@ -51,7 +50,7 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset($value);;
+        return asset($value ?: '/images/default-avatar.png');
     }
 
     public function timeline()
