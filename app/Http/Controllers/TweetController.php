@@ -14,13 +14,17 @@ class TweetController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            'body' => 'required'
+            'body' => 'required',
+            'image' => 'required|image',
         ]);
+        $attributes['user_id'] = auth()->id();
+        if (request('image'))
+            $attributes['image'] = request()->file('image')->store('tweet-images');
 
         request()->user()->tweets()->create($attributes);
 
         if (request()->wantsJson()) {
-            return ['message' => '/tweets'];
+            return ['message' => $attributes];
         }
 
         return redirect()->route('home')->with('flash', 'Your tweet has been published!');
