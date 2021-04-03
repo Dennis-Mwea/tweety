@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tweak notification page">
-      <change afterPath="$PROJECT_DIR$/resources/views/notifications/_youwerefollowed.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/notifications/_youwerementioned.blade.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Refactor pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_youwerementioned.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_youwerementioned.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,14 +201,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="20124000" />
-    </task>
-    <task id="LOCAL-00001" summary="Add initial scaffolding">
-      <created>1617399390786</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1617399390786</updated>
+      <workItem from="1617413411109" duration="20679000" />
     </task>
     <task id="LOCAL-00002" summary="Add authentication">
       <created>1617400163558</created>
@@ -546,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617463202708</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Refactor pages">
+      <created>1617463381319</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1617463381320</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +566,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update register form UI" />
     <MESSAGE value="Fix lose ends" />
     <MESSAGE value="Style follow button" />
     <MESSAGE value="Add FriendList component and vuex store" />
@@ -591,6 +590,7 @@
     <MESSAGE value="Mention users when creating tweets using @" />
     <MESSAGE value="Construct notification page and structure follow notification" />
     <MESSAGE value="Tweak notification page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweak notification page" />
+    <MESSAGE value="Refactor pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor pages" />
   </component>
 </project>
