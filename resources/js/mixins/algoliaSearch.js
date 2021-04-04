@@ -1,13 +1,14 @@
 import algoliasearch from "algoliasearch/lite";
 import AppInfiniteHits from "@/components/InfiniteHits";
-import {AisConfigure, AisInstantSearch, AisSearchBox} from "vue-instantsearch";
+import {AisConfigure, AisInstantSearch, AisPoweredBy, AisSearchBox} from "vue-instantsearch";
 
 export default {
     components: {
         AppInfiniteHits,
         AisInstantSearch,
         AisSearchBox,
-        AisConfigure
+        AisConfigure,
+        AisPoweredBy
     },
 
     filters: {

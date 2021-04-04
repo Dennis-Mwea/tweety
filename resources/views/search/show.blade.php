@@ -3,7 +3,7 @@
         <ais-configure query="{{ request('q') }}"/>
 
         <ais-configure query="{{ request('q') }}"/>
-        <div class="mb-6 -mt-26">
+        <div class="mb-3 -mt-26">
 
             <ais-search-box show-loading-indicator>
                 <div slot-scope="{ currentRefinement, isSearchStalled, refine }" class="text-center p-4 relative">
@@ -25,6 +25,8 @@
                 </div>
             </ais-search-box>
         </div>
+
+        <ais-powered-by class="mb-3 flex justify-end mr-5"></ais-powered-by>
 
         @include('search._tabs')
 
