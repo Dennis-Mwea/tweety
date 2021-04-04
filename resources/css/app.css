@@ -84,3 +84,12 @@ body::-webkit-scrollbar-thumb {
     left: 18%;
     position: sticky;
 }
+
+.page-item {
+    @apply px-4 py-2 flex items-center justify-center rounded-full;
+}
+
+.page-item:hover {
+    @apply text-blue-600 bg-blue-200;
+}
+

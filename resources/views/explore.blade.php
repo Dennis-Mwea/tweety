@@ -14,9 +14,8 @@
                         {{ '@'.$user->username }}</h4>
                 </div>
             </a>
-
         @endforeach
 
-        {{ $user->links }}
+        {{ $users->links() }}
     </div>
 </x-app>
