@@ -38,6 +38,7 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        $this->comment($this->tweety());
         $this->welcome();
 
         $this->createEnvFile();
@@ -63,6 +64,18 @@ class InstallCommand extends Command
         $this->goodbye();
 
         return 0;
+    }
+
+    public function tweety()
+    {
+        return '
+        ████████╗██╗    ██╗███████╗███████╗████████╗██╗   ██╗
+        ╚══██╔══╝██║    ██║██╔════╝██╔════╝╚══██╔══╝╚██╗ ██╔╝
+           ██║   ██║ █╗ ██║█████╗  █████╗     ██║    ╚████╔╝
+           ██║   ██║███╗██║██╔══╝  ██╔══╝     ██║     ╚██╔╝
+           ██║   ╚███╔███╔╝███████╗███████╗   ██║      ██║
+           ╚═╝    ╚══╝╚══╝ ╚══════╝╚══════╝   ╚═╝      ╚═╝
+        ';
     }
 
     private function welcome()
