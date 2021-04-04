@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 function current_user()
 {
-    return request()->user();
+    return auth()->user();
 }
 
 function get_notification_view($notificationType)
