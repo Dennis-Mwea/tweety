@@ -26,7 +26,7 @@
 <body>
 <div id="app">
     <section class="px-8 py-8 mb-6">
-        <header class="container mx-auto">
+        <header class="container mx-auto flex justify-between">
             <svg xmlns="http://www.w3.org/2000/svg" width="130" height="34" viewBox="0 0 130 34">
                 <g fill="none" fill-rule="evenodd">
                     <path fill="#47D5FE"
@@ -37,6 +37,10 @@
                     </text>
                 </g>
             </svg>
+
+            @if(isset($search))
+                {{ $search }}
+            @endif
         </header>
     </section>
 

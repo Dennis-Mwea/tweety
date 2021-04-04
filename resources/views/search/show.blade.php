@@ -1,5 +1,5 @@
 <x-app>
-    <ais-instant-search :search-client="searchClient" index-name="indexName">
+    <ais-instant-search :search-client="searchClient" index-name="tweets">
         <ais-configure query="{{ request('q') }}"/>
 
         <ais-configure query="{{ request('q') }}"/>
