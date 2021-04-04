@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Reply;
 use App\Tweet;
 use App\User;
 use Illuminate\Bus\Queueable;
@@ -15,7 +16,7 @@ class TweetWasLiked extends Notification
     /**
      * @var Tweet
      */
-    protected $tweet;
+    protected $subject;
 
     /**
      * @var User
@@ -28,9 +29,9 @@ class TweetWasLiked extends Notification
      * @param $tweet
      * @param User $user
      */
-    public function __construct($tweet, User $user)
+    public function __construct($subject, User $user)
     {
-        $this->tweet = $tweet;
+        $this->subject = $subject;
         $this->user = $user;
     }
 
@@ -70,14 +71,14 @@ class TweetWasLiked extends Notification
         return [
             'message' => $this->message(),
             'notifier' => $this->user(),
-            'link' => $this->tweet->path(),
-            'description' => $this->tweet->body,
+            'link' => $this->subject->path(),
+            'description' => $this->subject->body,
         ];
     }
 
     public function message()
     {
-        return sprintf('%s liked your tweet', $this->user()->username);
+        return sprintf('%s liked your %s', $this->user()->username, $this->subject instanceof Reply ? 'reply.' : 'tweet.');
     }
 
     /**

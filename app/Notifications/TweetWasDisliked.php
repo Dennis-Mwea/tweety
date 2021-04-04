@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Reply;
 use App\Tweet;
 use App\User;
 use Illuminate\Bus\Queueable;
@@ -15,7 +16,7 @@ class TweetWasDisliked extends Notification
     /**
      * @var Tweet
      */
-    protected $tweet;
+    protected $subject;
 
     /**
      * @var User
@@ -28,9 +29,9 @@ class TweetWasDisliked extends Notification
      * @param Tweet $tweet
      * @param User $user
      */
-    public function __construct(Tweet $tweet, User $user)
+    public function __construct($subject, User $user)
     {
-        $this->tweet = $tweet;
+        $this->subject = $subject;
         $this->user = $user;
     }
 
@@ -70,14 +71,14 @@ class TweetWasDisliked extends Notification
         return [
             'message' => $this->message(),
             'notifier' => $this->user(),
-            'link' => $this->tweet->path(),
-            'description' => $this->tweet->body,
+            'link' => $this->subject->path(),
+            'description' => $this->subject->body,
         ];
     }
 
     public function message()
     {
-        return sprintf('%s disliked your tweet', $this->user()->username);
+        return sprintf('%s disliked your %s', $this->user()->username, $this->subject instanceof Reply ? 'reply.' : 'tweet.');
     }
 
     /**

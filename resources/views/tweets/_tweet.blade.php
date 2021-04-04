@@ -27,7 +27,7 @@
     @endif
 
     <div class="flex items-center text-center -ml-2">
-        <like-buttons :tweet="{{ $tweet }}" class="mr-2"></like-buttons>
+        <like-buttons :subject="{{ $tweet }}" name="tweets" class="mr-2"></like-buttons>
 
         <reply-button :count="{{ $tweet->replies_count }}"></reply-button>
     </div>

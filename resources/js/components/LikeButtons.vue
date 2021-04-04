@@ -49,7 +49,7 @@ export default {
     name: "LikeButtons",
 
     props: {
-        tweet: {
+        subject: {
             type: Object,
             required: true
         }
@@ -57,11 +57,11 @@ export default {
 
     data() {
         return {
-            isLiked: this.tweet.is_liked,
-            isDisliked: this.tweet.is_disliked,
-            endpoint: `/tweets/${this.tweet.id}/like`,
-            likeCount: this.tweet.likes_count || 0,
-            dislikeCount: this.tweet.dislikes_count || 0
+            isLiked: this.subject.is_liked,
+            isDisliked: this.subject.is_disliked,
+            endpoint: `/tweets/${this.subject.id}/like`,
+            likeCount: this.subject.likes_count || 0,
+            dislikeCount: this.subject.dislikes_count || 0
         };
     },
 

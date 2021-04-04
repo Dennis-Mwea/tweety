@@ -20,6 +20,8 @@
 
                     <a class="text-sm mb-4" v-html="reply.body"></a>
                     <div class="flex items-center pt-2 -ml-2">
+                        <like-buttons :subject="reply" class="mr-2" name="replies"></like-buttons>
+
                         <button
                             class="focus:outline-none text-center hover:text-green-500 hover:bg-green-200 p-2 rounded-lg text-gray-600 flex items-center"
                             @click.prevent="showModal"

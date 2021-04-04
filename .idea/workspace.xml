@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Change like to morph">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix likes bugs">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplyLikesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/TweetWasDisliked.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/TweetWasDisliked.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/TweetWasLiked.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/TweetWasLiked.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ReplyFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ReplyFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_TweetWasDisliked.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_TweetWasDisliked.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_TweetWasLiked.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_TweetWasLiked.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,14 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="45395000" />
-    </task>
-    <task id="LOCAL-00042" summary="Add image view to tweet">
-      <created>1617458594885</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1617458594885</updated>
+      <workItem from="1617413411109" duration="46299000" />
     </task>
     <task id="LOCAL-00043" summary="Delete image when deliting a tweet">
       <created>1617458814567</created>
@@ -548,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617502099257</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Fix likes bugs">
+      <created>1617502522437</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1617502522437</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add notifications for reply" />
     <MESSAGE value="Fix loose ends" />
     <MESSAGE value="Tidy things up for pagination" />
     <MESSAGE value="Change replies to vue components" />
@@ -593,7 +603,8 @@
     <MESSAGE value="Fix notification bug" />
     <MESSAGE value="Add descriptions to notifications and fix some stylings" />
     <MESSAGE value="Change like to morph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change like to morph" />
+    <MESSAGE value="Fix likes bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix likes bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

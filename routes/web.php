@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/tweets/{tweet}/replies', 'RepliesController@index')->name('replies');
     Route::delete('/replies/{reply}', 'RepliesController@destroy')->name('delete-reply');
     Route::get('/api/replies/{reply}/children', 'Api\RepliesController@show');
+    Route::post('/replies/{reply}/like', 'ReplyLikesController@store')->name('like-reply');
+    Route::delete('/replies/{reply}/like', 'ReplyLikesController@destroy')->name('dislike-reply');
 
     Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
     Route::get('/profiles/{user}/edit', 'ProfilesController@edit')->name('profile.edit');

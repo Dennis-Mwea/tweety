@@ -1,10 +1,9 @@
 <template>
     <div class="overflow-hidden relative mb-">
         <slot>
-            <button class="shadow bg-blue-500 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
-                    type="button"
-            >
-                Choose File
+            <button
+                class="shadow bg-blue-500 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
+                type="button">Choose File
             </button>
         </slot>
         <input v-if="!clearInput" ref="input" :name="name" accept="image/*"

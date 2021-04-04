@@ -3,14 +3,17 @@
 namespace App;
 
 use App\Http\Resources\ReplyCollection;
+use App\Traits\Likable;
 use Illuminate\Database\Eloquent\Model;
 use Stevebauman\Purify\Facades\Purify;
 
 class Reply extends Model
 {
+    use Likable;
+
     protected $guarded = [];
 
-    protected $appends = ['path', 'children_count'];
+    protected $appends = ['path', 'children_count', 'is_liked', 'is_disliked', 'likes_count', 'dislikes_count'];
 
     protected $with = ['owner'];
 
