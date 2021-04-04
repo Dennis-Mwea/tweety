@@ -18,12 +18,8 @@ trait Likable
 
     public function getLikesCountAttribute()
     {
-        return $this->likes()->where('liked', true)->count();
-    }
-
-    public function likes()
-    {
-        return $this->morphMany(Like::class, 'liked');
+        return 1;
+        return $this->likes->where('liked', true)->count();
     }
 
     public function dislike(User $user = null)
@@ -46,6 +42,11 @@ trait Likable
     public function removeLike($user = null)
     {
         return $this->likes()->delete($user, null);
+    }
+
+    public function likes()
+    {
+        return $this->morphMany(Like::class, 'liked');
     }
 
     public function like(User $user = null, $liked = true)

@@ -57,11 +57,11 @@ export default {
 
     data() {
         return {
-            isLiked: this.tweet.is_liked_by,
-            isDisliked: this.tweet.is_disliked_by,
+            isLiked: this.tweet.is_liked,
+            isDisliked: this.tweet.is_disliked,
             endpoint: `/tweets/${this.tweet.id}/like`,
-            likeCount: this.tweet.likes || 0,
-            dislikeCount: this.tweet.dislikes || 0
+            likeCount: this.tweet.likes_count || 0,
+            dislikeCount: this.tweet.dislikes_count || 0
         };
     },
 
