@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="toggle">
-        <button :class="followed ? 'hover:bg-red-500' : 'hover:bg-blue-600'"
-                class="bg-blue-600 rounded-full shadow py-2 px-6 text-white text-sm font-bold focus:outline-none"
+        <button :class="followed ? 'bg-blue-500 hover:bg-red-600 text-white' : 'border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'"
+                class="rounded-full shadow py-2 px-6 text-sm font-bold focus:outline-none"
                 type="submit" @mouseleave="mouseleave" @mouseover="hover">
             {{ unfollowText ? unfollowText : text }}
         </button>
