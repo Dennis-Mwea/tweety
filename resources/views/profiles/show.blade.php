@@ -22,10 +22,7 @@
                         Profile</a>
                 @endcan
 
-                @if(current_user()->isNot($user))
-                    <follow-button :user="{{ $user }}"
-                                   :following="{{ current_user()->following($user) ? 1 : 0}} "></follow-button>
-                @endif
+                <x-follow-button :user="$user"></x-follow-button>
 
                 <div class="flex justify right">
                     <a class="mr-3 hover:underline hover:text-blue-500 cursor-pointer"

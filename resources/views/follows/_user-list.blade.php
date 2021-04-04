@@ -14,8 +14,7 @@
                 </div>
             </a>
 
-            <follow-button :user="{{ $user }}"
-                           :following="{{ current_user()->following($user) ? 1 : 0}} "></follow-button>
+            <x-follow-button :user="$user"></x-follow-button>
         </div>
     </div>
 @endforeach
