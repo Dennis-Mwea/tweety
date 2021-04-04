@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix minor bug">
-      <change beforePath="$PROJECT_DIR$/config/purify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/purify.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update purify config">
+      <change afterPath="$PROJECT_DIR$/resources/js/mixins/replyButtonVisibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/_logout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/replies/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/replies/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +32,8 @@
       <list>
         <option value="SCSS File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -181,6 +192,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/mixins" />
       <recent name="$PROJECT_DIR$/resources/js/utils" />
       <recent name="$PROJECT_DIR$/storage/app/public" />
     </key>
@@ -200,14 +212,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="42614000" />
-    </task>
-    <task id="LOCAL-00037" summary="Add image to publish tweet panel">
-      <created>1617424984344</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1617424984344</updated>
+      <workItem from="1617413411109" duration="43320000" />
     </task>
     <task id="LOCAL-00038" summary="Tweak percentage indicator">
       <created>1617425235770</created>
@@ -545,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617499553620</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="Update purify config">
+      <created>1617499600732</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1617499600732</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix follow button text" />
     <MESSAGE value="Add structure for adding replies" />
     <MESSAGE value="Add add-reply modal" />
     <MESSAGE value="Tweak reply modal" />
@@ -590,7 +601,8 @@
     <MESSAGE value="Update logout button" />
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Fix minor bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix minor bug" />
+    <MESSAGE value="Update purify config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update purify config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -78,3 +78,9 @@ body::-webkit-scrollbar-thumb {
     linear-gradient(90deg, #6cb2eb, #6cb2eb);
     background-size: 2px 8px;
 }
+
+.is-floating {
+    bottom: 1%;
+    left: 18%;
+    position: sticky;
+}

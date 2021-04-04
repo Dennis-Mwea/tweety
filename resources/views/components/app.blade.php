@@ -32,5 +32,9 @@
         </main>
     </section>
 
+    @if (isset($extra))
+        {{ $extra }}
+    @endif
+
     <flash message="{{ session('flash') }}"></flash>
 </x-master>

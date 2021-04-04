@@ -13,6 +13,21 @@
         </div>
 
         <span v-else v-show="!loading" class="px-2 py-8">No comments yet!</span>
+
+        <portal to="add-reply">
+            <transition mode="in-out" name="slide-fade">
+                <button v-show="isVisible"
+                        id="add-reply-button" class="bg-blue-500 rounded-full p-2 z-10 is-floating focus:shadow-outline"
+                        @click.prevent="showModal">
+                    <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 11a1 1 0 0 1 0 2h-4v4a1 1 0 0 1-2 0v-4H7a1 1 0 0 1 0-2h4V7a1 1 0 0 1 2 0v4h4z"
+                              fill="currentColor"/>
+                    </svg>
+                </button>
+            </transition>
+        </portal>
+
+        <add-reply-modal id="#" @created="add"></add-reply-modal>
     </div>
 </template>
 
@@ -22,6 +37,7 @@ import collection from '@/mixins/collection'
 import pagination from '@/mixins/collection'
 import LoadMore from "@/components/LoadMore";
 import {mapState} from "vuex";
+import replyButtonVisibility from "../mixins/replyButtonVisibility";
 
 export default {
     name: "Replies",
@@ -32,7 +48,7 @@ export default {
         replies: Array,
     },
 
-    mixins: [collection, pagination],
+    mixins: [collection, pagination, replyButtonVisibility],
 
     data() {
         return {
@@ -84,10 +100,33 @@ export default {
             this.dataSet = data;
             data.data.map(item => this.items.push(item))
         },
+
+        showModal() {
+            this.$modal.show("add-reply-#", {
+                tweetID: `${this.tweet.id}`,
+                parentID: null,
+                owner: this.tweet.user,
+                parentBody: `${this.tweet.body}`,
+                isRoot: true
+            });
+        },
     }
 }
 </script>
 
 <style scoped>
+.slide-fade-enter {
+    transform: translateX(10px);
+    opacity: 0;
+}
 
+.slide-fade-leave-to {
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+    transition: all 0.2s ease;
+}
 </style>

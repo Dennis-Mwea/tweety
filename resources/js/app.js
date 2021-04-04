@@ -9,11 +9,13 @@ import store from './store/store'
 import TurboLinksAdapter from 'vue-turbolinks'
 import VModal from "vue-js-modal";
 import TurboLinks from 'turbolinks'
+import PortalVue from 'portal-vue'
 
 TurboLinks.start()
 window.Vue = Vue;
 Vue.use(TurboLinksAdapter)
 Vue.use(VModal)
+Vue.use(PortalVue)
 window.events = new Vue();
 window.flash = function (message, level = "success") {
     window.events.$emit('flash', {message, level})
