@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 /*@import "./dropdown";*/
 @import "./components/tribute.css";
+@import "./sections/search.css";
 
 body {
     width: 100vw;

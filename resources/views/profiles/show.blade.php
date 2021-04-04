@@ -44,5 +44,7 @@
         <p class="text-sm">{{ $user->description }}</p>
     </header>
 
-    @include('_timeline',['tweets' => $user->tweets])
+    <div class="border border-gray-300 rounded-lg mb-6">
+        @include('_timeline',['tweets' => $user->tweets])
+    </div>
 </x-app>

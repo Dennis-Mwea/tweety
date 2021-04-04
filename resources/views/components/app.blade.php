@@ -30,9 +30,8 @@
         <main class="container mx-auto">
             <div class="lg:flex lg:justify-between">
                 @auth
-                    <div class="lg:w-64 lg:h-screen lg:fixed lg:left-0 lg:ml-56">
+                    <div class="lg:w-64 lg:h-screen lg:fixed lg:left-0 lg:ml-48">
                         @include('tweets/_sidebar-links')
-
                     </div>
                 @endauth
 
