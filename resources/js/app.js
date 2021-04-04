@@ -52,6 +52,8 @@ Vue.component('replies', require('./components/Replies').default)
 Vue.component('notification-link', require('./components/NotificationLink').default)
 Vue.component('reply-button', require('./components/ReplyButton').default)
 Vue.component('delete-reply-modal', require('./utils/DeleteReplyModal').default)
+Vue.component('tabs', require('./components/Tabs').default)
+Vue.component('tab', require('./components/Tab').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 

@@ -44,5 +44,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/api/friends', 'FriendsController@index');
     Route::get('/api/search-friends', 'Api\FriendsController@index');
 
+    Route::get('/profiles/{user}/followers', 'FollowsController@show')->name('show-followers');
+    Route::get('/profiles/{user}/following', 'FollowsController@show')->name('show-following');
+
     Route::get('/notifications', 'NotificationsController@index')->name('notifications');
 });
