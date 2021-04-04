@@ -38,7 +38,7 @@ export default new Vuex.Store({
         },
 
         SET_REPLIES_COUNT(state, replies) {
-            state.allReplies = replies;
+            state.repliesCount = replies;
         },
 
         INCREASE_REPLIES_COUNT(state) {
