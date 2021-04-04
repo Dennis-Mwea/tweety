@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <button v-show="shouldDisplyBtn" class="text-blue-500 text-xs hover:text-blue-600"
+            <button v-show="shouldDisplayBtn" class="text-blue-500 text-xs hover:text-blue-600"
                     @click="loadMore">View Replies
             </button>
             <add-reply-modal :id="reply.id" :key="reply.id" @created="add"></add-reply-modal>
