@@ -13,7 +13,7 @@ class FriendsController extends Controller
      */
     public function index()
     {
-        return cache()->remember('friends', 43200, function () {
+        return cache()->rememberForever('friends.' . auth()->id(), function () {
             return current_user()->follows->take(10);
         });
     }
