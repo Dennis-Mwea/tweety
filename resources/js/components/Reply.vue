@@ -146,13 +146,13 @@ export default {
 
     methods: {
         showModal() {
-            this.$modal.show('add-reply', {
+            this.$modal.show(`add-reply-${this.reply.id}`, {
                 tweetID: `${this.tweet.id}`,
                 parentID: this.parentID,
                 owner: this.reply.owner,
                 parentBody: `${this.reply.body}`,
-                isRoot: this.isRoot,
-            })
+                isRoot: this.isRoot
+            });
         },
 
         loadChildren({data}) {

@@ -151,7 +151,8 @@ export default {
                     this.$emit("created", data);
                 })
                 .catch(errors => {
-                    this.errors = errors.response.data.errors;
+                    if (errors.response)
+                        this.errors = errors.response.data.errors;
                 });
         },
 
