@@ -27,7 +27,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/tweets/{tweet}', 'TweetController@show')->name('tweets.show');
 
     Route::post('/tweets/{tweet}/reply', 'RepliesController@store')->name('tweets.replies.store');
-    Route::get('tweets/{tweet}/replies', 'RepliesController@index')->name('replies');
+    Route::get('/tweets/{tweet}/replies', 'RepliesController@index')->name('replies');
+    Route::delete('/replies/{reply}', 'RepliesController@destroy')->name('delete-reply');
     Route::get('/api/replies/{reply}/children', 'Api\RepliesController@show');
 
     Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');

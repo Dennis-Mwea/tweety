@@ -1,5 +1,5 @@
 <template>
-    <modal classes="p-8 bg-gray-100 shadow-lg rounded-lg w-64" height="auto" name="confirm-delete" width="25%"
+    <modal classes="p-8 bg-gray-100 shadow-lg rounded-lg w-64" height="auto" name="delete-tweet" width="25%"
            @before-open="beforeOpen">
         <h1 class="font-normal mb-6 text-center text-2xl font-bold">
             Delete Tweet?

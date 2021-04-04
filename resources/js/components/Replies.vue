@@ -1,13 +1,18 @@
 <template>
     <div>
-        <div v-if="items.length > 0">
+        <span :class="loading ? 'loader' : ''" class="flex items-center justify-center"></span>
+
+        <div v-if="items.length > 0" class="border border-gray-300 rounded-lg">
             <div v-for="(reply, index) in items" :key="reply.id" ref="replies">
-                <reply :ref="`reply-${reply.id}`" :childrenCount="items[index].children_count" :last="index === last"
-                       :reply="reply" :tweet="tweet"></reply>
+                <reply :ref="`reply-${reply.id}`" :childrenCount="items[index].children_count" :index="index"
+                       :last="index === last" :reply="reply" :tweet="tweet"
+                       @removed="remove(index, null, reply.children_count + 1)"></reply>
             </div>
 
             <load-more v-if="shouldPaginate" :container="container" @ready="loadMore"></load-more>
         </div>
+
+        <span v-else v-show="!loading" class="px-2 py-8">No comments yet!</span>
     </div>
 </template>
 
@@ -33,6 +38,7 @@ export default {
         return {
             container: this.$refs["replies"],
             childrenReplies: [],
+            loading: false
         };
     },
 
@@ -59,7 +65,11 @@ export default {
 
     methods: {
         fetch(page) {
-            axios.get(this.url(page)).then(this.refresh);
+            this.loading = true;
+            axios.get(this.url(page)).then(response => {
+                this.refresh(response);
+                this.loading = false;
+            });
         },
 
         url(page) {

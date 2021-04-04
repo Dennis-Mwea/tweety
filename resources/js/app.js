@@ -18,6 +18,16 @@ window.events = new Vue();
 window.flash = function (message, level = "success") {
     window.events.$emit('flash', {message, level})
 }
+let authorizations = require('./utils/authorizations')
+Vue.prototype.authorize = function (...params) {
+    if (!window.App.signedIn) return false
+
+    if (typeof params[0] === 'string')
+        return authorizations[params[0]](params[1])
+
+    return params[0](window.App.user)
+}
+Vue.prototype.signedIn = window.App.signedIn
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,12 +44,13 @@ Vue.component('friends-list', require('./components/FriendsList').default)
 Vue.component('banner-form', require('./components/BannerForm').default)
 Vue.component('publish-tweet-panel', require('./components/PublishTweetPanel').default)
 Vue.component('dropdown', require('./components/Dropdown').default)
-Vue.component('confirm-delete-modal', require('./utils/ConfirmDeleteModal').default)
+Vue.component('delete-tweet-modal', require('./utils/DeleteTweetModal').default)
 Vue.component('add-reply-modal', require('./utils/AddReplyModal').default)
 Vue.component('replies', require('./components/Replies').default)
 Vue.component('notification-link', require('./components/NotificationLink').default)
 Vue.component('reply-button', require('./components/ReplyButton').default)
 Vue.component('reply-form', require('./components/ReplyForm').default)
+Vue.component('delete-reply-modal', require('./utils/DeleteReplyModal').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 

@@ -43,6 +43,10 @@ export default new Vuex.Store({
 
         INCREASE_REPLIES_COUNT(state) {
             state.repliesCount += 1;
+        },
+
+        DECREASE_REPLIES_COUNT(state, count) {
+            state.repliesCount -= count;
         }
     },
 
@@ -71,6 +75,10 @@ export default new Vuex.Store({
 
         addReply({commit}) {
             commit("INCREASE_REPLIES_COUNT");
+        },
+
+        removeReply({commit}, count) {
+            commit("DECREASE_REPLIES_COUNT", count);
         }
     },
 })

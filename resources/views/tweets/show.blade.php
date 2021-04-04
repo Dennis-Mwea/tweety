@@ -7,7 +7,7 @@
 
     <h3 class="text-lg font-bold mb-6"> Comments</h3>
 
-    <div class="border border-gray-300 rounded-lg">
+    <div>
         @include('replies.list')
     </div>
 

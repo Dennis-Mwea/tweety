@@ -14,6 +14,15 @@ class Reply extends Model
 
     protected $with = ['owner'];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($reply) {
+            $reply->children->each->delete();
+        });
+    }
+
     public function owner()
     {
         return $this->belongsTo(User::class, 'user_id');
