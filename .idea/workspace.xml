@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add like function to reply and update notification">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update add reply placeholder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ReplyForm.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="46758000" />
-    </task>
-    <task id="LOCAL-00044" summary="Tidy things up">
-      <created>1617459129110</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1617459129110</updated>
+      <workItem from="1617413411109" duration="46930000" />
     </task>
     <task id="LOCAL-00045" summary="Add notification for follow">
       <created>1617459614830</created>
@@ -550,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617503477369</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Update add reply placeholder">
+      <created>1617503897935</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1617503897935</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tidy things up for pagination" />
     <MESSAGE value="Change replies to vue components" />
     <MESSAGE value="Add infiite scroll for replies" />
     <MESSAGE value="Add path to reply" />
@@ -595,7 +591,8 @@
     <MESSAGE value="Change like to morph" />
     <MESSAGE value="Fix likes bugs" />
     <MESSAGE value="Add like function to reply and update notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add like function to reply and update notification" />
+    <MESSAGE value="Update add reply placeholder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update add reply placeholder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

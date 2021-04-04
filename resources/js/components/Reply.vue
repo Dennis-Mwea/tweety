@@ -70,7 +70,7 @@
             </div>
 
             <button v-show="shouldDisplayBtn" class="text-blue-500 text-xs hover:text-blue-600"
-                    @click="loadMore">View Replies
+                    @click="loadMore">View {{ repliesLeft }} More {{ repliesLeft > 1 ? 'Replies' : 'Reply' }}
             </button>
             <add-reply-modal :id="reply.id" :key="reply.id" @created="add"></add-reply-modal>
         </div>
@@ -130,7 +130,11 @@ export default {
             return {
                 replyID: this.reply.id
             };
-        }
+        },
+
+        repliesLeft() {
+            return this.reply.children_count - this.items.length;
+        },
     },
 
     created() {
