@@ -1,14 +1,14 @@
 <template>
     <modal
+        :name="`add-reply-${id}`"
         classes="p-4 bg-white shadow-lg rounded-lg w-64"
         height="auto"
-        name="add-reply"
         @before-open="beforeOpen"
     >
         <div class="flex justify-end">
             <button
                 class="focus:outline-none bg-transparent p-1 hover:bg-blue-300 text-center rounded-full"
-                @click.prevent="$modal.hide('add-reply')"
+                @click.prevent="$modal.hide(`add-reply-${id}`)"
             >
                 <svg class="h-5 w-5 text-blue-500 hover:text-blue-600" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -83,6 +83,8 @@ import Tribute from "tributejs";
 export default {
     components: {VueTribute},
 
+    props: ["id"],
+
     data() {
         return {
             body: "",
@@ -144,7 +146,7 @@ export default {
                 .post(`/tweets/${this.tweetID}/reply`, this.createFormData())
                 .then(({data}) => {
                     this.body = "";
-                    this.$modal.hide("add-reply");
+                    this.$modal.hide(`add-reply-${id}`);
                     flash("Your reply has been posted");
                     this.$emit("created", data);
                 })
