@@ -70,7 +70,8 @@ class TweetWasLiked extends Notification
         return [
             'message' => $this->message(),
             'notifier' => $this->user(),
-            'link' => $this->tweet->path()
+            'link' => $this->tweet->path(),
+            'description' => $this->tweet->body,
         ];
     }
 
