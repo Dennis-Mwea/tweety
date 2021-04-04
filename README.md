@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Dennis-Mwea/tweety.svg?branch=master)](https://travis-ci.org/Dennis-Mwea/tweety)
+[![Build Status](https://travis-ci.com/github/Dennis-Mwea/tweety)](https://travis-ci.com/github/Dennis-Mwea/tweety)
 
 # Tweety
 
