@@ -24,7 +24,7 @@
         </div>
 
         <div class="w-full">
-            <ais-hits>
+            <app-infinite-hits>
                 <template slot="item" slot-scope="{ item }">
                     <div class="flex p-4 hover:bg-gray-200 rounded-lg">
                         <div class="mr-2 flex-shrink-0">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </template>
-            </ais-hits>
+            </app-infinite-hits>
         </div>
     </ais-instant-search>
 </x-app>
