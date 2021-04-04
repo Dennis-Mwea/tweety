@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add unit test for tweet">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ReplyTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add unit tests for user and reply">
+      <change afterPath="$PROJECT_DIR$/tests/Feature/TweetsTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ReplyFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ReplyFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/TweetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TweetTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,14 +218,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="8586000" />
-    </task>
-    <task id="LOCAL-00074" summary="wip and fix things">
-      <created>1617494707686</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1617494707686</updated>
+      <workItem from="1617508106808" duration="10999000" />
     </task>
     <task id="LOCAL-00075" summary="Fix bugs">
       <created>1617494998904</created>
@@ -564,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617516411535</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Add unit tests for user and reply">
+      <created>1617517186089</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1617517186089</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +583,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add view to display relevant replies" />
     <MESSAGE value="Add pagination to explore page and fix pagination styling" />
     <MESSAGE value="Style explore page" />
     <MESSAGE value="Update follow button design" />
@@ -609,7 +607,8 @@
     <MESSAGE value="Add simple data seeder" />
     <MESSAGE value="Disable algolia when performing tests" />
     <MESSAGE value="Add unit test for tweet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add unit test for tweet" />
+    <MESSAGE value="Add unit tests for user and reply" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unit tests for user and reply" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

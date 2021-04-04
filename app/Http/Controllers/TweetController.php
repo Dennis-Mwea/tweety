@@ -47,7 +47,7 @@ class TweetController extends Controller
             return ['message' => '/tweets'];
         }
 
-        return redirect('home');
+        return redirect()->route('home');
     }
 
     public function show(Tweet $tweet)

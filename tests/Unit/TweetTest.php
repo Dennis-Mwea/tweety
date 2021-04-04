@@ -50,18 +50,21 @@ class TweetTest extends TestCase
 
         $creator = create(User::class);
         $follower = create(User::class);
+        $secondFollower = create(User::class);
         $this->signIn($follower);
 
         $follower->follow($creator);
+        $this->signIn($secondFollower);
+        $secondFollower->follow($creator);
 
         create(Tweet::class, [
             'user_id' => $creator->id
         ]);
 
-        Notification::assertSentTo($follower, RecentlyTweeted::class);
+        Notification::assertSentTo([$follower, $secondFollower], RecentlyTweeted::class);
     }
 
-    function testATweetWrapsMentionedUsernamesInTheBodyWithinAnchorTagsWithCorrectStylings()
+    public function testATweetWrapsMentionedUsernamesInTheBodyWithinAnchorTagsWithCorrectStylings()
     {
         $tweet = new Tweet([
             'body' => 'Hello @Jane-Doe'
