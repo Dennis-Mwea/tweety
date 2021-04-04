@@ -13,7 +13,6 @@ export default {
                 let parent = this.items.findIndex(data => data.id == parent_id);
                 this.items[parent].children.push(item);
 
-                this.items[parent].children.push(item);
                 this.items[parent].children_count += 1;
             } else this.items.push(item);
 
