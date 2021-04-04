@@ -53,7 +53,7 @@ class Reply extends Model
 
     public function path()
     {
-        return $this->tweet->path() . "#reply-{$this->id}";
+        return $this->tweet->path() . "/replies/{$this->id}";
     }
 
     public function getBodyAttribute($body)

@@ -12,7 +12,7 @@
             <load-more v-if="shouldPaginate" :container="container" @ready="loadMore"></load-more>
         </div>
 
-        <span v-else v-show="!loading" class="px-2 py-8">No comments yet!</span>
+        <span v-else v-show="!loading" class="px-2 py-8">No relies yet!</span>
 
         <div
             id="add-reply-field"

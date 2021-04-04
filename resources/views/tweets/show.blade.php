@@ -5,7 +5,7 @@
 
     <hr class="mb-6 mt-6">
 
-    <h3 class="text-lg font-bold mb-6"> Comments</h3>
+    <h3 class="text-lg font-bold mb-6"> Replies</h3>
 
     <div>
         @include('replies.list')

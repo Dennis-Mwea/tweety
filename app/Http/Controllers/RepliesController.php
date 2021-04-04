@@ -25,6 +25,14 @@ class RepliesController extends Controller
         ]);
     }
 
+    public function show(Tweet $tweet, Reply $reply)
+    {
+        return view('replies.show', [
+            'tweet' => $tweet,
+            'reply' => $reply
+        ]);
+    }
+
     public function destroy(Reply $reply)
     {
         $this->authorize('edit', $reply->owner);

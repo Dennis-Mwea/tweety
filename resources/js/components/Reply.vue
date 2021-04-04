@@ -115,7 +115,7 @@ export default {
         },
 
         shouldDisplayBtn() {
-            return (this.items.length != this.reply.children_count && this.reply.children_count > 0);
+            return (this.items.length < this.reply.children_count && this.reply.children_count > 0);
         },
 
         shouldPaginate() {
