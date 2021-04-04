@@ -19,6 +19,8 @@ class ProfilesController extends Controller
 
     public function edit(User $user)
     {
+        $this->authorize('edit', $user);
+
         return view('profiles.edit', [
             'user' => $user
         ]);
@@ -35,6 +37,8 @@ class ProfilesController extends Controller
             'banner' => ['file'],
             'description' => ['sometimes', 'string'],
         ]);
+
+        $this->authorize('edit', $user);
 
         if (request('avatar'))
             $attributes['avatar'] = request()->file('avatar')->storePublicly('avatars', 'public');
