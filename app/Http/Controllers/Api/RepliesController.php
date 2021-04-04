@@ -9,6 +9,6 @@ class RepliesController extends Controller
 {
     public function show(Reply $reply)
     {
-        return $reply->children;
+        return $reply->children()->paginate(5);
     }
 }

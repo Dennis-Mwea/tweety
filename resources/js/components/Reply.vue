@@ -41,11 +41,8 @@
             </div>
         </div>
 
-        <button
-            v-show="shouldDisplyBtn"
-            class="text-blue-500 text-xs hover:text-blue-600"
-            @click="loadChildren"
-        >View Replies
+        <button v-show="shouldDisplayBtn" class="text-blue-500 text-xs hover:text-blue-600" @click="loadMore">
+            View Replies
         </button>
 
         <add-reply-modal :id="reply.id" :key="reply.id" @created="add"></add-reply-modal>
@@ -68,7 +65,9 @@ export default {
             id: this.reply.id,
             showChildren: false,
             replies_count: this.reply.children_count,
-            clicked: false
+            dataSet: [],
+            page: 0,
+            last_page: false
         };
     },
 
@@ -83,13 +82,28 @@ export default {
             return this.reply.parent_id === null;
         },
 
-        shouldDisplyBtn() {
+        shouldDisplayBtn() {
             return (this.items.length != this.reply.children_count && this.reply.children_count > 0);
+        },
+
+        shouldPaginate() {
+            return this.page === 0 || this.page <= this.last_page - 1
         }
     },
 
     created() {
         dayjs.extend(relativeTime);
+    },
+
+    watch: {
+        dataset() {
+            this.page = this.dataSet.current_page
+            this.last_page = this.dataSet.last_page
+        },
+
+        page() {
+            this.fetch(this.page);
+        }
     },
 
     filters: {
@@ -112,12 +126,30 @@ export default {
             })
         },
 
-        loadChildren() {
-            axios.get(`/api/replies/${this.id}/children`).then(({data}) => {
-                this.items = data;
-                console.log("Items:" + this.reply.id + ":" + this.items.length);
-                this.showChildren = true;
-            });
+        loadChildren({data}) {
+            this.dataSet = data;
+            data.data.map(item => this.items.push(item));
+            this.showChildren = true;
+        },
+
+        fetch(page) {
+            axios.get(this.url(page)).then(this.loadChildren);
+        },
+
+        url(page) {
+            if (!page) {
+                let query = location.search.match(/page=(\d+)/);
+
+                page = query ? query[1] : 1;
+            }
+            return `/api/replies/${this.reply.id}/children?page=${page}`;
+        },
+
+        loadMore() {
+            if (this.shouldPaginate) {
+                this.page++;
+                console.log(this.page);
+            }
         }
     }
 };
