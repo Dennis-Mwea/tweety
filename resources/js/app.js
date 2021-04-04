@@ -3,6 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+
 require('./bootstrap')
 import Vue from 'vue'
 import store from './store/store'
@@ -10,12 +11,15 @@ import TurboLinksAdapter from 'vue-turbolinks'
 import VModal from "vue-js-modal";
 import TurboLinks from 'turbolinks'
 import PortalVue from 'portal-vue'
+import algoliasearch from "algoliasearch";
+import InstantSearch from "vue-instantsearch";
 
 TurboLinks.start()
 window.Vue = Vue;
 Vue.use(TurboLinksAdapter)
 Vue.use(VModal)
 Vue.use(PortalVue)
+Vue.use(InstantSearch)
 window.events = new Vue();
 window.flash = function (message, level = "success") {
     window.events.$emit('flash', {message, level})
@@ -65,7 +69,36 @@ Vue.component('tab', require('./components/Tab').default)
  */
 
 document.addEventListener('turbolinks:load', () => {
+    const algoliaClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_SECRET)
+
     const app = new Vue({
+        data() {
+            const searchClient = {
+                search(requests) {
+                    if (requests.every(({params}) => !params.query)) {
+                        return Promise.resolve({
+                            results: requests.map(() => ({
+                                hits: [],
+                                nbHits: 0,
+                                nbPages: 0,
+                                processingTimeMS: 0
+                            }))
+                        })
+                    }
+
+                    return algoliaClient.search(requests)
+                }
+            }
+
+            return {
+                searchClient,
+                searchFunction(helper) {
+                    const currentQuery = helper.getQueryParameter('?q')
+
+                    helper.setQuery('Hello').search()
+                }
+            }
+        },
         store,
         el: '#app',
     });

@@ -6,17 +6,21 @@ use App\Events\TweetReceivedNewReply;
 use App\Events\TweetWasPublished;
 use App\Traits\Likable;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 use Stevebauman\Purify\Facades\Purify;
 
 class Tweet extends Model
 {
     use Likable;
+    use Searchable;
 
     protected $fillable = [
         'body', 'user_id', 'image'
     ];
 
     protected $appends = ['is_liked', 'is_disliked', 'replies_count', 'likes_count', 'dislikes_count'];
+
+    protected $with = ['user'];
 
     protected static function boot()
     {
@@ -69,11 +73,6 @@ class Tweet extends Model
         return $reply;
     }
 
-    public function path()
-    {
-        return "/tweets/{$this->id}";
-    }
-
     public function showTweet()
     {
         return static::where('id', $this->id)->first();
@@ -82,5 +81,15 @@ class Tweet extends Model
     public function getRepliesCountAttribute()
     {
         return $this->replies()->count();
+    }
+
+    public function toSearchableArray()
+    {
+        return $this->toArray() + ['path' => $this->path()];
+    }
+
+    public function path()
+    {
+        return "/tweets/{$this->id}";
     }
 }
