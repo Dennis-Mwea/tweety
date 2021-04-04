@@ -61,6 +61,18 @@ class TweetTest extends TestCase
         Notification::assertSentTo($follower, RecentlyTweeted::class);
     }
 
+    function testATweetWrapsMentionedUsernamesInTheBodyWithinAnchorTagsWithCorrectStylings()
+    {
+        $tweet = new Tweet([
+            'body' => 'Hello @Jane-Doe'
+        ]);
+
+        $this->assertEquals(
+            'Hello <a href="/profiles/Jane-Doe" class="text-blue-500 hover:underline">@Jane-Doe</a>',
+            $tweet->body
+        );
+    }
+
     protected function setUp(): void
     {
         parent::setUp();

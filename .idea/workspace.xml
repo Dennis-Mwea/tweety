@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Disable algolia when performing tests">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/TweetTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/utilities/functions.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add unit test for tweet">
+      <change afterPath="$PROJECT_DIR$/tests/Unit/ReplyTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/TweetFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TweetFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ReplyFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ReplyFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/TweetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TweetTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,14 +219,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="7938000" />
-    </task>
-    <task id="LOCAL-00073" summary="Fix bug">
-      <created>1617491913675</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1617491913675</updated>
+      <workItem from="1617508106808" duration="8586000" />
     </task>
     <task id="LOCAL-00074" summary="wip and fix things">
       <created>1617494707686</created>
@@ -568,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617515867570</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Add unit test for tweet">
+      <created>1617516411535</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1617516411535</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tighten loose end" />
     <MESSAGE value="Add view to display relevant replies" />
     <MESSAGE value="Add pagination to explore page and fix pagination styling" />
     <MESSAGE value="Style explore page" />
@@ -613,7 +608,8 @@
     <MESSAGE value="Update styling" />
     <MESSAGE value="Add simple data seeder" />
     <MESSAGE value="Disable algolia when performing tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Disable algolia when performing tests" />
+    <MESSAGE value="Add unit test for tweet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add unit test for tweet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
