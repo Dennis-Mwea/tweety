@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Reply;
 use App\Tweet;
 
 class RepliesController extends Controller
@@ -22,5 +23,17 @@ class RepliesController extends Controller
             'user_id' => auth()->id(),
             'parent_id' => request('parent_id', null),
         ]);
+    }
+
+    public function destroy(Reply $reply)
+    {
+        $this->authorize('edit', $reply->owner);
+
+        $reply->delete();
+
+        if (request()->expectsJson())
+            return response(['status' => 'Reply deleted']);
+
+        return back();
     }
 }

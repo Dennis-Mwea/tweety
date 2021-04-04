@@ -94,7 +94,8 @@ export default {
             id: this.reply.id,
             showChildren: false,
             page: 0,
-            loading: false
+            loading: false,
+            replies_count: this.reply.children_count,
         };
     },
 

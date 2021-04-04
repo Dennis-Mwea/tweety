@@ -11,16 +11,4 @@ class RepliesController extends Controller
     {
         return $reply->children()->paginate(5);
     }
-
-    public function destroy(Reply $reply)
-    {
-        $this->authorize('edit', $reply->owner);
-
-        $reply->delete();
-
-        if (request()->expectsJson())
-            return response(['status' => 'Reply deleted']);
-
-        return back();
-    }
 }
