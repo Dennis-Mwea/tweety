@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update profile test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add travis CI badge">
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,14 +215,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="15987000" />
-    </task>
-    <task id="LOCAL-00082" summary="Allow owner to delete replies">
-      <created>1617498559483</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1617498559483</updated>
+      <workItem from="1617508106808" duration="16183000" />
     </task>
     <task id="LOCAL-00083" summary="Update logout button">
       <created>1617498856484</created>
@@ -561,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617564305968</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Add travis CI badge">
+      <created>1617564547475</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1617564547475</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +580,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add following and follower counts in profile page" />
     <MESSAGE value="Add followers and following list" />
     <MESSAGE value="Configure laravel scout" />
     <MESSAGE value="Structure instant search" />
@@ -606,7 +604,8 @@
     <MESSAGE value="Add profile test" />
     <MESSAGE value="Add travis ci configuration" />
     <MESSAGE value="Update profile test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update profile test" />
+    <MESSAGE value="Add travis CI badge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add travis CI badge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
