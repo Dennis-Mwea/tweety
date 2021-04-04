@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add like feature test and fix like bugs">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/ProfilesTest.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add profile test">
+      <change afterPath="$PROJECT_DIR$/.env.travis" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,14 +217,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="15446000" />
-    </task>
-    <task id="LOCAL-00079" summary="Add pagination to child replies">
-      <created>1617496544337</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1617496544337</updated>
+      <workItem from="1617508106808" duration="15602000" />
     </task>
     <task id="LOCAL-00080" summary="Extract pagination to mixin">
       <created>1617496958802</created>
@@ -562,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617562706205</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Add profile test">
+      <created>1617563882928</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1617563882928</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +582,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update logo" />
     <MESSAGE value="Update ReadMe" />
     <MESSAGE value="Add installation command" />
     <MESSAGE value="Add following and follower counts in profile page" />
@@ -607,7 +606,8 @@
     <MESSAGE value="Add feature test for tweet" />
     <MESSAGE value="Add feature tests for mentioned users, search and follow" />
     <MESSAGE value="Add like feature test and fix like bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add like feature test and fix like bugs" />
+    <MESSAGE value="Add profile test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add profile test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
