@@ -6,6 +6,7 @@ use App\Traits\Followable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Sanctum\HasApiTokens;
 use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
@@ -13,6 +14,7 @@ class User extends Authenticatable
     use Notifiable;
     use Followable;
     use Searchable;
+    use HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
