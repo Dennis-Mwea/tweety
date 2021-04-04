@@ -18,8 +18,8 @@ export default {
 
     data() {
         const algoliaClient = algoliasearch(
-            process.env.MIX_ALGOLIA_APP_ID,
-            process.env.MIX_ALGOLIA_SECRET
+            'AXHNZOFH4V',
+            '7d23a9f8ca2a0126273b59f1d7d34944'
         );
         const searchClient = {
             search(requests) {
