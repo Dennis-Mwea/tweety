@@ -52,6 +52,8 @@
 <script>
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import collection from "@/mixins/collection";
+import pagination from "@/mixins/pagination";
 
 dayjs.extend(relativeTime);
 
@@ -64,12 +66,11 @@ export default {
         return {
             id: this.reply.id,
             showChildren: false,
-            replies_count: this.reply.children_count,
-            dataSet: [],
             page: 0,
-            last_page: false
         };
     },
+
+    mixins: [collection, pagination],
 
     computed: {
         parentID() {
@@ -93,17 +94,6 @@ export default {
 
     created() {
         dayjs.extend(relativeTime);
-    },
-
-    watch: {
-        dataset() {
-            this.page = this.dataSet.current_page
-            this.last_page = this.dataSet.last_page
-        },
-
-        page() {
-            this.fetch(this.page);
-        }
     },
 
     filters: {
@@ -144,13 +134,6 @@ export default {
             }
             return `/api/replies/${this.reply.id}/children?page=${page}`;
         },
-
-        loadMore() {
-            if (this.shouldPaginate) {
-                this.page++;
-                console.log(this.page);
-            }
-        }
     }
 };
 </script>

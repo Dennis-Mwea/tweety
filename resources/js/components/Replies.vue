@@ -14,6 +14,7 @@
 <script>
 import Reply from "@/components/Reply";
 import collection from '@/mixins/collection'
+import pagination from '@/mixins/collection'
 import LoadMore from "@/components/LoadMore";
 import {mapState} from "vuex";
 
@@ -26,29 +27,15 @@ export default {
         replies: Array,
     },
 
-    mixins: [collection],
+    mixins: [collection, pagination],
 
     data() {
         return {
-            page: 1,
-            last_page: false,
-            dataSet: [],
-            showChildren: false,
             container: this.$refs["replies"],
             childrenReplies: [],
         };
     },
 
-    watch: {
-        dataSet() {
-            this.page = this.dataSet.current_page;
-            this.last_page = this.dataSet.last_page;
-        },
-
-        page() {
-            this.fetch(this.page);
-        }
-    },
 
     components: {Reply, LoadMore},
 
@@ -87,16 +74,6 @@ export default {
             this.dataSet = data;
             data.data.map(item => this.items.push(item))
         },
-
-        loadMore() {
-            if (this.shouldPaginate) {
-                this.page++;
-            }
-        },
-
-        loadChildren() {
-            this.showChildren = true;
-        }
     }
 }
 </script>
