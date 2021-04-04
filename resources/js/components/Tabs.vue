@@ -42,7 +42,10 @@ export default {
     watch: {
         activeTab(activeTab) {
             this.tabs.map(tab => (tab.isActive = tab == activeTab));
-            this.updateUrl();
+            this.$emit("updated", this.activeTab.title.toLowerCase());
+            if (this.shouldUpdateUrl) {
+                this.updateUrl();
+            }
         }
     },
 

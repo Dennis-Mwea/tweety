@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Implemenet algolia inifinite hits and clean things up">
-      <change afterPath="$PROJECT_DIR$/resources/js/utils/EventBus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/search/_tweet-hits.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/search/_user-hits.blade.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="wip">
+      <change afterPath="$PROJECT_DIR$/resources/views/search/_tabs.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Followable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Followable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Tabs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/mixins/algoliaSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/mixins/algoliaSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/follows/_user-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/follows/_user-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/search/_user-hits.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search/_user-hits.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/search/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,14 +212,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="3057000" />
-    </task>
-    <task id="LOCAL-00061" summary="Fix tweet likes count in view">
-      <created>1617471399234</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1617471399234</updated>
+      <workItem from="1617508106808" duration="3564000" />
     </task>
     <task id="LOCAL-00062" summary="Add notifications for reply">
       <created>1617472282680</created>
@@ -560,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617510480206</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="wip">
+      <created>1617511234938</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1617511234938</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix minor bug" />
     <MESSAGE value="Update purify config" />
     <MESSAGE value="Add reply floating button" />
     <MESSAGE value="Fix notification bug" />
@@ -605,7 +601,8 @@
     <MESSAGE value="Style instant search" />
     <MESSAGE value="Add icon to search input" />
     <MESSAGE value="Implemenet algolia inifinite hits and clean things up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemenet algolia inifinite hits and clean things up" />
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

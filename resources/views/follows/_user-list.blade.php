@@ -2,7 +2,7 @@
     <div class="py-5 {{ $loop->last ? '' :  'border-b border-gray-400'}}">
         <div class="flex">
             <a href="{{ $user->path() }}" class="flex flex-1 items-start ">
-                <img src="{{ $user->avatar }}" alt="{{ $user->username }}'s avatar" width="60"
+                <img src="{{ $user->avatar }}" alt="{{ $user->username }}'s avatar" width="50"
                      class="mr-4 rounded-full">
 
                 <div class="flex flex-col items-start">
