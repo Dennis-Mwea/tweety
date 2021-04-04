@@ -1,6 +1,11 @@
 <template>
     <div class="bg-gray-200 border border-gray-400 rounded-lg py-4 px-4">
-        <h3 class="font-bold text-xl mb-4">Following</h3>
+        <div class="flex justify-between mb-4 items-center">
+            <h3 class="font-bold text-xl mb-4">Following</h3>
+
+            <a :href="'profiles/'+user.username+'/following'"
+               class="text-blue-500 hover:underline text-sm cursor-pointer">View all</a>
+        </div>
 
         <transition-group v-if="friends.length > 0" :class="loading ? 'loader' : ''" appear name="slide-up" tag="ul">
             <li v-for="(friend, index) in friends" :key="friend.id" :class="index === last ? '' :'mb-4'">
@@ -37,7 +42,13 @@ export default {
         },
 
         ...mapState(['friends', 'loading'])
-    }
+    },
+
+    data() {
+        return {
+            user: window.App.user
+        };
+    },
 }
 </script>
 
