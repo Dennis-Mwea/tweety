@@ -12,7 +12,7 @@ class TweetController extends Controller
     public function index()
     {
         return view('tweets.home', [
-            'tweets' => request()->user()->timeline()
+            'tweets' => current_user()->timeline()
         ]);
     }
 

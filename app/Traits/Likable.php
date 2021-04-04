@@ -6,7 +6,6 @@ use App\Like;
 use App\Notifications\TweetWasDisliked;
 use App\Notifications\TweetWasLiked;
 use App\User;
-use Illuminate\Database\Eloquent\Builder;
 
 trait Likable
 {
@@ -17,38 +16,31 @@ trait Likable
         });
     }
 
-    public function scopeWithLikes(Builder $query, $id = null)
+    public function getLikesCountAttribute()
     {
-        $id ?
-            $query->leftJoinSub(
-                "select tweet_id,sum(liked) likes, sum(!liked) dislikes from likes group by tweet_id having tweet_id = {$id}",
-                'likes',
-                'likes.tweet_id',
-                'tweets.id') :
-            $query->leftJoinSub(
-                "select tweet_id,sum(liked) likes, sum(!liked) dislikes from likes group by tweet_id",
-                'likes',
-                'likes.tweet_id',
-                'tweets.id');
+        return $this->likes()->where('liked', true)->count();
+    }
+
+    public function likes()
+    {
+        return $this->morphMany(Like::class, 'liked');
     }
 
     public function dislike(User $user = null)
     {
-        if ($this->isDislikedBy($user = current_user())) {
+        if ($this->isDisliked()) {
             return $this->removeLike($user);
         }
 
         return $this->like($user, false);
     }
 
-    public function isDislikedBy(User $user)
+    public function isDisliked()
     {
-        return (bool)$user
-            ->likes
+        return (bool)$this->likes
             ->where('tweet_id', $this->id)
             ->where('liked', false)
             ->count();
-
     }
 
     public function removeLike($user = null)
@@ -56,14 +48,9 @@ trait Likable
         return $this->likes()->delete($user, null);
     }
 
-    public function likes()
-    {
-        return $this->hasMany(Like::class);
-    }
-
     public function like(User $user = null, $liked = true)
     {
-        if ($this->isLikedBy($user = current_user()) && $liked) {
+        if ($this->isLiked() && $liked) {
             return $this->removeLike($user);
         }
 
@@ -77,27 +64,26 @@ trait Likable
         ]);
     }
 
-    public function isLikedBy(User $user)
+    public function isLiked()
     {
-        return (bool)$user->likes
+        return (bool)$this->likes
             ->where('tweet_id', $this->id)
             ->where('liked', true)
             ->count();
+    }
+
+    public function getDislikesCountAttribute()
+    {
+        return $this->likes->where('liked', false)->count();
     }
 
     public function getIsDislikedAttribute()
     {
-        return (bool)current_user()->likes
-            ->where('tweet_id', $this->id)
-            ->where('liked', false)
-            ->count();
+        return $this->isDisliked();;
     }
 
     public function getIsLikedAttribute()
     {
-        return (bool)current_user()->likes
-            ->where('tweet_id', $this->id)
-            ->where('liked', true)
-            ->count();
+        return $this->isLiked();
     }
 }
