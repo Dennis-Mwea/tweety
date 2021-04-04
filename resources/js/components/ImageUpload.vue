@@ -7,7 +7,7 @@
             </button>
         </slot>
         <input v-if="!clearInput" ref="input" :name="name" accept="image/*"
-               class="cursor-pointer opacity-0 absolute block right-0 top-0" type="file" @change="onChange"/>
+               class="cursor-pointer opacity-0 absolute block left-0 top-0" type="file" @change="onChange"/>
     </div>
 </template>
 

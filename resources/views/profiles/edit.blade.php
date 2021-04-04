@@ -15,12 +15,8 @@
                 <div>
                     <input
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value="{{ $user->name }}"
-                    >
+                        id="name" name="name" type="text" required value="{{ $user->name }}">
+
                     @error('name')
                     <span class="text-red-500 text-xs mt-2">{{ $message }}</span>
                     @enderror
@@ -38,12 +34,8 @@
                 <div>
                     <input
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                        id="username"
-                        name="username"
-                        type="text"
-                        required
-                        value="{{ $user->username }}"
-                    >
+                        id="username" name="username" type="text" required value="{{ $user->username }}">
+
                     @error('username')
                     <span class="text-red-500 text-xs mt-2">{{ $message }}</span>
                     @enderror
@@ -74,7 +66,7 @@
                 <div>
                     <textarea
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                        id="description" rows="4" name="description" required>{{ $user->description }}</textarea>
+                        id="description" rows="4" name="description">{{ $user->description }}</textarea>
                     @error('description')
                     <span class="text-red-500 text-xs mt-2">{{ $message }}</span>
                     @enderror
@@ -148,15 +140,12 @@
                 <div class="md:text-right">
                     <button
                         class="shadow bg-blue-500 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
-                        type="submit"
-                    >
+                        type="submit">
                         Submit
                     </button>
 
-                    <a
-                        class="ml-5     shadow bg-gray-700 hover:bg-gray-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
-                        href="{{ $user->path() }}"
-                    >
+                    <a class="ml-5 shadow bg-gray-700 hover:bg-gray-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
+                       href="{{ $user->path() }}">
                         Cancel
                     </a>
                 </div>
