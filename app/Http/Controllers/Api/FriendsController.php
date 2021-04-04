@@ -3,17 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Exception;
 
 class FriendsController extends Controller
 {
+    /**
+     * @return mixed
+     * @throws Exception
+     */
     public function index()
     {
-        $search = request('username');
-
-        return current_user()->follows()->where('username', 'LIKE', "%$search%")
-            ->take(5)
-            ->pluck('username')->map(function ($username) {
-                return ['username' => $username];
-            });
+        return cache()->remember('friends', 43200, function () {
+            return current_user()->follows;
+        });
     }
 }

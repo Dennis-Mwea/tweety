@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add pagination to child replies">
-      <change afterPath="$PROJECT_DIR$/resources/js/mixins/pagination.js" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Extract pagination to mixin">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tweety.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tweety.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Replies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Replies.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Reply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Reply.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/FriendsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/FriendsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Followable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Followable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
       <path value="$PROJECT_DIR$/vendor/stevebauman/purify" />
+      <path value="$PROJECT_DIR$/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qd595sZWeGTJfpyhQ8xVVaJvlu" />
@@ -202,14 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="39968000" />
-    </task>
-    <task id="LOCAL-00031" summary="Tweak banner form">
-      <created>1617422140153</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1617422140153</updated>
+      <workItem from="1617413411109" duration="40264000" />
     </task>
     <task id="LOCAL-00032" summary="Style things">
       <created>1617422622656</created>
@@ -547,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617496544337</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Extract pagination to mixin">
+      <created>1617496958802</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1617496958802</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +572,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update UI for mentioned notification" />
     <MESSAGE value="Tweak notifications view" />
     <MESSAGE value="Add tweet notifications for followers" />
     <MESSAGE value="Add notifications for tweet likes and dislikes" />
@@ -592,6 +596,7 @@
     <MESSAGE value="Fix bugs" />
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Add pagination to child replies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pagination to child replies" />
+    <MESSAGE value="Extract pagination to mixin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extract pagination to mixin" />
   </component>
 </project>

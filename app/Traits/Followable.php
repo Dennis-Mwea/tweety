@@ -4,11 +4,19 @@ namespace App\Traits;
 
 use App\Notifications\YouWereFollowed;
 use App\User;
+use Exception;
+use Illuminate\Database\Eloquent\Model;
 
 trait Followable
 {
+    /**
+     * @param User $user
+     * @return Model|int
+     * @throws Exception
+     */
     public function toggleFollow(user $user)
     {
+        cache()->forget('friends');
         if ($this->following($user)) {
             return $this->unfollow($user);
         }
