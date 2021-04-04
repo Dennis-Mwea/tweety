@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update follow button design">
-      <change afterPath="$PROJECT_DIR$/public/images/tweety-logo.svg" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update ReadMe">
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/InstallCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,21 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
-      <workItem from="1617413411109" duration="48267000" />
-    </task>
-    <task id="LOCAL-00051" summary="Update UI for mentioned notification">
-      <created>1617463946717</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1617463946717</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Tweak notifications view">
-      <created>1617464253109</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1617464253110</updated>
+      <workItem from="1617413411109" duration="49126000" />
     </task>
     <task id="LOCAL-00053" summary="Add tweet notifications for followers">
       <created>1617464746149</created>
@@ -550,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617505240585</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Update logo">
+      <created>1617505408963</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1617505408963</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Update ReadMe">
+      <created>1617505587063</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1617505587063</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,8 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add replies count" />
-    <MESSAGE value="Clean things up" />
     <MESSAGE value="wip and fix things" />
     <MESSAGE value="Fix bugs" />
     <MESSAGE value="Add pagination to child replies" />
@@ -595,7 +590,9 @@
     <MESSAGE value="Add pagination to explore page and fix pagination styling" />
     <MESSAGE value="Style explore page" />
     <MESSAGE value="Update follow button design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update follow button design" />
+    <MESSAGE value="Update logo" />
+    <MESSAGE value="Update ReadMe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update ReadMe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
