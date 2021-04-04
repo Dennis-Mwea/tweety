@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Dennis-Mwea/tweety.svg?branch=master)](https://travis-ci.org/Dennis-Mwea/tweety)
+
 # Tweety
 
 This is the repository for the "Laravel From
