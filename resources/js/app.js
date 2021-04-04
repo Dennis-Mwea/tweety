@@ -13,6 +13,8 @@ import TurboLinks from 'turbolinks'
 import PortalVue from 'portal-vue'
 import algoliasearch from "algoliasearch";
 import InstantSearch from "vue-instantsearch";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 
 TurboLinks.start()
 window.Vue = Vue;
@@ -34,6 +36,11 @@ Vue.prototype.authorize = function (...params) {
     return params[0](window.App.user)
 }
 Vue.prototype.signedIn = window.App.signedIn
+Vue.filter('diffForHumans', date => {
+    if (!date) return null
+
+    return dayjs(date).fromNow()
+})
 
 /**
  * The following block of code may be used to automatically register your
@@ -72,6 +79,14 @@ document.addEventListener('turbolinks:load', () => {
     const algoliaClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_SECRET)
 
     const app = new Vue({
+        created() {
+            dayjs.extend(relativeTime)
+        },
+        filters: {
+            getAvatar: path => {
+                return "/" + path.substr(17, path.length);
+            }
+        },
         data() {
             const searchClient = {
                 search(requests) {
