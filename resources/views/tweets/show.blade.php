@@ -11,8 +11,6 @@
         @include('replies.list')
     </div>
 
-    @include('replies.form')
-
     <x-slot name="extra">
         <portal-target name="add-reply" slim></portal-target>
     </x-slot>

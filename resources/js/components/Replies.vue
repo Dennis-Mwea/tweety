@@ -14,6 +14,16 @@
 
         <span v-else v-show="!loading" class="px-2 py-8">No comments yet!</span>
 
+        <div
+            id="add-reply-field"
+            class="border border-gray-400 rounded-lg py-6 px-8 mt-8 focus:outline-none focus:border-blue-400 hover:border-blue-400"
+            @click.prevent="showModal">
+            <footer class="flex items-center py-6">
+                <img :src="currentAvatar" alt="Your Avatar" class="rounded-full mr-10" height="50" width="50"/>
+                <h3 class="text-gray-600">Reply to tweet.</h3>
+            </footer>
+        </div>
+
         <portal to="add-reply">
             <transition mode="in-out" name="slide-fade">
                 <button v-show="isVisible"
@@ -34,7 +44,7 @@
 <script>
 import Reply from "@/components/Reply";
 import collection from '@/mixins/collection'
-import pagination from '@/mixins/collection'
+import pagination from '@/mixins/pagination'
 import LoadMore from "@/components/LoadMore";
 import {mapState} from "vuex";
 import replyButtonVisibility from "../mixins/replyButtonVisibility";
@@ -54,10 +64,10 @@ export default {
         return {
             container: this.$refs["replies"],
             childrenReplies: [],
-            loading: false
+            loading: false,
+            currentAvatar: window.App.user.avatar
         };
     },
-
 
     components: {Reply, LoadMore},
 
