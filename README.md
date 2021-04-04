@@ -23,6 +23,16 @@ npm run dev
 
 Next, boot up a server and visit Tweety. If using Laravel Valet, the URL will default to `http://tweety.test`.
 
+#### Instant Search
+
+- For instant search, you have to create an account at [algolia](https://www.algolia.com/users/sign_up).
+- Then, you have to reference your algolia app id and algolia secret key in your `.env` file as below.
+
+```bash
+MIX_ALGOLIA_APP_ID=YOUR_ALGOLIA_APP_ID
+MIX_ALGOLIA_SECRET=YOUR_ALGOLIA_SECRET
+```
+
 ## Extended Functionalities
 
 1. Dynamic profile banner image and description for each user.
