@@ -38,6 +38,7 @@ Vue.prototype.authorize = function (...params) {
     return params[0](window.App.user)
 }
 Vue.prototype.signedIn = window.App.signedIn
+Vue.prototype.$indexname = 'tweets'
 Vue.filter('diffForHumans', date => {
     if (!date) return null
 

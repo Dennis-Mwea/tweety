@@ -6,11 +6,13 @@ use App\Traits\Followable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
     use Notifiable;
     use Followable;
+    use Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -78,15 +80,20 @@ class User extends Authenticatable
         return $this->hasMany(Like::class);
     }
 
+    public function getBannerAttribute($value)
+    {
+        return asset($value ?: '/images/default-profile-banner.jpeg');
+    }
+
+    public function toSearchableArray()
+    {
+        return $this->toArray() + ['path' => $this->path()];
+    }
+
     public function path($append = '')
     {
         $path = route('profile', $this->username);
 
         return $append ? "{$path}/{$append}" : "$path";
-    }
-
-    public function getBannerAttribute($value)
-    {
-        return asset($value ?: '/images/default-profile-banner.jpeg');
     }
 }

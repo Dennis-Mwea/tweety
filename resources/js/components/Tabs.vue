@@ -20,6 +20,13 @@
 export default {
     name: "Tabs",
 
+    props: {
+        shouldUpdateUrl: {
+            type: Boolean,
+            default: true
+        }
+    },
+
     data() {
         return {
             tabs: [],
