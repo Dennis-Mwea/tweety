@@ -38,6 +38,7 @@ Vue.component('confirm-delete-modal', require('./utils/ConfirmDeleteModal').defa
 Vue.component('add-reply-modal', require('./utils/AddReplyModal').default)
 Vue.component('replies', require('./components/Replies').default)
 Vue.component('notification-link', require('./components/NotificationLink').default)
+Vue.component('reply-button', require('./components/ReplyButton').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 

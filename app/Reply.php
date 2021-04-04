@@ -10,7 +10,7 @@ class Reply extends Model
 {
     protected $guarded = [];
 
-    protected $appends = ['path'];
+    protected $appends = ['path', 'children_count'];
 
     public function owner()
     {
@@ -56,11 +56,6 @@ class Reply extends Model
         );
     }
 
-    public function children()
-    {
-        return $this->hasMany(Reply::class, 'parent_id', 'id')->with('owner');
-    }
-
     public function allChildrenReplies()
     {
         return $this->childrenReplies()->with('allChildrenReplies');
@@ -69,5 +64,15 @@ class Reply extends Model
     public function scopeChildless($query)
     {
         $query->has('childrenReplies', '=', 0);
+    }
+
+    public function getChildrenCountAttribute()
+    {
+        return $this->children()->count();
+    }
+
+    public function children()
+    {
+        return $this->hasMany(Reply::class, 'parent_id', 'id')->with('owner');
     }
 }

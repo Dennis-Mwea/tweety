@@ -1,17 +1,22 @@
 <template>
-    <modal classes="p-4 bg-white shadow-lg rounded-lg w-64" height="auto" name="add-reply" @before-open="beforeOpen">
+    <modal
+        classes="p-4 bg-white shadow-lg rounded-lg w-64"
+        height="auto"
+        name="add-reply"
+        @before-open="beforeOpen"
+    >
         <div class="flex justify-end">
             <button
                 class="focus:outline-none bg-transparent p-1 hover:bg-blue-300 text-center rounded-full"
                 @click.prevent="$modal.hide('add-reply')"
             >
-                <svg class="w-8 text-red-600 hover:text-red-700" xmlns="http://www.w3.org/2000/svg">
+                <svg class="h-5 w-5 text-blue-500 hover:text-blue-600" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        d="M4.93 19.07A10 10 0 1119.07 4.93 10 10 0 014.93 19.07zm1.41-1.41A8 8 0 1017.66 6.34 8 8 0
-                         006.34 17.66zM13.41 12l1.42 1.41a1 1 0 11-1.42 1.42L12 13.4l-1.41 1.42a1 1 0 11-1.42-1.42L10.6
-                          12l-1.42-1.41a1 1 0 111.42-1.42L12 10.6l1.41-1.42a1 1 0 111.42 1.42L13.4 12z"
-                        fill="currentColor"
-                    />
+                        d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+                            c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697s1.228-0.469,1.697,0L10,8.183
+                            l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0s0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+                            C14.817,13.62,14.817,14.38,14.348,14.849z"
+                        fill="currentColor"/>
                 </svg>
             </button>
         </div>
@@ -21,7 +26,6 @@
                 <div class="mr-2 flex-shrink-0">
                     <img :src="owner.avatar" alt class="rounded-full mr-2" height="50" width="50"/>
                 </div>
-
                 <div class="flex-1">
                     <h5 class="font-bold mb-4">{{ owner.name }}</h5>
                     <div class="mb-4">
@@ -32,79 +36,41 @@
 
             <p class="text-gray-600 bg-white">
                 Replying to
-                <span class="text-blue-500">{{ '@' + owner.username }}</span>
+                <span class="text-blue-500">{{ "@" + owner.username }}</span>
             </p>
         </div>
 
         <form class="p-4" enctype="multipart/form-data" method="POST" @keydown="submitted = false"
               @submit.prevent="submit">
             <input v-if="parentID" :value="parentID" name="parent_id" type="hidden"/>
-
             <vue-tribute :options="tributeOptions">
-                <textarea id="body" ref="tweet" v-model="body"
-                          autofocus
+                <textarea id="body" ref="tweet" v-model="body" autofocus
                           class="w-full focus:outline-none placeholder-blue-800 focus:placeholder-black bg-white mb-4"
-                          name="body" placeholder="Add a reply..."
-                          @keydown="delete errors.body"></textarea>
+                          name="body" placeholder="Add a reply..." @keydown="delete errors.body"></textarea>
             </vue-tribute>
             <span v-if="errors.body" class="text-xs text-red-600" v-text="errors.body[0]"></span>
-
-            <!-- <hr class="mb-4" />
-              <div class="rounded-full relative" v-if="imageSrc">
-                <img :src="imageSrc" class="rounded-lg mb-1 h-56 w-full object-cover" alt="tweet-image" />
-                <button
-                  type="button"
-                  class="absolute text-white text-right px-4 py-1 bg-black rounded-full"
-                  style="left:88%;top:5%"
-                  @click="clearImage"
-                >Clear</button>
-              </div>
-            <span class="text-xs text-red-600" v-text="errors.image[0]" v-if="errors.image"></span>-->
-
             <footer class="flex items-center justify-between">
                 <img :src="avatar" alt="Your Avatar" class="rounded-full mr-2" height="50" width="50"/>
-
-                <div class="flex items-center">
-                    <!-- <div class="mr-6">
-                        <image-upload :name="'image'" :clear="clear" @loaded="onLoad">
-                          <slot>
-                            <button
-                              type="button"
-                              class="bg-blue-300 focus:outline-none text-white font-bold py-2 px-2 rounded-full"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                class="h-6 w-6 text-blue-500"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M19 2H1a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V3a1 1 0 00-1-1zm-1 14H2V4h16v12zm-3.685-5.123l-3.231 1.605-3.77-6.101L4 14h12l-1.685-3.123zM13.25 9a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
-                                />
-                              </svg>
-                            </button>
-                          </slot>
-                        </image-upload>
-                    </div>-->
-
-                    <div v-if="body.length > 0" class="mr-6">
-                        <svg v-if="!limitExceed" class="circular-chart h-8 w-8" viewBox="0 0 36 36">
-                            <path class="circle-bg"
-                                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <path :stroke="limitExceed ? '#E53E3E' : '#4299e1'"
-                                  :stroke-dasharray="characterLeft + ' 100'" class="circle"
-                                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                                  fill="currentColor"/>
-                        </svg>
-                        <span v-else class="text-sm text-red-600">{{ characterLeft }}</span>
-                    </div>
-
-                    <button
-                        class="bg-blue-500 rounded-full shadow font-bold text-sm px-10 text-white hover:bg-blue-600 h-10 focus:outline-none"
-                        type="submit"
-                    >Publish
-                    </button>
+                <div v-if="body.length > 0" class="mr-6">
+                    <svg v-if="!limitExceed" class="circular-chart h-8 w-8" viewBox="0 0 36 36">
+                        <path
+                            class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path
+                            :stroke="limitExceed ? '#E53E3E' : '#4299e1'"
+                            :stroke-dasharray="characterLeft + ' 100'"
+                            class="circle"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                            fill="currentColor"
+                        />
+                    </svg>
+                    <span v-else class="text-sm text-red-600">{{ characterLeft }}</span>
                 </div>
+                <button
+                    class="bg-blue-500 rounded-full shadow font-bold text-sm px-10 text-white hover:bg-blue-600 h-10 focus:outline-none"
+                    type="submit"
+                >Publish
+                </button>
             </footer>
         </form>
     </modal>
@@ -115,19 +81,17 @@ import VueTribute from "vue-tribute";
 import Tribute from "tributejs";
 
 export default {
-    name: "AddReplyModal",
-
     components: {VueTribute},
 
     data() {
         return {
             body: "",
             tweetID: "",
-            replyingTo: "",
             avatar: window.App.user.avatar,
             parentID: null,
             parentBody: "",
             owner: "",
+            isRoot: false,
             limit: 255,
             errors: {},
             tributeOptions: new Tribute({
@@ -157,23 +121,32 @@ export default {
 
         limitExceed() {
             return this.body.length > this.limit;
+        },
+
+        replyingTo() {
+            return this.owner.username === window.App.user.username || this.isRoot
+                ? ""
+                : "@" + this.owner.username + " ";
         }
     },
 
     methods: {
-        beforeOpen($event) {
-            console.log($event.params.id);
-            this.tweetID = $event.params.tweetID;
-            this.parentID = $event.params.parentID;
-            this.parentBody = $event.params.parentRepyBody;
-            this.owner = $event.params.owner;
+        beforeOpen(event) {
+            this.tweetID = event.params.tweetID;
+            this.parentID = event.params.parentID;
+            this.parentBody = event.params.parentRepyBody;
+            this.owner = event.params.owner;
+            this.isRoot = event.params.isRoot;
         },
 
         submit() {
             axios
                 .post(`/tweets/${this.tweetID}/reply`, this.createFormData())
-                .then(response => {
-                    location = response.data.message;
+                .then(({data}) => {
+                    this.body = "";
+                    this.$modal.hide("add-reply");
+                    flash("Your reply has been posted");
+                    this.$emit("created", data);
                 })
                 .catch(errors => {
                     this.errors = errors.response.data.errors;
@@ -182,7 +155,7 @@ export default {
 
         createFormData() {
             let data = new FormData();
-            data.append("body", this.body);
+            data.append("body", this.replyingTo + this.body);
             if (this.image !== null) {
                 data.append("image", this.image);
             }

@@ -2,7 +2,9 @@
     <div>
         <div v-if="items.length > 0">
             <div v-for="(reply, index) in items" :key="reply.id" ref="replies">
-                <reply :last="index === last" :reply="reply" :tweet="tweet">
+                <reply :ref="`reply-${reply.id}`" :childrenCount="items[index].children_count" :last="index === last"
+                       :reply="reply"
+                       :tweet="tweet">
                     <div v-if="reply.children" class="ml-6 -mb-4">
                         <div v-for="(children, index) in reply.children" :key="children.id">
                             <reply :last=" index === Object.keys(reply.children).length - 1" :reply="children"
@@ -15,7 +17,8 @@
             <load-more v-if="shouldPaginate" :container="container" @ready="loadMore"></load-more>
         </div>
 
-        <span v-else class="px-2 py-8">No comments yet!</span>
+        <!--        <span v-else class="px-2 py-8">No comments yet!</span>-->
+        <add-reply-modal @created="add"></add-reply-modal>
     </div>
 </template>
 
@@ -23,12 +26,15 @@
 import Reply from "@/components/Reply";
 import collection from '@/mixins/collection'
 import LoadMore from "@/components/LoadMore";
+import {mapState} from "vuex";
 
 export default {
     name: "Replies",
 
     props: {
         tweet: Object,
+
+        replies: Array,
     },
 
     mixins: [collection],
@@ -37,18 +43,15 @@ export default {
         return {
             page: 1,
             last_page: false,
-            prevUrl: false,
-            nextUrl: false,
             dataSet: [],
-            container: this.$refs["replies"]
+            container: this.$refs["replies"],
+            childrenReplies: [],
         };
     },
 
     watch: {
         dataSet() {
             this.page = this.dataSet.current_page;
-            this.prevUrl = this.dataSet.prev_page_url;
-            this.nextUrl = this.dataSet.next_page_url;
             this.last_page = this.dataSet.last_page;
         },
 
@@ -66,18 +69,18 @@ export default {
 
         shouldPaginate() {
             return this.page <= this.last_page - 1;
-        }
+        },
+
+        ...mapState(['allReplies'])
     },
 
     created() {
-        this.fetch()
+        if (this.replies) {
+            this.replies.map(item => this.items.push(item));
+        } else this.fetch();
     },
 
     methods: {
-        broadcast() {
-            return this.$emit("changed", this.page);
-        },
-
         fetch(page) {
             axios.get(this.url(page)).then(this.refresh);
         },
@@ -92,9 +95,7 @@ export default {
 
         refresh({data}) {
             this.dataSet = data;
-            this.items.length === 0
-                ? (this.items = data.data)
-                : data.data.map(item => this.items.push(item));
+            data.data.map(item => this.items.push(item))
         },
 
         loadMore() {
