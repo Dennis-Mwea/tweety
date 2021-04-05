@@ -2,7 +2,7 @@
     @forelse($tweets as $tweet)
         <div
             class="flex p-4 hover:bg-gray-200 relative {{ $loop->first ? 'rounded-t-lg' : '' }} {{ $loop->last ? '' :  'border-b border-gray-400'}}">
-            <a href="{{ route('show-tweet',$tweet) }}" class="absolute inset-0 w-full h-full">
+            <a href="{{ route('tweets.show',$tweet) }}" class="absolute inset-0 w-full h-full">
                 @include('tweets._tweet', ['bladeCount' => true])
             </a>
         </div>

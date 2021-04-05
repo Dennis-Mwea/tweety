@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tweak notifications and tweet stylings">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/NotificationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/NotificationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/ReceivedNewReply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/ReceivedNewReply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/YouWereFollowed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/YouWereFollowed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update notification responses">
+      <change beforePath="$PROJECT_DIR$/resources/views/_timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_timeline.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +216,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="25679000" />
-    </task>
-    <task id="LOCAL-00113" summary="Update README">
-      <created>1617512353528</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1617512353528</updated>
+      <workItem from="1617508106808" duration="25795000" />
     </task>
     <task id="LOCAL-00114" summary="Update README">
       <created>1617512409427</created>
@@ -566,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617622302342</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Update notification responses">
+      <created>1617622481057</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1617622481057</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add route to get user avatar" />
     <MESSAGE value="Fetch replies for API" />
     <MESSAGE value="Add profile routes" />
     <MESSAGE value="Add api route to publish tweet" />
@@ -611,7 +605,8 @@
     <MESSAGE value="Implement API controller to find mentioned user" />
     <MESSAGE value="Update character limit indicator in AddReplyModal" />
     <MESSAGE value="Tweak notifications and tweet stylings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweak notifications and tweet stylings" />
+    <MESSAGE value="Update notification responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update notification responses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
