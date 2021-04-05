@@ -1,16 +1,4 @@
 <x-master>
-    <x-slot name="script">
-        @auth
-            <script>
-                window.App = {!! json_encode([
-                'csrfToken' => csrf_token(),
-                'user' => current_user(),
-                'signedIn' => auth()->check(),
-            ]) !!}
-            </script>
-        @endauth
-    </x-slot>
-
     @if(Illuminate\Support\Facades\Route::currentRouteName() != 'show-search')
         <x-slot name="search">
             <form class="search-box" method="GET" action="/search">
