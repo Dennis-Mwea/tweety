@@ -8,6 +8,7 @@ class ExploreController extends BaseApiController
 {
     public function __invoke()
     {
-        return $this->sendResponse(User::inRandomOrder()->take(15)->get());
+        return $this->sendResponse(User::where('id', '<>', auth()->id())
+            ->inRandomOrder()->take(15)->get());
     }
 }

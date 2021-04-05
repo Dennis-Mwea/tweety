@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update README">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SimpleDataSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TweetySeeder.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add seeder">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ExploreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ExploreController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,14 +216,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="28634000" />
-    </task>
-    <task id="LOCAL-00121" summary="Disable algolia when performing tests">
-      <created>1617515867570</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1617515867570</updated>
+      <workItem from="1617508106808" duration="28721000" />
     </task>
     <task id="LOCAL-00122" summary="Add unit test for tweet">
       <created>1617516411535</created>
@@ -563,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617644180703</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="Add seeder">
+      <created>1617644315847</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1617644315847</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implement follow/unfollow logic for API" />
     <MESSAGE value="Update response" />
     <MESSAGE value="Implement update profile for API" />
     <MESSAGE value="Allow tweets and replies to be deleted" />
@@ -608,7 +605,8 @@
     <MESSAGE value="Clean Up" />
     <MESSAGE value="Extract password edit" />
     <MESSAGE value="Update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
+    <MESSAGE value="Add seeder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add seeder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
