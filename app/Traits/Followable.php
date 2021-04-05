@@ -64,4 +64,11 @@ trait Followable
         return $this->belongsToMany(User::class, 'follows', 'following_user_id', 'user_id')
             ->withTimestamps();
     }
+
+    public function getIsFollowedAttribute()
+    {
+        return (bool)$this->followers()
+            ->where('user_id', auth()->id())
+            ->exists();
+    }
 }
