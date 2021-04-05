@@ -97,6 +97,12 @@ export default {
             this.messages.push(event.message)
 
             this.updateActivePeer(event.sender.id, false);
+        }).listen('MessageRead', (event) => {
+            this.messages.forEach((message, index) => {
+                if (!message.read_at) {
+                    this.messages[index].read_at = event.read_at;
+                }
+            });
         })
 
         this.fetchMessages()

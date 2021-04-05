@@ -15,7 +15,8 @@
                                 @if($chat->messages->first()->user_id === auth()->id() )
                                     You:
                                 @endif
-                                <p class="font-semibold">  {{ $chat->messages->first()->message }}</p>
+                                <p class="{{ $chat->messages->first()->read_at ? 'font-semibold' : ''}}">
+                                    {{ $chat->messages->first()->message }}</p>
                             </div>
                         @endif
                     </div>

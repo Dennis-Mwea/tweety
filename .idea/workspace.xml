@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix loose ends">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Toggle message info">
+      <change afterPath="$PROJECT_DIR$/app/Events/MessageRead.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Message.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Message.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Chat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Chat.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/chat/_chat-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chat/_chat-list.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,14 +245,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="42581000" />
-    </task>
-    <task id="LOCAL-00144" summary="Add api explore controller">
-      <created>1617617693138</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1617617693138</updated>
+      <workItem from="1617508106808" duration="43043000" />
     </task>
     <task id="LOCAL-00145" summary="Implement follow/unfollow logic for API">
       <created>1617618213687</created>
@@ -586,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617658711470</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Toggle message info">
+      <created>1617658943590</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1617658943590</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +610,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implement store on user avatar controller" />
     <MESSAGE value="Fetch user replies from API" />
     <MESSAGE value="Update API mentioned user response" />
     <MESSAGE value="Clean Up" />
@@ -631,7 +634,8 @@
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Extract message component" />
     <MESSAGE value="Fix loose ends" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix loose ends" />
+    <MESSAGE value="Toggle message info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toggle message info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
