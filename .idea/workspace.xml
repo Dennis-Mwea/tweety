@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update explore controller response (exclude logged in user from the list of exprole users)">
-      <change afterPath="$PROJECT_DIR$/app/Providers/PurifySetupProvider.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Wrap web page url in tweety and reply body with anchor tag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Reply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tweet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/purify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/purify.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/TweetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TweetTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,14 +219,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="29095000" />
-    </task>
-    <task id="LOCAL-00123" summary="Add unit tests for user and reply">
-      <created>1617517186089</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1617517186089</updated>
+      <workItem from="1617508106808" duration="29860000" />
     </task>
     <task id="LOCAL-00124" summary="Add feature test for tweet">
       <created>1617543553648</created>
@@ -567,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617644389023</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Wrap web page url in tweety and reply body with anchor tag">
+      <created>1617644753206</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1617644753206</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implement update profile for API" />
     <MESSAGE value="Allow tweets and replies to be deleted" />
     <MESSAGE value="Add email controller for API" />
     <MESSAGE value="Update views" />
@@ -612,7 +608,8 @@
     <MESSAGE value="Update README" />
     <MESSAGE value="Add seeder" />
     <MESSAGE value="Update explore controller response (exclude logged in user from the list of exprole users)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update explore controller response (exclude logged in user from the list of exprole users)" />
+    <MESSAGE value="Wrap web page url in tweety and reply body with anchor tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrap web page url in tweety and reply body with anchor tag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

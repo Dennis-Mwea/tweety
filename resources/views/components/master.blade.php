@@ -25,8 +25,8 @@
 </head>
 <body>
 <div id="app">
-    <section class="px-8 py-8 mb-6">
-        <header class="container mx-auto flex justify-between">
+    <section class="w-full bg-white items-center flex-wrap m-auto top-0 animated fixed z-20">
+        <header class="container mx-auto flex justify-between bg-white p-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="130" height="34" viewBox="0 0 130 34">
                 <g fill="none" fill-rule="evenodd">
                     <path fill="#47D5FE"
@@ -44,7 +44,9 @@
         </header>
     </section>
 
-    {{ $slot }}
+    <div class="mt-32">
+        {{ $slot }}
+    </div>
 </div>
 </body>
 </html>
