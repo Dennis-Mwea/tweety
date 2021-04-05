@@ -27,7 +27,7 @@ class MessagesController extends Controller
         $message = current_user()->messages()->create([
             'message' => $request->input('message'),
             'chat_id' => $chat->id,
-        ]);
+        ])->load('sender');
 
         $chat->messages()->attach($message);
         $chat->touch();

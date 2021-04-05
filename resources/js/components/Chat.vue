@@ -94,11 +94,7 @@ export default {
                 this.updateActivePeer(id, false);
             }, 3000);
         }).listen("MessageSent", (event) => {
-            this.messages.push({
-                message: event.message.message,
-                sender: event.sender,
-                chatId: event.chat.id
-            })
+            this.messages.push(event.message)
 
             this.updateActivePeer(event.sender.id, false);
         })
@@ -168,9 +164,8 @@ export default {
         },
 
         addMessage(message) {
-            this.messages.push(message);
-
             axios.post(`/chat/${this.chatId}/messages`, message).then((response) => {
+                this.messages.push(response.data.message)
             });
         },
 
