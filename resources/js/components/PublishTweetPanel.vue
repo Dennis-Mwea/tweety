@@ -21,35 +21,20 @@
             <span v-if="errors.image" class="text-xs text-red-600" v-text="errors.image[0]"></span>
 
             <footer class="flex items-center justify-between">
-                <img
-                    :src="avatar"
-                    alt="Your Avatar"
-                    class="rounded-full mr-2"
-                    height="50"
-                    width="50"
-                />
+                <img :src="avatar" alt="Your Avatar" class="rounded-full mr-2" height="50" width="50"/>
 
                 <div class="flex items-center">
                     <div class="mr-6">
-                        <image-upload
-                            :clear="clear"
-                            :name="'image'"
-                            @loaded="onLoad"
-                        >
+                        <image-upload :clear="clear" :name="'image'" @loaded="onLoad">
                             <slot>
                                 <button
                                     class="bg-blue-300 focus:outline-none text-white font-bold py-2 px-2 rounded-full"
-                                    type="button"
-                                >
-                                    <svg
-                                        class="h-6 w-6 text-blue-500"
-                                        viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                    type="button">
+                                    <svg class="h-6 w-6 text-blue-500" viewBox="0 0 20 20"
+                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M19 2H1a1 1 0 00-1 1v14a1 1 0 001 1h18a1 1 0 001-1V3a1 1 0 00-1-1zm-1 14H2V4h16v12zm-3.685-5.123l-3.231 1.605-3.77-6.101L4 14h12l-1.685-3.123zM13.25 9a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"
-                                            fill="currentColor"
-                                        />
+                                            fill="currentColor"/>
                                     </svg>
                                 </button>
                             </slot>
@@ -57,33 +42,25 @@
                     </div>
 
                     <div v-if="body.length > 0" class="mr-6">
-                        <svg
-                            v-if="!limitExceeded"
-                            class="circular-chart h-8 w-8"
-                            viewBox="0 0 36 36"
-                        >
-                            <path
-                                class="circle-bg"
-                                d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                            <path
-                                :stroke="limitExceeded ? '#E53E3E' : '#4299e1'"
-                                :stroke-dasharray="characterLeft + ' 100'"
-                                class="circle"
-                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                                fill="currentColor"
-                            />
-                        </svg>
-                        <span v-else class="text-sm text-red-600">
-                            {{ characterLeft }}</span>
+                        <span v-if="reachErrorLimit" class="text-sm text-red-600">{{ characterLeft }}</span>
+                        <div v-else>
+                            <svg class="circular-chart h-8 w-8" viewBox="0 0 36 36">
+                                <path class="circle-bg"
+                                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path :stroke="indicatorColor" :stroke-dasharray="characterLeftPercentage + ' 100'"
+                                      class="circle"
+                                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      fill="currentColor"/>
+                                <text v-if="reachWarningLimit" dy=".4em" stroke="#A0AEC0" stroke-width=".5px"
+                                      text-anchor="middle" x="50%" y="50%">{{ characterLeft }}
+                                </text>
+                            </svg>
+                        </div>
                     </div>
 
                     <button
                         class="bg-blue-500 rounded-full shadow text-sm px-10 text-white hover:bg-blue-600 h-10 focus:outline-none"
-                        type="submit"
-                    >
+                        type="submit">
                         Publish
                     </button>
                 </div>
@@ -136,12 +113,36 @@ export default {
     },
 
     computed: {
-        characterLeft() {
+        characterLeftPercentage() {
             return ((this.limit - this.body.length) * (100 / this.limit)).toFixed(0)
         },
 
-        limitExceeded() {
+        limitExceed() {
             return this.length > this.limit
+        },
+
+        reachWarningLimit() {
+            return this.body.length > this.limit - 21;
+        },
+
+        reachErrorLimit() {
+            return this.body.length > this.limit + 10;
+        },
+
+        reachInitailErrorLimit() {
+            return (
+                this.body.length > this.limit && this.body.length <= this.limit + 10
+            );
+        },
+
+        indicatorColor() {
+            if (this.reachInitailErrorLimit) {
+                return "#E53E3E";
+            }
+            if (this.reachWarningLimit) {
+                return "#DD6B20";
+            }
+            return "#4299e1";
         }
     },
 
