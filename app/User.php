@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Scout\Searchable;
 
+/**
+ * @method static where(string $string, mixed $email)
+ * @method static create(array $array)
+ */
 class User extends Authenticatable
 {
     use Notifiable;
