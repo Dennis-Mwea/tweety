@@ -42,7 +42,7 @@ MIX_ALGOLIA_SECRET=YOUR_ALGOLIA_SECRET
 3. The ability to toggle a like.
 4. Pop-up flash messages.
 5. Interactivity with [Vuejs](https://vuejs.org/).
-6. Display the number of remaining characters allowed whhen writing a new tweet,.
+6. Display the number of remaining characters allowed when writing a new tweet,.
 7. Allow tweets to be deleted.
 8. Mentions and notifications.
 9. Two level nested replies.
