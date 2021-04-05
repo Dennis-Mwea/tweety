@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Chat;
 use App\Events\MessageSent;
 use App\Message;
+use App\User;
 use Illuminate\Http\Request;
 
 class MessagesController extends Controller
@@ -35,5 +36,12 @@ class MessagesController extends Controller
         broadcast(new MessageSent(current_user(), $message, $chat))->toOthers();
 
         return ['status' => 'Message sent.'];
+    }
+
+    public function update(Chat $chat, User $user)
+    {
+        $chat->userMessages($user)->markAsRead();
+
+        return ['status' => 'Message read.'];
     }
 }

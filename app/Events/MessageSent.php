@@ -6,6 +6,7 @@ use App\Message;
 use App\User;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -37,7 +38,7 @@ class MessageSent implements ShouldBroadcast
      * @param Message $message
      * @param $chat
      */
-    public function __construct(User $user, Message $message, $chat)
+    public function __construct(Authenticatable $user, Message $message, $chat)
     {
         $this->user = $user;
         $this->message = $message;

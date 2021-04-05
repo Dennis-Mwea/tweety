@@ -47,7 +47,7 @@
                                    class="bg-gray-300 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                    name="message"
                                    placeholder="Type your message here..." type="text"
-                                   @keyup="sendTypingEvent" @keyup.enter="sendMessage"/>
+                                   @focus="markAsRead" @keyup="sendTypingEvent" @keyup.enter="sendMessage"/>
                         </div>
 
                         <button
@@ -193,6 +193,14 @@ export default {
             }
 
             return dayjs(secondMessageTime).diff(dayjs(firstMessageTime), "m") >= 10;
+        },
+
+        markAsRead(message) {
+            axios
+                .patch(`/chat/${this.chatId}/messages/${message.id}`)
+                .then((response) => {
+                    console.log(response.data);
+                });
         }
     }
 }

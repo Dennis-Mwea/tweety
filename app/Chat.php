@@ -11,8 +11,11 @@ class Chat extends Model
     use HasFactory;
 
     public $incrementing = false;
+
     protected $guarded = [];
+
     protected $with = ['messages', 'participants'];
+
     protected $keyType = 'string';
 
     protected static function boot()
@@ -26,20 +29,17 @@ class Chat extends Model
         });
     }
 
-//    public function getIncrementing()
-//    {
-//        return false;
-//    }
-//
-//    public function getKeyType()
-//    {
-//        return 'string';
-//    }
-
     public function participants()
     {
         return $this->belongsToMany(User::class, 'chat_participants')
             ->withTimestamps();
+    }
+
+    public function userMessages(User $user)
+    {
+        return $this->messages()
+            ->whereNull('read_at')
+            ->where('user_id', $user->id);
     }
 
     public function messages()
