@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update character indicator stylings">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/CharacterLimitIndicator.vue" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Extract character limit indicator component">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/PublishTweetPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/PublishTweetPanel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,14 +219,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="24559000" />
-    </task>
-    <task id="LOCAL-00108" summary="Add icon to search input">
-      <created>1617510050932</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1617510050932</updated>
+      <workItem from="1617508106808" duration="24806000" />
     </task>
     <task id="LOCAL-00109" summary="Implemenet algolia inifinite hits and clean things up">
       <created>1617510480206</created>
@@ -564,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617621092964</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Extract character limit indicator component">
+      <created>1617621404492</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1617621404492</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update travis testing php version" />
     <MESSAGE value="Update travis ci project url" />
     <MESSAGE value="Configure sanctum" />
     <MESSAGE value="Add auth controller" />
@@ -609,7 +608,8 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update paginator stylings" />
     <MESSAGE value="Update character indicator stylings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update character indicator stylings" />
+    <MESSAGE value="Extract character limit indicator component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extract character limit indicator component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
