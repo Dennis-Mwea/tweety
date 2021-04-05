@@ -51,4 +51,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/notifications', 'NotificationsController@index')->name('notifications');
 
     Route::get('/search', 'SearchController@show')->name('show-search');
+
+    Route::get('/profiles/{user}/settings', 'SettingsController@edit')
+        ->middleware('can:edit,user')->name('account-settings');
+    Route::get('/profiles/{user}/password/edit', 'PasswordController@edit')
+        ->middleware('can:edit,user')->name('edit-password');
+    Route::patch('/profiles/{user}/password', 'PasswordController@update')
+        ->middleware('can:edit,user')->name('update-password');
 });

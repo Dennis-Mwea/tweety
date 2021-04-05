@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update API mentioned user response">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ChildrenRepliesController.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Clean Up">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SettingsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/settings/password/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfilesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_ReceivedNewReply.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_ReceivedNewReply.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_RecentlyTweeted.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_RecentlyTweeted.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profiles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfilesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfilesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,14 +228,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="27155000" />
-    </task>
-    <task id="LOCAL-00118" summary="Update styling">
-      <created>1617513853107</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1617513853107</updated>
+      <workItem from="1617508106808" duration="27803000" />
     </task>
     <task id="LOCAL-00119" summary="Add simple data seeder">
       <created>1617513924912</created>
@@ -567,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617623121688</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Clean Up">
+      <created>1617642723682</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1617642723682</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +593,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add api reply likes controller" />
     <MESSAGE value="Store reply from client" />
     <MESSAGE value="Add api explore controller" />
     <MESSAGE value="Implement follow/unfollow logic for API" />
@@ -612,7 +617,8 @@
     <MESSAGE value="Implement store on user avatar controller" />
     <MESSAGE value="Fetch user replies from API" />
     <MESSAGE value="Update API mentioned user response" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update API mentioned user response" />
+    <MESSAGE value="Clean Up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean Up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

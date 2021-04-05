@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class ProfilesTest extends TestCase
@@ -67,5 +68,18 @@ class ProfilesTest extends TestCase
             ->assertSee($attributes['username'])
             ->assertSee($attributes['name'])
             ->assertSee($attributes['description']);
+    }
+
+    public function authorized_users_can_edit_their_password()
+    {
+        $user = create(User::class);
+
+        $this->actingAs($user)
+            ->patch($user->path('password'), $attributes = [
+                'current_password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+                'new_password' => 'password',
+                'new_password_confirmation' => 'password',
+            ]);
+        $this->assertTrue(Hash::check($attributes['new_password'], $user->fresh()->password));
     }
 }
