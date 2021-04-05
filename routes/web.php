@@ -58,4 +58,9 @@ Route::middleware('auth')->group(function () {
         ->middleware('can:edit,user')->name('edit-password');
     Route::patch('/profiles/{user}/password', 'PasswordController@update')
         ->middleware('can:edit,user')->name('update-password');
+
+    Route::get('/profiles/{user}/email/edit', 'EmailController@edit')
+        ->middleware('can:edit,user', 'password.confirm')->name('edit-email');
+    Route::patch('/profiles/{user}/email', 'EmailController@update')
+        ->middleware('can:edit,user')->name('update-email');
 });

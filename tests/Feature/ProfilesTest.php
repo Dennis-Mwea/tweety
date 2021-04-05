@@ -70,7 +70,8 @@ class ProfilesTest extends TestCase
             ->assertSee($attributes['description']);
     }
 
-    public function authorized_users_can_edit_their_password()
+    /** @test */
+    public function authorized_users_can_edit_their_passwords()
     {
         $user = create(User::class);
 
@@ -81,5 +82,17 @@ class ProfilesTest extends TestCase
                 'new_password_confirmation' => 'password',
             ]);
         $this->assertTrue(Hash::check($attributes['new_password'], $user->fresh()->password));
+    }
+
+    /** @test */
+    public function authorized_users_can_edit_their_emails()
+    {
+        $user = create(User::class);
+
+        $this->actingAs($user)
+            ->patch($user->path('email'), $attributes = [
+                'email' => 'john@example.com'
+            ]);
+        $this->assertEquals($attributes['email'], $user->fresh()->email);
     }
 }

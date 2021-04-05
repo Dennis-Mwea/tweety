@@ -47,3 +47,7 @@ MIX_ALGOLIA_SECRET=YOUR_ALGOLIA_SECRET
 8. Mentions and notifications.
 9. Two level nested replies.
 10. Instant search with algolia
+
+## Mobile App
+
+Mobile App for Tweety written in Flutter can be found [here](https://github.com/Dennis-Mwea/tweety-app).
