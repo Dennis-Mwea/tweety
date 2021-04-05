@@ -22,6 +22,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/tweets', 'Api\TweetsController@store');
     Route::get('/tweets/{tweet}/replies', 'Api\RepliesController@index');
     Route::get('/replies/{reply}/children/json', 'Api\RepliesController@jsonShow');
+    Route::post('/tweets/{tweet}/like', 'Api\TweetLikesController@store');
+    Route::delete('/tweets/{tweet}/dislike', 'Api\TweetLikesController@destroy');
 
     Route::get('/profile/avatar', 'Api\UserAvatarController@show');
     Route::get('/profile', 'Api\ProfilesController@index');

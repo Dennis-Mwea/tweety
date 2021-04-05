@@ -6,7 +6,6 @@ use App\Like;
 use App\Notifications\TweetWasDisliked;
 use App\Notifications\TweetWasLiked;
 use App\Reply;
-use App\User;
 
 trait Likable
 {
@@ -22,7 +21,7 @@ trait Likable
         return $this->likes->where('liked', true)->count();
     }
 
-    public function dislike(User $user = null)
+    public function dislike($user = null)
     {
         if ($this->isDisliked()) {
             return $this->removeLike($user);
@@ -49,7 +48,7 @@ trait Likable
         return $this->morphMany(Like::class, 'liked');
     }
 
-    public function like(User $user = null, $liked = true)
+    public function like($user = null, $liked = true)
     {
         if ($this->isLiked() && $liked) {
             return $this->removeLike($user);

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add profile routes">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add api route to publish tweet">
       <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ExploreController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TweetLikesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TweetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TweetsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tweet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/Likable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Likable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,14 +221,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="20396000" />
-    </task>
-    <task id="LOCAL-00091" summary="Fix likes bugs">
-      <created>1617502522437</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1617502522437</updated>
+      <workItem from="1617508106808" duration="20516000" />
     </task>
     <task id="LOCAL-00092" summary="Add like function to reply and update notification">
       <created>1617503477369</created>
@@ -566,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617616905731</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Add api route to publish tweet">
+      <created>1617617116863</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1617617116863</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +586,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add search box to layout" />
     <MESSAGE value="Update README" />
     <MESSAGE value="Format following list" />
     <MESSAGE value="Fix algolia search" />
@@ -611,7 +610,8 @@
     <MESSAGE value="Add route to get user avatar" />
     <MESSAGE value="Fetch replies for API" />
     <MESSAGE value="Add profile routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add profile routes" />
+    <MESSAGE value="Add api route to publish tweet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add api route to publish tweet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
