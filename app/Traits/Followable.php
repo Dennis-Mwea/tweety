@@ -49,6 +49,16 @@ trait Followable
         return $this->follows()->save($user);
     }
 
+    public function getFollowsCountAttribute()
+    {
+        return $this->follows()->count();
+    }
+
+    public function getFollowersCountAttribute()
+    {
+        return $this->followers()->count();
+    }
+
     public function followers()
     {
         return $this->belongsToMany(User::class, 'follows', 'following_user_id', 'user_id')

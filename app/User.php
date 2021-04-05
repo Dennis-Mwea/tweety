@@ -48,7 +48,7 @@ class User extends Authenticatable
     ];
 
     protected $appends = [
-        'avatar'
+        'avatar', 'follows_count', 'followers_count',
     ];
 
     public function tweets()
