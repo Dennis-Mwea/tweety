@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 use Stevebauman\Purify\Facades\Purify;
 
+/**
+ * @method static create(array $attributes)
+ */
 class Tweet extends Model
 {
     use Likable;
@@ -52,6 +55,11 @@ class Tweet extends Model
             '<a href="/profiles/$1" class="text-blue-500 hover:underline">$0</a>',
             $body
         );
+    }
+
+    public function getImageAttribute($value)
+    {
+        return $value ? asset($value) : null;
     }
 
     public function getThreadedReplies()

@@ -19,6 +19,7 @@ Route::post('/logout', 'Api\AuthController@logout');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/tweets', 'Api\TweetsController@index');
+    Route::post('/tweets', 'Api\TweetsController@store');
     Route::get('/tweets/{tweet}/replies', 'Api\RepliesController@index');
     Route::get('/replies/{reply}/children/json', 'Api\RepliesController@jsonShow');
 
