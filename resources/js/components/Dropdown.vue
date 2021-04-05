@@ -5,7 +5,7 @@
         </div>
 
         <transition name="pop-out-quick">
-            <ul v-show="isOpen" class="bg-gray-100 absolute mt-2 bg-white -m-6 rounded shadow-lg z-10">
+            <ul v-show="isOpen" class="bg-gray-100 absolute mt-2 -m-6 rounded shadow-lg z-10">
                 <slot></slot>
             </ul>
         </transition>
