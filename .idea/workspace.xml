@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix loose ends">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add api route to create chat room">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ChatsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ChatsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/utils/authorizations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/utils/authorizations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_timeline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_timeline.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,14 +244,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="44716000" />
-    </task>
-    <task id="LOCAL-00151" summary="Add password controller for API">
-      <created>1617620087414</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1617620087415</updated>
+      <workItem from="1617508106808" duration="45056000" />
     </task>
     <task id="LOCAL-00152" summary="Retrieve following and followers list for API">
       <created>1617620298941</created>
@@ -588,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617661015837</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="Add api route to create chat room">
+      <created>1617661090630</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1617661090630</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +609,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add seeder" />
     <MESSAGE value="Update explore controller response (exclude logged in user from the list of exprole users)" />
     <MESSAGE value="Wrap web page url in tweety and reply body with anchor tag" />
     <MESSAGE value="Update layout structure" />
@@ -633,7 +633,8 @@
     <MESSAGE value="Send and receive message via API" />
     <MESSAGE value="Tweak typing event payload for API" />
     <MESSAGE value="Fix loose ends" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix loose ends" />
+    <MESSAGE value="Add api route to create chat room" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add api route to create chat room" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

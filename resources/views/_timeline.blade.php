@@ -10,7 +10,9 @@
         <p class="p-4 font-normal">No tweets yet!</p>
     @endforelse
 
-    <div class="flex items-center">
-        {{--        {{ $tweets->links() }}--}}
-    </div>
+    @if(!is_collection($tweets))
+        <div class="flex w-full items-center justify-center">
+            {{ $tweets->links() }}
+        </div>
+    @endif
 </div>

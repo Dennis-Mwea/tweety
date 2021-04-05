@@ -25,3 +25,8 @@ function get_notification_color($notificationType)
 
     return $colors[$notificationType];
 }
+
+function is_collection($value)
+{
+    return ($value instanceof \Illuminate\Support\Collection);
+}

@@ -13,7 +13,7 @@ class TweetController extends Controller
     {
         return view('tweets.home', [
             'tweets' => current_user()->timeline()
-                ->paginate(10)
+                ->paginate(5)
         ]);
     }
 
