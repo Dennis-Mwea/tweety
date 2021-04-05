@@ -76,6 +76,18 @@ class TweetTest extends TestCase
         );
     }
 
+    public function testATweetWrapsWebpageUrlInTheBodyWithinAnchorTagsWithCorrectStylings()
+    {
+        $tweet = new Tweet([
+            'body' => 'Check at google.com and https://tunnandaaung.tech'
+        ]);
+
+        $this->assertEquals(
+            'Check at <a href="google.com" class="text-blue-500 hover:underline">google.com</a> and <a href="https://tunnandaaung.tech" class="text-blue-500 hover:underline" target="_blank" rel="noreferrer noopener">https://tunnandaaung.tech</a>',
+            $tweet->body
+        );
+    }
+
     protected function setUp(): void
     {
         parent::setUp();
