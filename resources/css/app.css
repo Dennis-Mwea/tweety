@@ -86,11 +86,11 @@ body::-webkit-scrollbar-thumb {
     position: sticky;
 }
 
-.page-item {
+.page-link {
     @apply px-4 py-2 flex items-center justify-center rounded-full;
 }
 
-.page-item:hover {
+.page-link:hover {
     @apply text-blue-600 bg-blue-200;
 }
 
