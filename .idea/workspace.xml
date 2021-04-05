@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add chat index page">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fix bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Chat.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,14 +237,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="39788000" />
-    </task>
-    <task id="LOCAL-00133" summary="Update travis ci project url">
-      <created>1617564711193</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1617564711193</updated>
+      <workItem from="1617508106808" duration="39951000" />
     </task>
     <task id="LOCAL-00134" summary="Configure sanctum">
       <created>1617564920937</created>
@@ -583,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617655516575</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="Fix bug">
+      <created>1617656079095</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1617656079096</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +609,6 @@
     <MESSAGE value="Update character limit indicator in AddReplyModal" />
     <MESSAGE value="Tweak notifications and tweet stylings" />
     <MESSAGE value="Update notification responses" />
-    <MESSAGE value="Fix bug" />
     <MESSAGE value="Implement store on user avatar controller" />
     <MESSAGE value="Fetch user replies from API" />
     <MESSAGE value="Update API mentioned user response" />
@@ -628,7 +626,8 @@
     <MESSAGE value="Add chat component" />
     <MESSAGE value="Tweak chat component" />
     <MESSAGE value="Add chat index page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chat index page" />
+    <MESSAGE value="Fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

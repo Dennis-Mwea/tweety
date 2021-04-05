@@ -105,7 +105,6 @@ export default {
                 this.updateActivePeer(id, false);
             }, 3000);
         }).listen("MessageSent", (event) => {
-            console.log('Message received')
             this.messages.push({
                 message: event.message.message,
                 user: event.user,
