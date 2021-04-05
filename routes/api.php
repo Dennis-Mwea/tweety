@@ -43,4 +43,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::patch('/auth/email', 'Api\EmailController@update');
     Route::patch('/auth/password', 'Api\PasswordController@update');
+
+    Route::get('/profiles/{user}/following', 'Api\FollowsController@show')
+        ->name('api-show-following');
+    Route::get('/profiles/{user}/followers', 'Api\FollowsController@show');
 });
