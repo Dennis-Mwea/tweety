@@ -15,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register', 'Api\AuthController@register');
 Route::post('/login', 'Api\AuthController@login');
-Route::post('/logout', 'Api\AuthController@logout');
+Route::post('password/forgot', 'Api\ForgotPasswordController');
 
 Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', 'Api\AuthController@logout');
+
     Route::get('/tweets', 'Api\TweetsController@index');
     Route::post('/tweets', 'Api\TweetsController@store');
     Route::get('/tweets/{tweet}/replies', 'Api\RepliesController@index');
@@ -33,6 +35,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('replies/{reply}/children/json', 'Api\RepliesController@showChildren');
 
     Route::get('/profile/avatar', 'Api\UserAvatarController@show');
+    Route::post('/profile-images', 'Api\UserAvatarController@store');
     Route::get('/profile', 'Api\ProfilesController@index');
     Route::get('/profiles/{user}', 'Api\ProfilesController@show');
     Route::get('/profiles/{user}/tweets', 'Api\ProfileTweetsController@show');
