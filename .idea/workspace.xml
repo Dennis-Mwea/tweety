@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Mark messages as read on focus">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tweety.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tweety.iml" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Rename user to sender">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/websockets.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/websockets.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Chat.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,14 +240,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="41118000" />
-    </task>
-    <task id="LOCAL-00139" summary="Add profile routes">
-      <created>1617616905731</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1617616905731</updated>
+      <workItem from="1617508106808" duration="41289000" />
     </task>
     <task id="LOCAL-00140" summary="Add api route to publish tweet">
       <created>1617617116863</created>
@@ -592,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617657117399</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Rename user to sender">
+      <created>1617657438929</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1617657438929</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implement API controller to find mentioned user" />
     <MESSAGE value="Update character limit indicator in AddReplyModal" />
     <MESSAGE value="Tweak notifications and tweet stylings" />
     <MESSAGE value="Update notification responses" />
@@ -637,7 +629,8 @@
     <MESSAGE value="Remove console log" />
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Mark messages as read on focus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mark messages as read on focus" />
+    <MESSAGE value="Rename user to sender" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename user to sender" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
