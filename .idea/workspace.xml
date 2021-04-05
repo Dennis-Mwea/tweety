@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Remove console log">
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/MessageCollection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_05_210510_add_reat_at_to_messages_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/MessageSent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageSent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MessagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Chat.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add read_at field to message table">
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,14 +236,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="40541000" />
-    </task>
-    <task id="LOCAL-00135" summary="Add auth controller">
-      <created>1617614827975</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1617614827976</updated>
+      <workItem from="1617508106808" duration="40612000" />
     </task>
     <task id="LOCAL-00136" summary="Add api tweets routes">
       <created>1617615222944</created>
@@ -589,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617656246149</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Add read_at field to message table">
+      <created>1617656850271</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1617656850271</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Extract character limit indicator component" />
     <MESSAGE value="Add API search controller" />
     <MESSAGE value="Implement API controller to find mentioned user" />
     <MESSAGE value="Update character limit indicator in AddReplyModal" />
@@ -634,7 +625,8 @@
     <MESSAGE value="Add chat index page" />
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Remove console log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove console log" />
+    <MESSAGE value="Add read_at field to message table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add read_at field to message table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
