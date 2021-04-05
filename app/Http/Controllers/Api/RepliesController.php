@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Reply;
 use App\Tweet;
+use Illuminate\Support\Facades\Gate;
 
 class RepliesController extends BaseApiController
 {
@@ -37,5 +38,16 @@ class RepliesController extends BaseApiController
         $reply['parent_id'] ? (int)$reply['parent_id'] : $reply['parent_id'];
 
         return $this->sendResponse($reply, '', 201);
+    }
+
+    public function destroy(Reply $reply)
+    {
+        if (Gate::denies('edit', $reply->owner)) {
+            return $this->sendError('Unauthorized!', [], 403);
+        };
+
+        $reply->delete();
+
+        return $this->sendResponse([], 'Reply successfully deleted!', 200);
     }
 }
