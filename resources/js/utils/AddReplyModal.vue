@@ -51,21 +51,7 @@
             <span v-if="errors.body" class="text-xs text-red-600" v-text="errors.body[0]"></span>
             <footer class="flex items-center justify-between">
                 <img :src="avatar" alt="Your Avatar" class="rounded-full mr-2" height="50" width="50"/>
-                <div v-if="body.length > 0" class="mr-6">
-                    <svg v-if="!limitExceed" class="circular-chart h-8 w-8" viewBox="0 0 36 36">
-                        <path
-                            class="circle-bg"
-                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                        <path
-                            :stroke="limitExceed ? '#E53E3E' : '#4299e1'"
-                            :stroke-dasharray="characterLeft + ' 100'"
-                            class="circle"
-                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                            fill="currentColor"
-                        />
-                    </svg>
-                    <span v-else class="text-sm text-red-600">{{ characterLeft }}</span>
-                </div>
+                <character-limit-indicator :body="body"></character-limit-indicator>
                 <button
                     class="bg-blue-500 rounded-full shadow font-bold text-sm px-10 text-white hover:bg-blue-600 h-10 focus:outline-none"
                     type="submit"
@@ -79,9 +65,10 @@
 <script>
 import VueTribute from "vue-tribute";
 import Tribute from "tributejs";
+import CharacterLimitIndicator from "@/components/CharacterLimitIndicator";
 
 export default {
-    components: {VueTribute},
+    components: {VueTribute, CharacterLimitIndicator},
 
     props: ["id"],
 
@@ -94,7 +81,6 @@ export default {
             parentBody: "",
             owner: "",
             isRoot: false,
-            limit: 255,
             errors: {},
             tributeOptions: new Tribute({
                 values: function (text, cb) {
@@ -117,14 +103,6 @@ export default {
     },
 
     computed: {
-        characterLeft() {
-            return ((this.limit - this.body.length) * (100 / this.limit)).toFixed(0);
-        },
-
-        limitExceed() {
-            return this.body.length > this.limit;
-        },
-
         replyingTo() {
             return this.owner.username === window.App.user.username || this.isRoot
                 ? ""
@@ -174,32 +152,5 @@ export default {
 </script>
 
 <style scoped>
-.circular-chart {
-    display: block;
-    margin: 10px auto;
-}
 
-.circle {
-    fill: none;
-    stroke-width: 4;
-    stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
-}
-
-.circle-bg {
-    fill: none;
-    stroke: #e2e8f0;
-    stroke-width: 5;
-}
-
-@keyframes progress {
-    0% {
-        stroke-dasharray: 0 100;
-    }
-}
-
-.percentage {
-    fill: #666;
-    text-anchor: middle;
-}
 </style>
