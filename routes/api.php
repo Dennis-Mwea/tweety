@@ -51,6 +51,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/profiles/{user}/following', 'Api\FollowsController@show')
         ->name('api-show-following');
     Route::get('/profiles/{user}/followers', 'Api\FollowsController@show');
+    Route::get('/profiles/{user}/replies', 'Api\ProfileRepliesController@show');
 
     Route::get('/notification-counts', 'Api\NotificationCountsController');
     Route::get('/notifications', 'Api\NotificationsController@index');

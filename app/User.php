@@ -101,4 +101,9 @@ class User extends Authenticatable
 
         return $append ? "{$path}/{$append}" : "$path";
     }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class)->with('tweet')->latest();
+    }
 }
