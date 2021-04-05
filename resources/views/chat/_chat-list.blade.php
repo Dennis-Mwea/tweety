@@ -11,13 +11,13 @@
                         <span class="font-bold text-sm text-gray-600">{{ '@'. $user->username }}</span>
 
                         @if(!is_null($chat->messages->first()))
-                            <div class="flex">
-                                @if($chat->messages->first()->user_id === auth()->id() )
+                            @if($chat->messages->first()->user_id === auth()->id() )
+                                <div class="flex">
                                     You:
-                                @endif
-                                <p class="{{ $chat->messages->first()->read_at ? 'font-semibold' : ''}}">
-                                    {{ $chat->messages->first()->message }}</p>
-                            </div>
+                                    <p class="{{ $chat->messages->first()->read_at ? 'font-semibold' : ''}}">
+                                        {{ $chat->messages->first()->message }}</p>
+                                </div>
+                            @endif
                         @endif
                     </div>
                 </a>

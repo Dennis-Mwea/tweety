@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,4 +65,7 @@ Route::middleware('auth:sanctum')
 
         Route::get('/chat', 'ChatsController@index');
         Route::get('/chat/{chat}/messages', 'MessagesController@get');
+        Route::post('/chat/{chat}/messages', 'MessagesController@store');
     });
+
+Broadcast::routes(['middleware' => ['auth:sanctum']]);

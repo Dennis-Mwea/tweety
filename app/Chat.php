@@ -46,7 +46,7 @@ class Chat extends Model
     {
         return $this->belongsToMany(Message::class, 'chat_messages')
             ->latest()
-            ->take(10)
+            ->limit(10)
             ->withTimestamps();
     }
 }
