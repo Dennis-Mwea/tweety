@@ -11,6 +11,13 @@
 |
 */
 
-Broadcast::channel('App.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+use App\Chat;
+use Illuminate\Support\Facades\Broadcast;
+
+Broadcast::channel('chat.{id}', function ($user, Chat $chat) {
+    if ($chat->participants->contains($user)) {
+        return $user;
+    }
+
+    return false;
 });

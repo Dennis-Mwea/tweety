@@ -16,6 +16,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import {ObserveVisibility} from "vue-observe-visibility";
 import algoliaSearch from "@/mixins/algoliaSearch";
+import VueChatScroll from "vue-chat-scroll/dist/vue-chat-scroll";
 
 TurboLinks.start()
 window.Vue = Vue;
@@ -24,6 +25,7 @@ Vue.use(VModal)
 Vue.use(PortalVue)
 Vue.use(InstantSearch)
 Vue.directive("observe-visibility", ObserveVisibility)
+Vue.use(VueChatScroll)
 window.events = new Vue();
 window.flash = function (message, level = "success") {
     window.events.$emit('flash', {message, level})

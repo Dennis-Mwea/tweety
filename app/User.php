@@ -102,4 +102,14 @@ class User extends Authenticatable
             ->with('tweet', 'parent')
             ->latest();
     }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
+
+    public function chats()
+    {
+        return $this->belongsToMany(Chat::class, 'chat_participants')->withTimestamps();
+    }
 }
