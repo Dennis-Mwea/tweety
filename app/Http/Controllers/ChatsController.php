@@ -12,6 +12,14 @@ class ChatsController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        $chats = current_user()->chats()
+            ->latest()->get();
+
+        return view('chat.index', compact('chats'));
+    }
+
     public function show(User $user)
     {
         $chat = $this->findOrCreateChatRoom($user);

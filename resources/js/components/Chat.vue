@@ -10,7 +10,7 @@
                             <li v-for="(message, index) in messages"
                                 :key="message.id"
                                 :class="{'mb-12': shouldAddMargin( messages[index === 0 ? 0 : index - 1].created_at,messages[index].created_at)}"
-                                class="mb-12">
+                                class="mb-4">
                                 <div :class="authUser.id === message.user.id ? 'justify-end': 'justify-start'"
                                      class="flex">
                                     <div class="flex justify-end items-end">
@@ -120,19 +120,18 @@ export default {
 
     computed: {
         shouldPaginate() {
-            return this.page <= this.last_page - 1
+            return this.currentPage <= this.lastPage - 1
         }
     },
 
     methods: {
         fetchMessages() {
-            this.currentPage++
-
             if (this.currentPage >= this.lastPage) {
                 axios.get(this.url(this.currentPage)).then(({data}) => {
                     data.data.map((item) => this.messages.unshift(item))
 
                     this.lastPage = data.last_page
+                    this.currentPage++
                 })
             }
         },

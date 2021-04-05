@@ -64,7 +64,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profiles/{user}/email', 'EmailController@update')
         ->middleware('can:edit,user')->name('update-email');
 
-    Route::get('/chat/{user}', 'ChatsController@show');
+    Route::get('/chats', 'ChatsController@index')->name('chat');
+    Route::get('/chat/{user}', 'ChatsController@show')->name('show-chat');
     Route::get('/chat/{chat}/messages', 'MessagesController@get');
     Route::post('/chat/{chat}/messages', 'MessagesController@store');
 });

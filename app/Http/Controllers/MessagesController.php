@@ -30,6 +30,7 @@ class MessagesController extends Controller
         ]);
 
         $chat->messages()->attach($message);
+        $chat->touch();
 
         broadcast(new MessageSent(current_user(), $message, $chat))->toOthers();
 
