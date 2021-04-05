@@ -1,10 +1,7 @@
 <x-master>
-    <div class="w-full max-w-sm mx-auto">
-
-        <form
-            class="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 mb-4"
-            method="POST" action="{{ route('register') }}"
-        >
+    <x-panel>
+        <form class="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+              method="POST" action="{{ route('register') }}">
             @csrf
 
             <div class="mb-6 text-xl font-bold">{{ __('Register') }}</div>
@@ -82,35 +79,23 @@
 
                 <input
                     class="shadow appearance-none @error('password') border border-red-500  @enderror rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                    id="password_confirmation"
-                    type="password"
-                    placeholder="******************"
-                    name="password_confirmation" required autocomplete="new-password"
-                >
+                    id="password_confirmation" type="password" placeholder="******************"
+                    name="password_confirmation" required autocomplete="new-password">
 
                 @error('password_confirmation')
                 <p class="text-red-500 text-xs italic">{{ $message }}</p>
                 @enderror
-
             </div>
 
             <div class="flex items-center justify-end">
-
                 <button
                     class="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
-                    type="submit"
-                >
+                    type="submit">
                     Register
                 </button>
-
             </div>
-
-
         </form>
 
-        <p class="text-center text-gray-500 text-xs">
-            &copy;2020 Tweety. All rights reserved.
-        </p>
-
-    </div>
+        <p class="text-center text-gray-500 text-xs">&copy;2020 Tweety. All rights reserved.</p>
+    </x-panel>
 </x-master>
