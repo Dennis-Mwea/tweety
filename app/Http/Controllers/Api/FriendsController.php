@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use Exception;
 
-class FriendsController extends Controller
+class FriendsController extends BaseApiController
 {
     /**
      * @return mixed
