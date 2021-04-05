@@ -10,9 +10,10 @@ class Chat extends Model
 {
     use HasFactory;
 
+    public $incrementing = false;
     protected $guarded = [];
-
     protected $with = ['messages', 'participants'];
+    protected $keyType = 'string';
 
     protected static function boot()
     {
@@ -25,15 +26,15 @@ class Chat extends Model
         });
     }
 
-    public function getIncrementing()
-    {
-        return false;
-    }
-
-    public function getKeyType()
-    {
-        return 'string';
-    }
+//    public function getIncrementing()
+//    {
+//        return false;
+//    }
+//
+//    public function getKeyType()
+//    {
+//        return 'string';
+//    }
 
     public function participants()
     {

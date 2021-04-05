@@ -11,10 +11,12 @@
 |
 */
 
+use App\Chat;
 use Illuminate\Support\Facades\Broadcast;
 
 Broadcast::channel('chat.{id}', function ($user, $chat) {
-    if ($chat->participants->contains($user)) {
+    $chat = Chat::find($chat);
+    if (!is_null($chat) && $chat->participants->contains($user)) {
         return $user;
     }
 
