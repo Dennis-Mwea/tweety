@@ -2,7 +2,6 @@
 
 namespace App\Events;
 
-use App\Chat;
 use App\Message;
 use App\User;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -34,9 +33,11 @@ class MessageSent implements ShouldBroadcast
     /**
      * Create a new event instance.
      *
-     * @return void
+     * @param User $user
+     * @param Message $message
+     * @param $chat
      */
-    public function __construct(User $user, Message $message, Chat $chat)
+    public function __construct(User $user, Message $message, $chat)
     {
         $this->user = $user;
         $this->message = $message;

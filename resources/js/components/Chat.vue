@@ -1,26 +1,23 @@
 <template>
-    <div class="flex">
+    <div class="flex px-4 py-1 rounded-xl rounded-t-none bg-gray-100">
         <div class="flex-1 flex flex-col max-h-screen chat-list">
             <div class="flex-1 flex justify-between overflow-y-hidden">
-                <div class="bg-gray-750 flex-1 flex flex-col justify-between">
+                <div class="flex-1 flex flex-col justify-between">
                     <div class="text-sm overflow-y-auto">
-                        <ul v-if="messages.length" id="messages" v-chat-scroll="{ always: false, smooth: true }"
-                            class="overflow-y-auto h-full max-h-screen" @v-chat-scroll-top-reached="fetchMessages()">
-                            <load-more v-show="shouldPaginate" :container="container" @ready="loadMore"></load-more>
-                            <li v-for="(message, index) in messages" :key="message.id"
-                                :class="{'mb-12': shouldAddMargin(messages[index === 0 ? 0 : index - 1].created_at, messages[index].created_at )}"
-                                class="mb-12">
-                                <div :class="authUser.id === message.user.id? 'justify-end': 'justify-start'"
+                        <ul v-if="messages.length" id="messages"
+                            v-chat-scroll="{ always: false, smooth: true }" class="overflow-y-auto h-full max-h-screen" @v-chat-scroll-top-reached="fetchMessages()">
+                            <li v-for="(message, index) in messages"
+                                :key="message.id"
+                                :class="{'mb-12': shouldAddMargin( messages[index === 0 ? 0 : index - 1].created_at,messages[index].created_at)}" class="mb-12">
+                                <div :class="authUser.id === message.user.id ? 'justify-end': 'justify-start'"
                                      class="flex">
-                                    <div>
-                                        <div
-                                            :class="authUser.id === message.user.id? 'bg-blue-200  rounded-br-none': 'bg-gray-300 rounded-bl-none'"
-                                            class="w-full rounded-full px-3 py-2 text-center">
+                                    <div class="flex justify-end items-end">
+                                        <img v-if="authUser.id !== message.user.id" :src="message.user.avatar"
+                                             alt="" class="w-6 h-6 rounded-full mr-2"/>
+                                        <div :class="authUser.id === message.user.id? 'bg-blue-200  rounded-br-none': 'bg-gray-300 rounded-bl-none'"
+                                             class="w-full rounded-full px-3 py-2 text-center">
                                             <p>{{ message.message }}</p>
                                         </div>
-
-                                        <img v-if="authUser.id !== message.user.id" :src="message.user.avatar"
-                                             alt="" class="w-6 h-6 rounded-full"/>
                                     </div>
                                 </div>
                             </li>
@@ -34,28 +31,26 @@
                     </div>
 
                     <div class="flex justify-between w-full mx-auto items-center">
-                        <div class="flex flex-1 flex-col">
+                        <div class="flex flex-1 flex-col mr-4">
                             <ul>
                                 <li v-for="participant in participants" :key="participant.id">
                                     <p v-if="participant.typing">
                                         @{{ participant.name }} is
-                                        <span class="bg-blue-500 text-white p-1 rounded-lg text-xs"
-                                        >typing...</span
-                                        >
+                                        <span class="bg-blue-500 text-white p-1 rounded-lg text-xs">typing...</span>
                                     </p>
                                 </li>
                             </ul>
-                            <input v-model="newMessage"
-                                   class="bg-gray-300 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
-                                   name="message" placeholder="Type your message here..." type="text"
+                            <input v-model="newMessage" class="bg-gray-300 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                                   name="message"
+                                   placeholder="Type your message here..." type="text"
                                    @keyup="sendTypingEvent" @keyup.enter="sendMessage"/>
                         </div>
-                        <span>
-                              <button
-                                  id="btn-chat"
-                                  class="bg-blue-500 rounded-full px-4 py-2 text-white hover:bg-blue-600 font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                                  @click="sendMessage">Send</button>
-                        </span>
+
+                        <button
+                            id="btn-chat"
+                            class="bg-blue-500 rounded-full px-4 py-2 text-white hover:bg-blue-600 font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110" @click="sendMessage">
+                            Send
+                        </button>
                     </div>
                 </div>
             </div>
@@ -105,6 +100,7 @@ export default {
                 this.updateActivePeer(id, false);
             }, 3000);
         }).listen("MessageSent", (event) => {
+            console.log('Message received')
             this.messages.push({
                 message: event.message.message,
                 user: event.user,
@@ -128,7 +124,7 @@ export default {
             this.currentPage++
 
             if (this.currentPage >= this.lastPage) {
-                axios.get(this.url(this.currentPage)).then(response => {
+                axios.get(this.url(this.currentPage)).then(({data}) => {
                     data.data.map((item) => this.messages.unshift(item))
 
                     this.lastPage = data.last_page

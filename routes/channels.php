@@ -11,10 +11,9 @@
 |
 */
 
-use App\Chat;
 use Illuminate\Support\Facades\Broadcast;
 
-Broadcast::channel('chat.{id}', function ($user, Chat $chat) {
+Broadcast::channel('chat.{id}', function ($user, $chat) {
     if ($chat->participants->contains($user)) {
         return $user;
     }
