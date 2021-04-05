@@ -3,7 +3,7 @@
         <form @submit.prevent="like">
             <button
                 :class="isLiked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-600'"
-                class="flex items-center mr-4 focus:outline-none hover:text-blue-500 hover:bg-blue-200 p-2 rounded-lg"
+                class="flex items-center mr-4 focus:outline-none hover:text-blue-500 hover:bg-blue-200 p-2 rounded-full"
                 type="submit"
             >
                 <svg class="mr-1 w-4 h-4" style="transform: scaleX(-1)" viewBox="0 0 20 20">
@@ -24,7 +24,7 @@
         <form @submit.prevent="dislike">
             <button
                 :class="isDisliked ? 'text-blue-500 bg-blue-200 rounded-lg p-2' : 'text-gray-600'"
-                class="flex items-center focus:outline-none hover:text-blue-500 hover:bg-blue-200 p-2 rounded-lg"
+                class="flex items-center focus:outline-none hover:text-blue-500 hover:bg-blue-200 p-2 rounded-full"
                 type="submit"
             >
                 <svg class="mr-1 w-3" viewBox="0 0 20 20">

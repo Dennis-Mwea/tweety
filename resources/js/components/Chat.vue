@@ -1,5 +1,5 @@
 <template>
-    <div class="flex px-4 py-1 rounded-xl rounded-t-none bg-gray-100">
+    <div class="flex px-4 py-1 rounded-xl rounded-t-none bg-gray-200">
         <div class="flex-1 flex flex-col max-h-screen chat-list">
             <div class="flex-1 flex justify-between overflow-y-hidden">
                 <div class="flex-1 flex flex-col justify-between">

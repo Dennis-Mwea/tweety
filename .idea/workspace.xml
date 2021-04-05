@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Use tailwind pagination">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update ReadMe.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Chat.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Dropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Dropdown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Flash.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Flash.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/FriendsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FriendsList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ImageUpload.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LikeButtons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_logout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_logout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_sidebar-links.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tweets/_tweet.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,14 +249,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="45387000" />
-    </task>
-    <task id="LOCAL-00155" summary="Update paginator stylings">
-      <created>1617620815709</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1617620815709</updated>
+      <workItem from="1617508106808" duration="45758000" />
     </task>
     <task id="LOCAL-00156" summary="Update character indicator stylings">
       <created>1617621092964</created>
@@ -585,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617661737451</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="Update ReadMe.">
+      <created>1617661763332</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1617661763332</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +614,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update layout structure" />
     <MESSAGE value="Update pagination links" />
     <MESSAGE value="Upgrade to Laravel 8" />
     <MESSAGE value="Set up chats" />
@@ -630,7 +638,8 @@
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Update paginator stylings" />
     <MESSAGE value="Use tailwind pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use tailwind pagination" />
+    <MESSAGE value="Update ReadMe." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update ReadMe." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

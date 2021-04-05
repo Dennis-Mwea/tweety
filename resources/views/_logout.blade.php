@@ -1,7 +1,7 @@
 <footer>
     <dropdown align="right" width="400px" v-cloak>
         <template v-slot:trigger>
-            <li class="flex items-center rounded-full bg-transparent px-1 py-1 hover:bg-gray-200 hover:text-black cursor-pointer -ml-4">
+            <li class="flex items-center rounded-full bg-transparent px-1 py-1 hover:bg-gray-200 hover:text-black cursor-pointer">
                 <img src="{{ current_user()->avatar }}" alt="" class="rounded-full mr-2" width="30" height="30">
 
                 <div class="flex flex-col mr-5 text-left">
@@ -39,7 +39,8 @@
                 <form method="POST" action="/logout">
                     @csrf
 
-                    <button class="text-sm text-red-600" type="Submit">
+                    <button class="px-3 w-full py-3 flex items-center hover:bg-gray-300 text-sm text-red-600"
+                            type="Submit">
                         Log out {{ '@'. current_user()->username }}
                     </button>
                 </form>

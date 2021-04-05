@@ -1,6 +1,6 @@
 <template>
     <transition mode="out-in" name="slide-fade">
-        <div v-show="show" :class="classes" class="rounded-lg" role="alert" style="right: 25px; bottom: 25px;"
+        <div v-show="show" :class="classes" class="rounded-xl" role="alert" style="right: 25px; bottom: 25px;"
              v-text="body"></div>
     </transition>
 </template>
