@@ -13,21 +13,6 @@ class RepliesController extends BaseApiController
         return $this->sendResponse($tweet->getApiThreadedReplies());
     }
 
-    public function show(Reply $reply)
-    {
-        return $reply->children()->paginate(5);
-    }
-
-    public function showChildren(Reply $reply)
-    {
-        $this->sendResponse($reply->children()->jsonPaginate(3));
-    }
-
-    public function jsonShow(Reply $reply)
-    {
-        return $this->sendResponse($reply);
-    }
-
     public function store(Tweet $tweet)
     {
         $attributes = request()->validate([
@@ -43,6 +28,11 @@ class RepliesController extends BaseApiController
         $reply['parent_id'] ? (int)$reply['parent_id'] : $reply['parent_id'];
 
         return $this->sendResponse($reply, '', 201);
+    }
+
+    public function show(Reply $reply)
+    {
+        return $this->sendResponse($reply);
     }
 
     public function destroy(Reply $reply)

@@ -104,6 +104,8 @@ class User extends Authenticatable
 
     public function replies()
     {
-        return $this->hasMany(Reply::class)->with('tweet')->latest();
+        return $this->hasMany(Reply::class)
+            ->with('tweet', 'parent')
+            ->latest();
     }
 }

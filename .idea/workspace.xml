@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Fetch user replies from API">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Update API mentioned user response">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ChildrenRepliesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MentionUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MentionUsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_ReceivedNewReply.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_ReceivedNewReply.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/notifications/_RecentlyTweeted.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/notifications/_RecentlyTweeted.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,14 +222,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="26274000" />
-    </task>
-    <task id="LOCAL-00117" summary="Add algolia logo">
-      <created>1617513371952</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1617513371952</updated>
+      <workItem from="1617508106808" duration="27155000" />
     </task>
     <task id="LOCAL-00118" summary="Update styling">
       <created>1617513853107</created>
@@ -562,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617623061043</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="Update API mentioned user response">
+      <created>1617623121688</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1617623121688</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add api tweet likes controller" />
     <MESSAGE value="Add api reply likes controller" />
     <MESSAGE value="Store reply from client" />
     <MESSAGE value="Add api explore controller" />
@@ -607,7 +611,8 @@
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Implement store on user avatar controller" />
     <MESSAGE value="Fetch user replies from API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fetch user replies from API" />
+    <MESSAGE value="Update API mentioned user response" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update API mentioned user response" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
