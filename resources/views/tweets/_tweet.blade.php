@@ -14,9 +14,9 @@
         <span class="text-sm text-gray-600">{{ '. '.$tweet->created_at->diffForHumans() }}</span>
     </div>
 
-    <a class="text-sm" href="{{ route('tweets.show', $tweet) }}">
+    <h3 class="mb-2">
         {!! $tweet->body !!}
-    </a>
+    </h3>
 
     @if($tweet->image !=null)
         <div class="mb-2">
