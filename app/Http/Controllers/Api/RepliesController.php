@@ -34,6 +34,8 @@ class RepliesController extends BaseApiController
             'parent_id' => request('parent_id', null)
         ]);
 
+        $reply['parent_id'] ? (int)$reply['parent_id'] : $reply['parent_id'];
+
         return $this->sendResponse($reply, '', 201);
     }
 }
