@@ -16,12 +16,8 @@
 
                 <input
                     class="shadow appearance-none @error('name') border border-red-500  @enderror border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="name"
-                    type="name"
-                    name="name"
-                    placeholder="John Doe"
-                    value="{{ old('name') }}" required autocomplete="name" autofocus
-                >
+                    id="name" type="text" name="name" placeholder="John Doe" value="{{ old('name') }}" required
+                    autocomplete="name" autofocus>
 
                 @error('name')
                 <p class="text-red-500 text-xs italic">{{ $message }}</p>
@@ -34,12 +30,8 @@
 
                 <input
                     class="shadow appearance-none @error('username') border border-red-500  @enderror border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="username"
-                    type="username"
-                    name="username"
-                    placeholder="JohnDoe"
-                    value="{{ old('username') }}" required autocomplete="username" autofocus
-                >
+                    id="username" type="text" name="username" placeholder="JohnDoe" value="{{ old('username') }}"
+                    required autocomplete="username" autofocus>
 
                 @error('username')
                 <p class="text-red-500 text-xs italic">{{ $message }}</p>

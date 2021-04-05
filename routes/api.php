@@ -40,4 +40,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/replies/{reply}', 'Api\RepliesController@destroy');
 
     Route::get('/explore', 'Api\ExploreController');
+
+    Route::patch('/auth/email', 'Api\EmailController@update');
 });

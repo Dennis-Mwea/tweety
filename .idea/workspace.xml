@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Implement update profile for API">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Allow tweets and replies to be deleted">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EmailController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Rules/MatchOldPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TweetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TweetsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,14 +221,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="22373000" />
-    </task>
-    <task id="LOCAL-00099" summary="Update follow button design">
-      <created>1617505240585</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1617505240585</updated>
+      <workItem from="1617508106808" duration="22737000" />
     </task>
     <task id="LOCAL-00100" summary="Update logo">
       <created>1617505408963</created>
@@ -565,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617618793102</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Allow tweets and replies to be deleted">
+      <created>1617619141686</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1617619141686</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +586,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add unit test for tweet" />
     <MESSAGE value="Add unit tests for user and reply" />
     <MESSAGE value="Add feature test for tweet" />
     <MESSAGE value="Add feature tests for mentioned users, search and follow" />
@@ -610,7 +610,8 @@
     <MESSAGE value="Implement follow/unfollow logic for API" />
     <MESSAGE value="Update response" />
     <MESSAGE value="Implement update profile for API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement update profile for API" />
+    <MESSAGE value="Allow tweets and replies to be deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow tweets and replies to be deleted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
