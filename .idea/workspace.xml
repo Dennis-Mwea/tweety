@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add api tweets routes">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add route to get user avatar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tweet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,14 +220,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="18820000" />
-    </task>
-    <task id="LOCAL-00088" summary="Fix notification bug">
-      <created>1617500461580</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1617500461580</updated>
+      <workItem from="1617508106808" duration="19114000" />
     </task>
     <task id="LOCAL-00089" summary="Add descriptions to notifications and fix some stylings">
       <created>1617500800941</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617615222945</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Add route to get user avatar">
+      <created>1617615334745</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1617615334745</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implemenet algolia inifinite hits and clean things up" />
     <MESSAGE value="wip" />
     <MESSAGE value="Make users searchable" />
     <MESSAGE value="Add search box to layout" />
@@ -609,7 +609,8 @@
     <MESSAGE value="Configure sanctum" />
     <MESSAGE value="Add auth controller" />
     <MESSAGE value="Add api tweets routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add api tweets routes" />
+    <MESSAGE value="Add route to get user avatar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add route to get user avatar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

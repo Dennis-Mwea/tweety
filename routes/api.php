@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register', 'Api\AuthController@register');
 Route::post('/login', 'Api\AuthController@login');
+Route::post('/logout', 'Api\AuthController@logout');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/tweets', 'Api\TweetsController@index');
+    Route::get('/tweets/{tweet}/replies', 'Api\RepliesController@index');
+    Route::get('/replies/{reply}/children/json', 'Api\RepliesController@jsonShow');
 
     Route::get('/profile/avatar', 'Api\UserAvatarController@show');
-    Route::post('/logout', 'Api\AuthController@logout');
 });
