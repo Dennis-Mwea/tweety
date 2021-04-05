@@ -1,7 +1,7 @@
 <template>
     <div>
         <div :class="authUser.id === message.sender.id ? 'justify-end': 'justify-start'"
-             class="flex">
+             class="flex relative" @click="toggleInfo">
             <div class="flex justify-end items-end">
                 <img v-if="authUser.id !== message.sender.id" :src="message.sender.avatar"
                      alt="" class="w-6 h-6 rounded-full mr-2"/>
@@ -13,8 +13,10 @@
             </div>
         </div>
 
-        <span :class="authUser.id === message.sender.id ? 'justify-end' : 'justify-start'"
-              class="text-gray-500 text-xs flex items-center">
+        <div v-show="showInfo" :ref="message.id"
+             :class="authUser.id === message.sender.id ? 'justify-end' : 'justify-start'"
+             :style="showInfo ? 'max-height: ' + $refs[message.id].scrollHeight + 'px' : ''"
+             class="text-gray-500 text-xs flex items-center relative transition-all max-h-0 duration-300 mt-2">
             {{ formatDate(message.created_at) }}
             <svg v-if="message.read_at" class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20"
                  xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +24,7 @@
                       d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                       fill-rule="evenodd"/>
             </svg>
-        </span>
+        </div>
     </div>
 </template>
 
@@ -37,6 +39,7 @@ export default {
     data() {
         return {
             authUser: window.App.user,
+            showInfo: false,
         };
     },
 
@@ -44,10 +47,33 @@ export default {
         formatDate(date) {
             return dayjs(date).format("MMM DD, YYYY h:mm a");
         },
+
+        toggleInfo() {
+            this.showInfo = !this.showInfo
+        }
     },
 }
 </script>
 
 <style scoped>
+.pop-out-quick-enter-active,
+.pop-out-quick-leave-active {
+    transition: all 0.4s;
+}
 
+.pop-out-quick-enter,
+.pop-out-quick-leave-active {
+    opacity: 0;
+    transform: translateY(-7px);
+}
+
+.smooth-enter-active,
+.smooth-leave-active {
+    transition: max-height 0.5s;
+}
+
+.smooth-enter,
+.smooth-leave-to {
+    max-height: 0;
+}
 </style>
