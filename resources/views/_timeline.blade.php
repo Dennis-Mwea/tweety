@@ -11,6 +11,6 @@
     @endforelse
 
     <div class="flex items-center">
-        {{ $tweets->links() }}
+        {{--        {{ $tweets->links() }}--}}
     </div>
 </div>

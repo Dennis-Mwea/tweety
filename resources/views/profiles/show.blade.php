@@ -15,7 +15,7 @@
                 <p class="text-sm">Joined {{ $user->created_at->diffForHumans() }}</p>
             </div>
 
-            <div>
+            <div class="flex flex-col">
                 @can('edit', $user)
                     <a href="{{ $user->path('edit') }}"
                        class="bg-white rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-2 font-bold hover:bg-blue-500 hover:text-white">Edit
@@ -30,6 +30,8 @@
                         </svg>
                     </a>
                 @endcan
+
+                <x-chat-button :user="$user"></x-chat-button>
 
                 <x-follow-button :user="$user"></x-follow-button>
 

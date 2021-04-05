@@ -63,4 +63,8 @@ Route::middleware('auth')->group(function () {
         ->middleware('can:edit,user', 'password.confirm')->name('edit-email');
     Route::patch('/profiles/{user}/email', 'EmailController@update')
         ->middleware('can:edit,user')->name('update-email');
+
+    Route::get('/chat/{user}', 'ChatsController@show');
+    Route::get('/chat/{chat}/messages', 'MessagesController@get');
+    Route::post('/chat/{chat}/messages', 'MessagesController@store');
 });

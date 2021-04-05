@@ -69,6 +69,7 @@ Vue.component('reply-button', require('./components/ReplyButton').default)
 Vue.component('delete-reply-modal', require('./utils/DeleteReplyModal').default)
 Vue.component('tabs', require('./components/Tabs').default)
 Vue.component('tab', require('./components/Tab').default)
+Vue.component('chat', require('./components/Chat').default)
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
