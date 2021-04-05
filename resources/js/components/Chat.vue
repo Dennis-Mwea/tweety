@@ -121,7 +121,7 @@ export default {
                 chatId: event.chat.id
             })
 
-            this.updateActivePeer(event.user.id, false);
+            this.updateActivePeer(event.sender.id, false);
         })
 
         this.fetchMessages()

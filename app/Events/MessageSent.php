@@ -20,7 +20,7 @@ class MessageSent implements ShouldBroadcast
      *
      * @var User
      */
-    public $user;
+    public $sender;
 
     /**
      * Message details
@@ -40,7 +40,7 @@ class MessageSent implements ShouldBroadcast
      */
     public function __construct(Authenticatable $user, Message $message, $chat)
     {
-        $this->user = $user;
+        $this->sender = $user;
         $this->message = $message;
         $this->chat = $chat;
     }
