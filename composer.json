@@ -11,6 +11,7 @@
         "php": "^7.3|^8.0",
         "algolia/algoliasearch-client-php": "^2.7",
         "beyondcode/laravel-websockets": "^1.11",
+        "doctrine/dbal": "^3.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",

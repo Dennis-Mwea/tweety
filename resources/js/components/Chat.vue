@@ -9,15 +9,15 @@
                             @v-chat-scroll-top-reached="fetchMessages()">
                             <li v-for="(message, index) in messages"
                                 :key="message.id"
-                                :class="{'mb-12': shouldAddMargin( messages[index === 0 ? 0 : index - 1].created_at,messages[index].created_at)}"
+                                :class="{'mb-12': shouldAddMargin( messages[index === 0 ? 0 : index - 1].created_at, messages[index].created_at)}"
                                 class="mb-4">
-                                <div :class="authUser.id === message.user.id ? 'justify-end': 'justify-start'"
+                                <div :class="authUser.id === message.sender.id ? 'justify-end': 'justify-start'"
                                      class="flex">
                                     <div class="flex justify-end items-end">
-                                        <img v-if="authUser.id !== message.user.id" :src="message.user.avatar"
+                                        <img v-if="authUser.id !== message.sender.id" :src="message.sender.avatar"
                                              alt="" class="w-6 h-6 rounded-full mr-2"/>
                                         <div
-                                            :class="authUser.id === message.user.id? 'bg-blue-200  rounded-br-none': 'bg-gray-300 rounded-bl-none'"
+                                            :class="authUser.id === message.sender.id? 'bg-blue-200  rounded-br-none': 'bg-gray-300 rounded-bl-none'"
                                             class="w-full rounded-full px-3 py-2 text-center">
                                             <p>{{ message.message }}</p>
                                         </div>
@@ -47,14 +47,12 @@
                                    class="bg-gray-300 appearance-none border-2 border-gray-300 rounded-full w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                    name="message"
                                    placeholder="Type your message here..." type="text"
-                                   @focus="markAsRead" @keyup="sendTypingEvent" @keyup.enter="sendMessage"/>
+                                   @blur="markAsRead" @keyup="sendTypingEvent" @keyup.enter="sendMessage"/>
                         </div>
 
-                        <button
-                            id="btn-chat"
-                            class="bg-blue-500 rounded-full px-4 py-2 text-white hover:bg-blue-600 font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                            @click="sendMessage">
-                            Send
+                        <button id="btn-chat"
+                                class="bg-blue-500 rounded-full px-4 py-2 text-white hover:bg-blue-600 font-semibold"
+                                @click="sendMessage">Send
                         </button>
                     </div>
                 </div>
@@ -107,7 +105,7 @@ export default {
         }).listen("MessageSent", (event) => {
             this.messages.push({
                 message: event.message.message,
-                user: event.user,
+                sender: event.sender,
                 chatId: event.chat.id
             })
 
@@ -150,7 +148,7 @@ export default {
 
         sendMessage() {
             this.addMessage({
-                user: this.user,
+                sender: this.user,
                 message: this.newMessage,
                 chatId: this.chatId,
             })
@@ -179,11 +177,9 @@ export default {
         },
 
         addMessage(message) {
-            console.log(message);
             this.messages.push(message);
 
             axios.post(`/chat/${this.chatId}/messages`, message).then((response) => {
-                console.log(response.data);
             });
         },
 
