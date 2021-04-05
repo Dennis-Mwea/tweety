@@ -20,8 +20,8 @@
 
     @if($tweet->image !=null)
         <div class="mb-2">
-            <img src="{{ asset($tweet->image) }}" alt="tweet-image" class="rounded-lg mb-1 h-64 w-full object-cover"
-                 width="40" height="40">
+            <img src="{{ asset($tweet->image) }}" alt="tweet-image"
+                 class="rounded-lg mb-1 h-64 w-full object-cover shadow-xl" width="40" height="40">
         </div>
     @endif
 
