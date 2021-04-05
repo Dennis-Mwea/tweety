@@ -39,7 +39,8 @@ class Chat extends Model
     {
         return $this->messages()
             ->whereNull('read_at')
-            ->where('user_id', $user->id);
+            ->where('user_id', $user->id)
+            ->get();
     }
 
     public function messages()

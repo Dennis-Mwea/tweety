@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add read_at field to message table">
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Remove console log">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Chat.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,14 +237,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="40612000" />
-    </task>
-    <task id="LOCAL-00136" summary="Add api tweets routes">
-      <created>1617615222944</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1617615222945</updated>
+      <workItem from="1617508106808" duration="40691000" />
     </task>
     <task id="LOCAL-00137" summary="Add route to get user avatar">
       <created>1617615334745</created>
@@ -581,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617656850271</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="Remove console log">
+      <created>1617656910379</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1617656910379</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,9 +625,9 @@
     <MESSAGE value="Tweak chat component" />
     <MESSAGE value="Add chat index page" />
     <MESSAGE value="Fix bug" />
-    <MESSAGE value="Remove console log" />
     <MESSAGE value="Add read_at field to message table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add read_at field to message table" />
+    <MESSAGE value="Remove console log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove console log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
