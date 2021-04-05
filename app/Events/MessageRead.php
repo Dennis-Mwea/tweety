@@ -7,6 +7,7 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -33,7 +34,7 @@ class MessageRead implements ShouldBroadcast
      * @param User $user
      * @param Chat $chat
      */
-    public function __construct(User $user, Chat $chat)
+    public function __construct(Authenticatable $user, Chat $chat)
     {
         $this->user = $user;
 

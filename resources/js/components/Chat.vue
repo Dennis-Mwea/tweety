@@ -76,6 +76,7 @@ export default {
             currentPage: 1,
             lastPage: null,
             typingTimer: false,
+            alreadyRead: false,
         }
     },
 
@@ -136,7 +137,7 @@ export default {
         },
 
         sendTypingEvent() {
-            Echo.join(`chat.${this.chatId}`).whisper('typing', this.user)
+            Echo.join(`chat.${this.chatId}`).whisper('typing', JSON.stringify(this.user))
         },
 
         sendMessage() {
@@ -184,11 +185,13 @@ export default {
         },
 
         markAsRead() {
-            axios
-                .patch(`/chat/${this.chatId}/messages/${this.recipient.username}/read`)
-                .then((response) => {
-                    console.log(response.data);
-                });
+            if (!this.alreadyRead) {
+                axios
+                    .patch(`/chat/${this.chatId}/messages/${this.recipient.username}/read`)
+                    .then(() => {
+                        this.alreadyRead = true
+                    });
+            }
         },
     }
 }

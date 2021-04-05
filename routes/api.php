@@ -66,6 +66,7 @@ Route::middleware('auth:sanctum')
         Route::get('/chat', 'ChatsController@index');
         Route::get('/chat/{chat}/messages', 'MessagesController@get');
         Route::post('/chat/{chat}/messages', 'MessagesController@store');
+        Route::patch('/chat/{chat}/messages/{user}/read', 'MessagesController@update');
     });
 
 Broadcast::routes(['middleware' => ['auth:sanctum']]);
