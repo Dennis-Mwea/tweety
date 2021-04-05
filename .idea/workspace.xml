@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add auth controller">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TweetsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tweety.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tweety.iml" afterDir="false" />
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add api tweets routes">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UserAvatarController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,14 +219,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="18618000" />
-    </task>
-    <task id="LOCAL-00087" summary="Add reply floating button">
-      <created>1617500383558</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1617500383558</updated>
+      <workItem from="1617508106808" duration="18820000" />
     </task>
     <task id="LOCAL-00088" summary="Fix notification bug">
       <created>1617500461580</created>
@@ -570,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617614827976</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Add api tweets routes">
+      <created>1617615222944</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1617615222945</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add icon to search input" />
     <MESSAGE value="Implemenet algolia inifinite hits and clean things up" />
     <MESSAGE value="wip" />
     <MESSAGE value="Make users searchable" />
@@ -615,7 +608,8 @@
     <MESSAGE value="Update travis ci project url" />
     <MESSAGE value="Configure sanctum" />
     <MESSAGE value="Add auth controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add auth controller" />
+    <MESSAGE value="Add api tweets routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add api tweets routes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

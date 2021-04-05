@@ -18,4 +18,7 @@ Route::post('/login', 'Api\AuthController@login');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/tweets', 'Api\TweetsController@index');
+
+    Route::get('/profile/avatar', 'Api\UserAvatarController@show');
+    Route::post('/logout', 'Api\AuthController@logout');
 });
