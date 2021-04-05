@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Add chat component">
+    <list default="true" id="511ce1ba-322a-4427-8b2e-a4e9350aa613" name="Default Changelist" comment="Tweak chat component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/MessageSent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageSent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Chat.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/chat/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chat/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,14 +238,7 @@
       <updated>1617396477798</updated>
       <workItem from="1617396484672" duration="15470000" />
       <workItem from="1617413411109" duration="50490000" />
-      <workItem from="1617508106808" duration="38176000" />
-    </task>
-    <task id="LOCAL-00130" summary="Update profile test">
-      <created>1617564305968</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1617564305968</updated>
+      <workItem from="1617508106808" duration="38290000" />
     </task>
     <task id="LOCAL-00131" summary="Add travis CI badge">
       <created>1617564547475</created>
@@ -587,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617651496966</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Tweak chat component">
+      <created>1617654330137</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1617654330137</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +603,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update README.md" />
     <MESSAGE value="Update paginator stylings" />
     <MESSAGE value="Update character indicator stylings" />
     <MESSAGE value="Extract character limit indicator component" />
@@ -632,7 +627,8 @@
     <MESSAGE value="Set up chats" />
     <MESSAGE value="Setup models and events" />
     <MESSAGE value="Add chat component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chat component" />
+    <MESSAGE value="Tweak chat component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweak chat component" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
