@@ -42,4 +42,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/explore', 'Api\ExploreController');
 
     Route::patch('/auth/email', 'Api\EmailController@update');
+    Route::patch('/auth/password', 'Api\PasswordController@update');
 });
