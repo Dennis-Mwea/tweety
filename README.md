@@ -66,7 +66,7 @@ MIX_ALGOLIA_SECRET=YOUR_ALGOLIA_SECRET
 8. Mentions and notifications.
 9. Two level nested replies.
 10. Instant search with algolia
-11. Real-time chat with Pusher and Laravel WebSockets. **_(Currently avaiable in web app only.)_**
+11. Real-time chat with Pusher and Laravel WebSockets.
 
 ## Mobile App
 
