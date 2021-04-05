@@ -116,6 +116,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/scout" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-json-api-paginate" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/legacy-factories" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/result-type" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

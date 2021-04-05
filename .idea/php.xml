@@ -113,9 +113,11 @@
       <path value="$PROJECT_DIR$/vendor/laravel/scout" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-json-api-paginate" />
+      <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpUnit">
