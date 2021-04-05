@@ -7,12 +7,13 @@ use Illuminate\Support\Facades\Storage;
 
 class TweetController extends Controller
 {
-    protected $shouldFlash;
+    protected $shouldFlash = false;
 
     public function index()
     {
         return view('tweets.home', [
             'tweets' => current_user()->timeline()
+                ->paginate(10)
         ]);
     }
 
