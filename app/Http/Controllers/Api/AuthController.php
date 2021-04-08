@@ -26,7 +26,7 @@ class AuthController extends BaseApiController
             ]);
         }
 
-        $token = $user->createToken($attributes['email'])->plaintext;
+        $token = $user->createToken($attributes['email'])->plainTextToken;
 
         return $this->sendresponse([
             'token' => $token,
