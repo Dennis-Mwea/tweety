@@ -7,10 +7,10 @@ window._ = require('lodash');
  */
 
 try {
-    // window.Popper = require('popper.js').default;
-    // window.$ = window.jQuery = require('jquery');
-    //
-    // require('bootstrap');
+	// window.Popper = require('popper.js').default;
+	// window.$ = window.jQuery = require('jquery');
+	//
+	// require('bootstrap');
 } catch (e) {
 }
 
@@ -34,11 +34,21 @@ import Echo from 'laravel-echo';
 
 window.Pusher = require('pusher-js');
 
+console.log(process.env.MIX_PUSHER_HOST)
 window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: 'qwerty',
-    wsHost: window.location.hostname,
-    wsPort: 6001,
-    disableStats: true,
-    forceTLS: false
+	broadcaster: 'pusher',
+	// key: 'qwerty',
+	// wsHost: window.location.hostname,
+	// wsPort: 6001,
+	disableStats: true,
+	forceTLS: false,
+	key: process.env.MIX_PUSHER_APP_KEY,
+	cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+	wsHost: process.env.MIX_PUSHER_HOST,
+	wsPort: process.env.MIX_PUSHER_PORT,
+	wssPort: process.env.MIX_PUSHER_PORT,
+	// forceTLS: true,
+	// scheme: 'https',
+	encrypted: true,
+	enabledTransports: ['ws', 'wss']
 });
