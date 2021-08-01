@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
@@ -11,7 +12,7 @@ class AuthController extends BaseApiController
     /**
      * @throws ValidationException
      */
-    public function login()
+    public function login(): JsonResponse
     {
         $attributes = request()->validate([
             'email' => ['required', 'email', 'exists:users,email'],
@@ -26,16 +27,12 @@ class AuthController extends BaseApiController
             ]);
         }
 
-        $token = $user->createToken($attributes['email'])->plainTextToken;
+        $user->token = $user->createToken($attributes['email'])->plainTextToken;
 
-        return $this->sendresponse([
-            'token' => $token,
-            'user_id' => $user->id,
-            'username' => $user->username
-        ]);
+        return $this->sendresponse($user);
     }
 
-    public function register()
+    public function register(): JsonResponse
     {
         $validator = request()->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -52,16 +49,12 @@ class AuthController extends BaseApiController
             'password' => Hash::make($validator['password']),
         ]);
 
-        $token = $user->createToken(request('email'))->plainTextToken;
+        $user->token = $user->createToken(request('email'))->plainTextToken;
 
-        return $this->sendResponse([
-            'token' => $token,
-            'user_id' => $user->id,
-            'username' => $user->username
-        ], 201);
+        return $this->sendResponse($user, '', 201);
     }
 
-    public function logout()
+    public function logout(): JsonResponse
     {
         current_user()->currentAccessToken()->delete();
 
